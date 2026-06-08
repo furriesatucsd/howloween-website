@@ -1,0 +1,41 @@
+{
+  "main": [
+    {
+      "title": "Home",
+      "url": "/"
+    },
+    {
+      "title": "Club Store",
+      "url": "/store/"
+    },
+    {
+      "title": "Upcoming Events",
+      "type": "dropdown",
+      "items": [
+        {
+          "title": "Event Calendar",
+          "url": "/event-calendar/"
+        }
+      ]
+    },
+    {
+      "title": "About Us",
+      "type": "dropdown",
+      "items": [
+        {
+          "title": "Our Traditions",
+          "url": "/traditions/"
+        },
+        {
+          "title": "Our Team",
+          "url": "/team/"
+        }
+      ]
+    },
+    {
+      "title": "Links & Socials",
+      "url": "https://linktr.ee/furriesatucsd",
+      "external": true
+    }
+  ]
+}

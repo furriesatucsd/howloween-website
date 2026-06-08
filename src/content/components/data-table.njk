@@ -1,0 +1,38 @@
+<!-- Data Table -->
+<section class="py-5 {{ tableData.background_class | default('') }}">
+  <div class="container{{ tableData.container_fluid | default('') }} fade-in">
+    <div class="row justify-content-center">
+      <div class="col-lg-{{ tableData.col_width | default('10') }}">
+        {% if tableData.title %}
+        <h2 class="display-5 fw-bold text-center mb-4">{{ tableData.title }}</h2>
+        {% endif %} {% if tableData.description %}
+        <p class="lead text-center mb-5">{{ tableData.description }}</p>
+        {% endif %}
+
+        <div class="table-responsive">
+          <table class="table table-striped table-hover">
+            <thead class="table-primary">
+              <tr>
+                {% for header in tableData.headers %}
+                <th scope="col">{{ header }}</th>
+                {% endfor %}
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in tableData.data %}
+              <tr>
+                <!-- If there is only one cell in the row, make it span all cols -->
+                {% if row | length == 1 %}
+                <td colspan="{{ tableData.headers | length }}">{{ row[0] }}</td>
+                {% else %} {% for cell in row %}
+                <td>{{ cell }}</td>
+                {% endfor %} {% endif %}
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
