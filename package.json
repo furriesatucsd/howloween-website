@@ -1,5 +1,5 @@
 {
-  "name": "furriesatucsd.github.io",
+  "name": "howloween-website",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -17,16 +17,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/furriesatucsd/furriesatucsd.github.io.git"
+    "url": "git+https://github.com/furriesatucsd/howloween-website.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/furriesatucsd/furriesatucsd.github.io/issues"
+    "url": "https://github.com/furriesatucsd/howloween-website/issues"
   },
-  "homepage": "https://github.com/furriesatucsd/furriesatucsd.github.io#readme",
+  "homepage": "https://github.com/furriesatucsd/howloween-website#readme",
   "description": "",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",

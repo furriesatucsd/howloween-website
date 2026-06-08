@@ -1,6 +1,6 @@
-# Triton Tails - Furries at UCSD Website
+# Triton Tails - Howloween Website
 
-The official website for Triton Tails, the furry student organization at UC San Diego.
+The official website for Howloween, an annual Halloween-themed mini convention at UCSD. Howloween is hosted by Triton Tails, the furry student organization at UC San Diego.
 
 ## 🛠️ Technology Stack
 
@@ -58,8 +58,8 @@ The project uses Nunjucks (`.njk`) as the templating language for pages and layo
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/furriesatucsd/furriesatucsd.github.io.git
-   cd furriesatucsd.github.io
+   git clone https://github.com/furriesatucsd/howloween-website.git
+   cd howloween-website
    ```
 
 2. Install dependencies:
@@ -116,5 +116,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🔗 Links
 
-- [Organization Website](https://furriesatucsd.github.io)
-- [GitHub Repository](https://github.com/furriesatucsd/furriesatucsd.github.io)
+- [Howloween Website](https://github.com/furriesatucsd/howloween-website) (coming soon!)
+- [GitHub Repository](https://github.com/furriesatucsd/howloween-website) (you are here)
