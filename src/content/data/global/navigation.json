@@ -1,25 +1,69 @@
 {
   "main": [
     {
-      "title": "Home",
-      "url": "/"
+      "title": "Registration",
+      "type": "feature",
+      "url": "/registration/"
     },
     {
-      "title": "Club Store",
-      "url": "/store/"
-    },
-    {
-      "title": "Upcoming Events",
+      "title": "Venue",
       "type": "dropdown",
+      "url": "/venue/",
       "items": [
         {
-          "title": "Event Calendar",
-          "url": "/event-calendar/"
+          "title": "Floor Plans",
+          "url": "/floor-plans/"
+        },
+        {
+          "title": "Food & Drink",
+          "url": "/food/"
         }
       ]
     },
     {
-      "title": "About Us",
+      "title": "Transportation",
+      "type": "dropdown",
+      "items": [
+        {
+          "title": "Parking",
+          "url": "/parking/"
+        },
+        {
+          "title": "Public Transit",
+          "url": "/transit/"
+        }
+      ]
+    },
+    {
+      "title": "Programming",
+      "type": "dropdown",
+      "items": [
+        {
+          "title": "Parking",
+          "url": "/parking/"
+        },
+        {
+          "title": "Public Transit",
+          "url": "/transit/"
+        }
+      ]
+    },
+    {
+      "title": "Get Involved",
+      "type": "dropdown",
+      "items": [
+        {
+          "title": "View All Applications",
+          "url": "/applications/"
+        },
+        {
+          "title": "Volunteering",
+          "url": "/volunteering/"
+        }
+      ]
+    },
+    {
+      "title": "Policies",
       "type": "dropdown",
       "items": [
         {
@@ -33,9 +77,8 @@
       ]
     },
     {
-      "title": "Links & Socials",
-      "url": "https://linktr.ee/furriesatucsd",
-      "external": true
+      "title": "About",
+      "url": "/about/"
     }
   ]
 }
