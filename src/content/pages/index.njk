@@ -66,7 +66,7 @@ our events, or recruiting talent within our community, reach out to us!" ], imag
 } ] %} {% for spotlight_data in spotlights %} {{ spotlight(spotlight_data) }} {% endfor %} #}
 <!-- Spotlight -->
 {% set spotlightData = {
-  spotlight: spotlights
+  spotlight: spotlight.spotlights
 } %}
 {% include "../components/spotlight.njk" %}
 

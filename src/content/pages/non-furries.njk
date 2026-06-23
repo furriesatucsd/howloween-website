@@ -50,7 +50,7 @@ our events, or recruiting talent within our community, reach out to us!" ], imag
 "/assets/images/spotlight04.jpg", alt: "Alumni Network", image_position: "left", background: "dark"
 } ] %} {% for spotlight_data in spotlights %} {{ spotlight(spotlight_data) }} {% endfor %} #}
 {% set spotlightData = {
-  spotlight: spotlights
+  spotlight: spotlight.spotlights
 } %}
 {% include "../components/spotlight.njk" %}
 
