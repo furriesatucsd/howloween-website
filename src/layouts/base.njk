@@ -65,7 +65,11 @@
     {% include "../content/components/navigation.njk" %}
 
     <!-- Main Content -->
+    {% if content %}
     <main>{{ content | safe }}</main>
+    {% else %}
+      {% include "../content/components/coming-soon.njk" %}
+    {% endif %}
 
     {% include "../content/components/footer.njk" %}
 

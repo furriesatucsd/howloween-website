@@ -12,25 +12,25 @@
       "items": [
         {
           "title": "Floor Plans",
-          "url": "/floor-plans/"
+          "url": "/venue/floor-plans/"
         },
         {
           "title": "Food & Drink",
-          "url": "/food/"
+          "url": "/venue/food/"
         }
       ]
     },
     {
-      "title": "Transportation",
+      "title": "Travel",
       "type": "dropdown",
       "items": [
         {
           "title": "Parking",
-          "url": "/parking/"
+          "url": "/travel/parking/"
         },
         {
           "title": "Public Transit",
-          "url": "/transit/"
+          "url": "/travel/transit/"
         }
       ]
     },
@@ -39,12 +39,12 @@
       "type": "dropdown",
       "items": [
         {
-          "title": "Parking",
-          "url": "/parking/"
+          "title": "Event Schedule",
+          "url": "/programming/schedule/"
         },
         {
-          "title": "Public Transit",
-          "url": "/transit/"
+          "title": "West Ballroom",
+          "url": "/programming/ballroom-west"
         }
       ]
     },
@@ -54,11 +54,11 @@
       "items": [
         {
           "title": "View All Applications",
-          "url": "/applications/"
+          "url": "/apply/"
         },
         {
           "title": "Volunteering",
-          "url": "/volunteering/"
+          "url": "/volunteer/"
         }
       ]
     },
