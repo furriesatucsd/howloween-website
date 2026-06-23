@@ -20,7 +20,7 @@ description: New to the community, or just wondering what it's all about?
 </section>
 
 <!-- Spotlights -->
-{% from "../components/spotlight.njk" import spotlight %} {% set spotlights = [ { title: "Furries?
+{# {% from "../components/spotlight.njk" import spotlight %} {% set spotlights = [ { title: "Furries?
 at <b><i>MY</i></b> university!?", subtitle: "It's more likely than you think!", content: [ "Triton
 Tails (est. 2021) is a social club with over 500 members, devoted to appreciating and engaging with
 furry culture and media through a positive and lighthearted lens.", "Our shared interests bring us
@@ -48,7 +48,11 @@ collaborations for our members.", "We maintain a resume database to assist compa
 in finding exceptional talent. If you're interested in sponsoring our organization, partnering with
 our events, or recruiting talent within our community, reach out to us!" ], image:
 "/assets/images/spotlight04.jpg", alt: "Alumni Network", image_position: "left", background: "dark"
-} ] %} {% for spotlight_data in spotlights %} {{ spotlight(spotlight_data) }} {% endfor %}
+} ] %} {% for spotlight_data in spotlights %} {{ spotlight(spotlight_data) }} {% endfor %} #}
+{% set spotlightData = {
+  spotlight: spotlights
+} %}
+{% include "../components/spotlight.njk" %}
 
 <!-- Photo Gallery -->
 {% set galleryData = { title: "Photo Gallery", description: "Explore some of our past events and see

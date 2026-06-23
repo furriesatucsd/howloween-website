@@ -34,7 +34,7 @@ description: Triton Tails (Furries at UCSD) is a student organization focused on
 </section>
 
 <!-- Spotlights -->
-<span id="learnmore"></span>
+{# <span id="learnmore"></span>
 {% from "../components/spotlight.njk" import spotlight %} {% set spotlights = [ { title: "Furries?
 at <b><i>MY</i></b> university!?", subtitle: "It's more likely than you think!", content: [ "Triton
 Tails (est. 2021) is a social club with over 500 members, devoted to appreciating and engaging with
@@ -63,20 +63,30 @@ collaborations for our members.", "We maintain a resume database to assist compa
 in finding exceptional talent. If you're interested in sponsoring our organization, partnering with
 our events, or recruiting talent within our community, reach out to us!" ], image:
 "/assets/images/spotlight04.jpg", alt: "Alumni Network", image_position: "left", background: "dark"
-} ] %} {% for spotlight_data in spotlights %} {{ spotlight(spotlight_data) }} {% endfor %}
+} ] %} {% for spotlight_data in spotlights %} {{ spotlight(spotlight_data) }} {% endfor %} #}
+<!-- Spotlight -->
+{% set spotlightData = {
+  spotlight: spotlights
+} %}
+{% include "../components/spotlight.njk" %}
 
 <!-- Photo Gallery -->
-{% set galleryData = { title: "Photo Gallery", description: "Explore some of our past events and see
-what we've been up to." } %} {% set galleryData = galleryData | merge({photos: gallery.photos}) %}
+{% set galleryData = {
+  title: "Photo Gallery",
+  description: "Explore some of our past events and see
+ what we 've been up to." } %}
+{% set galleryData = galleryData | merge({photos: gallery.photos}) %}
 {% include "../components/photo-gallery.njk" %}
 
 <!-- Perks -->
 {% set tableData = { title: "Membership Perks", description: "Triton Tails members get perks and
 discounts across campus, as well as travel and hotel benefits.", background_class: "bg-light",
-container_fluid: "-fluid" } %} {% set tableData = tableData | merge({headers: perks.headers, data:
-perks.data}) %} {% include "../components/data-table.njk" %}
+container_fluid: "-fluid" } %}
+{% set tableData = tableData | merge({headers: perks.headers, data: perks.data}) %}
+{% include "../components/data-table.njk" %}
 
 <!-- Non-Furries Accordion -->
 {% set accordionData = { title: "Common Myths & FAQs", description: "Here are some common questions
-we get from non-furries:", faqs: nonfurries.faqs } %} {% include "../components/accordion-set.njk"
+we get from non-furries:", faqs: nonfurries.faqs } %}
+{% include "../components/accordion-set.njk"
 %}

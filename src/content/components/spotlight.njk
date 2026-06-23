@@ -1,4 +1,4 @@
-{% macro spotlight(data) %}
+{# {% macro spotlight(data) %}
 <section class="py-5 {% if data.background == 'light' %}bg-light{% endif %}">
   <div class="container-fluid">
     <div class="row align-items-center g-4 g-lg-5">
@@ -18,4 +18,26 @@
     </div>
   </div>
 </section>
-{% endmacro %}
+{% endmacro %} #}
+{% for spotlight in spotlightData.spotlight %}
+  <section class="py-5 {% if spotlight.background == 'light' %}bg-light{% endif %}">
+    <div class="container-fluid">
+      <div class="row align-items-center g-4 g-lg-5">
+        <div class="col-lg-6 {% if spotlight.image_position == 'right' %}order-lg-2{% endif %} mb-4 mb-lg-0 fade-in">
+          <img src="{{ spotlight.image }}" class="d-block w-100" alt="{{ spotlight.alt }}">
+        </div>
+        <div class="col-lg-6 {% if spotlight.image_position == 'right'%}order-lg-1{% endif %} fade-in">
+          <h2 class="display-5 fw-bold">{{ spotlight.title | safe }}</h2>
+          {% if spotlight.subtitle %}
+            <p class="lead {% if spotlight.content %}mb-4{% endif %}">{{ spotlight.subtitle }}</p>
+          {% endif %}
+          {% for paragraph in spotlight
+            .content
+            .split("\n\n") %}
+            <p>{{ paragraph }}</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endfor %}
