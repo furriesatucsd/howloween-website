@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Members Only • Triton Tails</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="This page is for Triton Tails Members only, please enter the password to view." />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Site Assets -->
+    <link rel="stylesheet" href="/assets/main.css" />
+    <script type="module" src="/assets/main.js"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- GA4 -->
+    
+    <script>
+      // Check hostname at runtime
+      if (window.location.hostname === 'furriesatucsd.github.io') {
+        // Load GA4 script dynamically
+        const gaScript = document.createElement('script');
+        gaScript.async = true;
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-FL8NYH375F';
+        document.head.appendChild(gaScript);
+
+        // Initialize GA4
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-FL8NYH375F');
+      } else {
+        console.warn(
+          'Google Analytics is not enabled for this hostname:',
+          window.location.hostname
+        );
+      }
+    </script>
+    
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark">
+  <div class="container-fluid">
+    <a href="/" class="navbar-brand d-flex align-items-center">
+      <img src="/assets/images/top-logo.gif" alt="Triton Tails Logo" class="me-2" />
+      <span class="fw-bold">Howloween</span>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarMain"
+      aria-controls="navbarMain"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+         
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            href="/"
+            
+          >
+            Home
+          </a>
+        </li>
+          
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            href="/store/"
+            
+          >
+            Club Store
+          </a>
+        </li>
+          
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Upcoming Events
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li>
+              <a
+                class="dropdown-item "
+                href="/event-calendar/"
+                
+              >
+                Event Calendar
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+          
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            About Us
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li>
+              <a
+                class="dropdown-item "
+                href="/traditions/"
+                
+              >
+                Our Traditions
+              </a>
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item "
+                href="/team/"
+                
+              >
+                Our Team
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+          
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            href="https://linktr.ee/furriesatucsd"
+            target="_blank"
+            
+          >
+            Links &amp; Socials
+          </a>
+        </li>
+         
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <!-- Main Content -->
+    <main>
+<script>
+  async function hash(input) {
+    // Hash the input using SHA-256
+    const encoder = new TextEncoder();
+    const data = encoder.encode(input);
+    const buffer = await crypto.subtle.digest('SHA-256', data);
+    const result = Array.from(new Uint8Array(buffer))
+      .map((b) => b.toString(16).padStart(2, '0'))
+      .join('');
+
+    console.log(result);
+    return result;
+  }
+  async function checkIfPasswordCorrect() {
+    // Get the input value
+    const input = document.getElementById('password-input-box').value;
+    // Hash the input
+    const hashedInput = await hash(input);
+    // Using an http request, check if /[the hashed input].html is a valid website and returns 200 OK
+    fetch('/' + hashedInput + '.html')
+      .then((response) => {
+        if (response.ok) {
+          // If the response is OK, redirect to the page
+          window.location.href = '/' + hashedInput + '.html';
+        } else {
+          // If the response is not OK, show an error message
+          alert("Oops, that's not right. Please try again or ask an officer.");
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again later.');
+      });
+  }
+</script>
+
+<section class="wrapper style1 align-center">
+  <div class="inner">
+    <h1>Members Only</h1>
+    <p>
+      This page is for Triton Tails Members only. To access it, please enter the name &amp; species
+      of our mascot (e.g. "tony tiger"). If you're a new member, you should join our Discord to stay
+      updated on events!
+    </p>
+    <form
+      onsubmit="
+        event.preventDefault();
+        checkIfPasswordCorrect();
+      "
+    >
+      <ul class="actions justify-content-center">
+        <li>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter password"
+            id="password-input-box"
+          />
+        </li>
+      </ul>
+      <ul class="actions justify-content-center">
+        <li>
+          <button type="button" class="button secondary" onclick="history.back()">Go Back</button>
+        </li>
+        <li>
+          <button type="submit" class="button primary">Submit</button>
+        </li>
+      </ul>
+    </form>
+    <br />
+    <img src="/assets/images/stickers/oops.webp" alt="404" class="error-image" />
+  </div>
+</section>
+</main>
+
+    <!-- Footer -->
+<footer class="bg-dark text-white py-4 mt-5 text-center">
+  <div class="container">
+    <div class="mb-3">
+      <a href="https://linktr.ee/furriesatucsd" target="_blank" class="btn btn-outline-light btn-lg"
+        >Our Links &amp; Socials</a
+      >
+    </div>
+    <div>
+      <p>Triton Tails - Furries at UC San Diego</p>
+      <p class="small">
+        &copy; 2026 Triton Tails. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- External Scripts -->
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  </body>
+</html>
