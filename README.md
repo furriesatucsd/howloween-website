@@ -83,7 +83,7 @@ The project uses Nunjucks (`.njk`) as the templating language for pages and layo
 - `npm run clean` - Clean the dist directory
 - `npm run dev` - Start development server with hot reloading (cleans dist, runs Vite in watch mode, and starts 11ty server)
 - `npm run build` - Build the site for production (cleans dist, builds with Vite, and runs 11ty)
-- `npm run preview` - Build and preview the production site locally
+- `npm run serve` - Build and preview the production site locally
 - `npm run lint` - Run ESLint to check code quality in JavaScript/TypeScript files
 - `npm run lint:fix` - Fix ESLint issues automatically
 - `npm run format` - Format code using Prettier (JS, TS, JSON, MD, CSS, SCSS, NJK)
