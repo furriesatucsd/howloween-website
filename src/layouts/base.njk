@@ -67,11 +67,8 @@
     <!-- Main Content -->
     {% if content %}
     <main>{{ content | safe }}</main>
-    {% else %}
-      {% include "../content/components/coming-soon.njk" %}
-    {% endif %}
-
-    {% include "../content/components/footer.njk" %}
+    {% else %} {% include "../content/components/coming-soon.njk" %} {% endif %} {% include
+    "../content/components/footer.njk" %}
 
     <!-- External Scripts -->
     <!-- Bootstrap JS Bundle (includes Popper) -->

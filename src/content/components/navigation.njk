@@ -18,8 +18,7 @@
 
     <div class="collapse navbar-collapse" id="navbarMain">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        {% for item in navigation.main %} 
-        {% if item.type == "feature" %}
+        {% for item in navigation.main %} {% if item.type == "feature" %}
         <li class="nav-item">
           <a
             class="nav-link {% if page.url == item.url %}active{% endif %}"
