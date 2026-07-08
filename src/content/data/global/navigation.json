@@ -1,25 +1,69 @@
 {
   "main": [
     {
-      "title": "Home",
-      "url": "/"
+      "title": "Registration",
+      "type": "feature",
+      "url": "/registration/"
     },
     {
-      "title": "Club Store",
-      "url": "/store/"
-    },
-    {
-      "title": "Upcoming Events",
+      "title": "Venue",
       "type": "dropdown",
+      "url": "/venue/",
       "items": [
         {
-          "title": "Event Calendar",
-          "url": "/event-calendar/"
+          "title": "Floor Plans",
+          "url": "/venue/floor-plans/"
+        },
+        {
+          "title": "Food & Drink",
+          "url": "/venue/food/"
         }
       ]
     },
     {
-      "title": "About Us",
+      "title": "Travel",
+      "type": "dropdown",
+      "items": [
+        {
+          "title": "Parking",
+          "url": "/travel/parking/"
+        },
+        {
+          "title": "Public Transit",
+          "url": "/travel/transit/"
+        }
+      ]
+    },
+    {
+      "title": "Programming",
+      "type": "dropdown",
+      "items": [
+        {
+          "title": "Event Schedule",
+          "url": "/programming/schedule/"
+        },
+        {
+          "title": "West Ballroom",
+          "url": "/programming/ballroom-west"
+        }
+      ]
+    },
+    {
+      "title": "Get Involved",
+      "type": "dropdown",
+      "items": [
+        {
+          "title": "View All Applications",
+          "url": "/apply/"
+        },
+        {
+          "title": "Volunteering",
+          "url": "/volunteer/"
+        }
+      ]
+    },
+    {
+      "title": "Policies",
       "type": "dropdown",
       "items": [
         {
@@ -33,9 +77,8 @@
       ]
     },
     {
-      "title": "Links & Socials",
-      "url": "https://linktr.ee/furriesatucsd",
-      "external": true
+      "title": "About",
+      "url": "/about/"
     }
   ]
 }
