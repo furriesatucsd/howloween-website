@@ -30,6 +30,32 @@
               "description": "Upon confirmation, you will be directed to our payment processor."
             }
           ]
+        },
+        {
+          "name": "Sponsor Tickets",
+          "shortDesc": "Purchase if you are not a UCSD student and are not affiliated with UCSD",
+          "image": "/assets/images/store/Tile_Bracelets_Howloween2025.png",
+          "variants": [
+            {
+              "name": "default",
+              "price": 19.99,
+              "priceId": "",
+              "description": "Upon confirmation, you will be directed to our payment processor."
+            }
+          ]
+        },
+        {
+          "name": "Minor Tickets",
+          "shortDesc": "Purchase if you are not a UCSD student and are not affiliated with UCSD",
+          "image": "/assets/images/store/Tile_Bracelets_Howloween2025.png",
+          "variants": [
+            {
+              "name": "default",
+              "price": 19.99,
+              "priceId": "",
+              "description": "Upon confirmation, you will be directed to our payment processor."
+            }
+          ]
         }
       ]
     }

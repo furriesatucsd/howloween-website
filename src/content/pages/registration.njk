@@ -176,54 +176,27 @@ description: Registration page for Howloween 2026.
           />
           <div class="options-list">
             <!-- Options -->
-            <div class="mcq">
-              <div class="mcq-header">
-                <h6>Item options:</h6>
-              </div>
-              <div class="mcq-options">
-                <button class="btn btn-sm btn-secondary" type="button">Option A</button>
-                <button class="btn btn-sm btn-light" type="button">Option B</button>
-              </div>
-            </div>
+            <div class="mcq"></div>
 
             <!-- Description -->
-            <p id="item-modal-description">Full item description</p>
+            <label for="ppform-email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="ppform-email" required />
           </div>
         </div>
         <div class="modal-footer" id="item-modal-footer-standard">
-          <div class="modal-footer-price-display">
-            <p id="item-modal-price">$Price</p>
-            <p class="modal-footer-price-display-detail">Taxes already included</p>
-          </div>
           <div class="cart-item-actions">
-            <button class="btn btn-outline-secondary" id="item-modal-quantity-down" type="button">
-              –
-            </button>
-            <span class="cart-item-quantity" id="item-modal-quantity">1</span>
-            <button class="btn btn-outline-secondary" id="item-modal-quantity-up" type="button">
-              +
-            </button>
-            <button id="item-modal-addtocart" class="btn btn-primary" type="button">
-              Add to Cart
-            </button>
-          </div>
-        </div>
-        <!-- Different footer state for when item is added to cart: -->
-        <div class="modal-footer" id="item-modal-footer-addedtocart">
-          <div class="modal-footer-price-display">
-            <span class="text-success font-weight-bold">Added to Cart!</span>
-          </div>
-          <button
-            class="btn btn-link text-secondary"
-            data-bs-dismiss="modal"
-            onclick="
+            <button 
+              id="item-modal-addtocart" 
+              class="btn btn-primary" 
+              onclick="
               openCartModal();
               fireGAEvent('Clicked View Cart After Adding to Cart');
-            "
-            type="button"
-          >
-            View Cart
-          </button>
+              "
+              type="button"
+            >
+              Submit
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -298,7 +271,6 @@ description: Registration page for Howloween 2026.
           <h2>Event Tickets</h2>
           <p>Purchase your Tickets Here!</p>
         </div>
-        <button class="button primary" onclick="openCartModal()" type="button">Cart</button>
       </div>
     </div>
     <img id="store-banner" src="/assets/images/store/store_banner.jpeg" alt="Store Banner" />
