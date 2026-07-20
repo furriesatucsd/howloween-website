@@ -179,8 +179,9 @@ description: Registration page for Howloween 2026.
             <div class="mcq"></div>
 
             <!-- Description -->
-            <label for="ppform-email" class="form-label">Email Address</label>
-            <input type="email" class="form-control" id="ppform-email" required />
+            <div id="item-modal-description"></div>
+            <b></b>
+            <div id="item-modal-form"></div>
           </div>
         </div>
         <div class="modal-footer" id="item-modal-footer-standard">
@@ -589,6 +590,8 @@ description: Registration page for Howloween 2026.
       itemModal.querySelector('#itemModalLabel').textContent = item.name;
       itemModal.querySelector('#item-modal-image').src = item.image;
       itemModal.querySelector('#item-modal-image').alt = item.name;
+      itemModal.querySelector('#item-modal-description').textContent = item.regDesc;
+      itemModal.querySelector('#item-modal-form').innerHTML = item.regForm; 
 
       // Update the item modal with the variant details
       var firstVariant = item.variants[Object.keys(item.variants)[0]];
