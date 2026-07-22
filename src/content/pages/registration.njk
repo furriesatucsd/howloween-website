@@ -197,6 +197,18 @@ description: Registration page for Howloween 2026.
             >
               Submit
             </button>
+
+            <button 
+              id="item-modal-purchase" 
+              class="btn btn-primary" 
+              onclick="
+              openCartModal();
+              fireGAEvent('Clicked View Cart After Adding to Cart');
+              "
+              type="button"
+            >
+              Submit
+            </button>
           </div>
         </div>
       </div>
@@ -728,6 +740,12 @@ description: Registration page for Howloween 2026.
     });
   });
 
+  // item Modal: Purchase Ticket from Submit Button
+  var submitButton = document.querySelector('#item-modal-purchase'); 
+  submitButton.addEventListener('click', function (e) {
+    
+  });
+
   // CART MODAL ACTIONS
 
   // Open the cart modal
@@ -919,7 +937,7 @@ description: Registration page for Howloween 2026.
         );
       });
   });
-
+  
   // PAGE EVENTS
 
   // Fire a Google Analytics event containing the cart contents, number of products, total price, and store status
