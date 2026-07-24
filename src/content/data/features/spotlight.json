@@ -2,21 +2,36 @@
   "spotlights": [
     {
       "id": "01",
-      "title": "Registration",
-      "content": "Our Registration is currently unavailble at the moment: Registration can be found: <a href=\"/store/\">HERE</a>",
+      "title": "Stay updated!",
+      "content": "Registration for Howloween will open up soon. If you want to be notified when it opens, and receive other news related to the event, you should join our Discord server or Telegram announcement channel :3",
       "image": "assets/images/spotlight01.jpg",
       "alt": "Furries at UCSD",
       "image_position": "right",
-      "background": "light"
+      "background": "light",
+      "actions": {
+        "discord": {
+          "text": "Discord",
+          "link": "https://discord.com"
+        },
+        "telegram": {
+          "text": "Telegram",
+          "link": "https://telegram.com"
+        }
+      }
     },
     {
       "id": "02",
-      "title": "Parking for the Event",
-      "subtitle": "Gilman Parking Structure",
-      "content": "252 Russell Ln, La Jolla, CA 92093",
+      "title": "Get Involved!",
+      "content": "Do you have an idea for a panel or art you want to sell? Or even just want to help make this event happen in any way you can? We currently have applications open for many different aspects of the event, so apply while you still can!",
       "image": "/assets/images/maps/GilmanParkingStructure.png",
       "alt": "Gilman Parking Structure Image",
-      "image_position": "left"
+      "image_position": "left",
+      "actions": {
+        "applications": {
+          "text": "View all applications",
+          "link": "/apply"
+        }
+      }
     }
   ]
 }

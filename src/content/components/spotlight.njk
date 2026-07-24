@@ -35,7 +35,11 @@
         <p class="lead {% if spotlight.content %}mb-4{% endif %}">{{ spotlight.subtitle }}</p>
         {% endif %} {% for paragraph in spotlight .content .split("\n\n") %}
         <p>{{ paragraph }}</p>
-        {% endfor %}
+        {% endfor %} {% if spotlight.actions %}
+          {% for k, action in spotlight.actions %}
+            <a href="{{ action.link }}" class="btn btn-dark">{{ action.text }}</a>
+          {% endfor %}
+        {% endif %}
       </div>
     </div>
   </div>

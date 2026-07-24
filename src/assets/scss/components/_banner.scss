@@ -16,13 +16,37 @@
 
   .banner-image {
     transition: transform 10s ease-out;
-    background: url('/assets/images/bannerHowloween.jpg') center/cover no-repeat;
-    filter: brightness(0.45);
+    background: url('/assets/images/banner_blank.png') top/cover no-repeat;
 
+    /*
     &:hover {
       transform: scale(1.05);
     }
+    */
   }
+
+  .banner-asset-wrapper {
+    max-width: 50%;
+    margin-bottom: -20vh;
+  }
+
+  .banner-asset {
+    
+    max-height: 100%;
+  }
+
+  .info-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 110vh;
+    width: 100vw; 
+    margin: 0;
+    padding: 0    
+  }
+
+
 
   .container-fluid {
     z-index: 2;
