@@ -1,5 +1,23 @@
 ---
 layout: base.njk
 title: All Applications
-description: Parking information for Howloween 2026.
+description: All applications (staff, programming, etc.) for Howloween and their statuses.
 ---
+
+<!-- Page Banner -->
+<section class="wrapper align-center">
+  <div class="inner">
+    <div>
+      <h1>All Applications</h1>
+      <p>
+        Interested in helping to make Howloween a bigger and better event? You're in the right place!</br>
+        For the most recent information regarding application availability and deadlines, please check our announcements channel on Discord.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Applications -->
+{% set applicationData = { application: application.applications } %} {% include
+"../components/application.njk" %}
