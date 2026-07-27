@@ -1,7 +1,13 @@
 // Navbar component styling
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 .navbar {
-  background-color: #00447a;
+  background-color: #000000;
   z-index: 1030;
+  font-family: $font-family-strong;
+  font-size: 1.15rem;
+  letter-spacing: 5%;
 }
 
 .navbar-brand {
@@ -9,13 +15,19 @@
 }
 
 .navbar-brand img {
-  height: 2.5rem;
+  height: 3.5rem;
 }
 
 .nav-link {
   font-weight: 500;
+  margin-right: 0.5rem;
 }
 
 .dropdown-menu {
   z-index: 1031;
+  font-family: $font-family-base;
+}
+
+.feature {
+  text-shadow: 0 0 0.3rem red;
 }
