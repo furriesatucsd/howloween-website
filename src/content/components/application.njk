@@ -35,18 +35,18 @@
           />
           {% endif %}
 
-          <div class="d-flex justify-content-between align-items-center gap-3">
+          <div class="applications">
             <div>
               <h2 class="display-6 fw-bold mb-2">{{ application.title | safe }}</h2>
               <div>
                 {% if application.status == "open" %}
-                <span class="badge bg-success fs-5 d-inline-block">Open</span>
+                <span class="badge bg-success fs-5 d-inline-block mb-2">Open</span>
                 {% if application.dueDate %}
                 <p class="d-inline-block ms-3 fs-5 mb-0">Closes {{ application.dueDate }}</p>
                 {% endif %} {% elif application.status == "soon" %}
-                <span class="badge bg-warning fs-5 d-inline-block">Opening Soon</span>
+                <span class="badge bg-warning fs-5 d-inline-block mb-2">Opening Soon</span>
                 {% elif application.status == "closed" %}
-                <span class="badge bg-danger fs-5 d-inline-block">Closed</span>
+                <span class="badge bg-danger fs-5 d-inline-block mb-2">Closed</span>
                 {% endif %}
               </div>
             </div>
