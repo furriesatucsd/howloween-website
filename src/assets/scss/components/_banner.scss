@@ -24,80 +24,76 @@
     */
   }
 
-
-.info-flex {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 100%;
-  margin: 0 auto;
-  padding: 0;
-  position: relative;
-
-  @include respond-to(large) {
-    flex-direction: column-reverse;
-    align-items: center;
-    height: auto;
-    min-height: 100%;
-  }
-}
-
-.banner-asset-wrapper {
-  width: 50%;
-  margin-left: auto;
-  text-align: center;
-  z-index: 3;
-  filter: drop-shadow(0 0 2rem rgba(0, 0, 0, 1));
-
-  @include respond-to(large) {
-    max-width: 80%;
-    width: 100%;
-    margin-left: 0;
+  .info-flex {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 1rem;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+
+    @include respond-to(large) {
+      flex-direction: column-reverse;
+      align-items: center;
+      height: auto;
+      min-height: 100%;
+    }
   }
-}
 
-.banner-text p {
-  text-shadow: 0 0 0.5rem black; 
-}
+  .banner-asset-wrapper {
+    width: 50%;
+    margin-left: auto;
+    text-align: center;
+    z-index: 3;
+    filter: drop-shadow(0 0 2rem rgba(0, 0, 0, 1));
 
-.banner-asset {
-  width: 50%;
-  min-width: 500px;
-  max-width: 1000px;
+    @include respond-to(large) {
+      max-width: 80%;
+      width: 100%;
+      margin-left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
 
-  @include respond-to(large) {
-    min-width: 200px;
+  .banner-text p {
+    text-shadow: 0 0 0.5rem black;
+  }
+
+  .banner-asset {
+    width: 50%;
+    min-width: 500px;
+    max-width: 1000px;
+
+    @include respond-to(large) {
+      min-width: 200px;
+      width: 100%;
+    }
+  }
+
+  .banner-main {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: auto;
+    margin: 0;
+    max-width: 800px;
     width: 100%;
+    transform: translateY(5%);
+    z-index: 2;
+    pointer-events: none;
+
+    @include respond-to(large) {
+      position: static;
+      align-self: center;
+      width: 670px;
+      transform: none;
+      pointer-events: auto;
+    }
   }
-}
-
-.banner-main {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: auto;
-  margin: 0;
-  max-width: 800px;
-  width: 100%;
-  transform: translateY(5%) ;
-  z-index: 2;
-  pointer-events: none;
-
-  @include respond-to(large) {
-    position: static;
-    align-self: center;
-    width: 670px;
-    transform: none;
-    pointer-events: auto;
-  }
-}
-  
-
-
 
   .container-fluid {
     z-index: 2;

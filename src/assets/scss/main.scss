@@ -24,9 +24,9 @@
 @use './layouts/container';
 
 main {
-    min-height: 100vh;
-    flex-grow: 1;
-    color: white;
+  min-height: 100vh;
+  flex-grow: 1;
+  color: white;
 }
 
 .bg-warning {
@@ -35,5 +35,5 @@ main {
 }
 
 .bg-darker {
-    background-color: #111111;
+  background-color: #111111;
 }

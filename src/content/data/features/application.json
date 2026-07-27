@@ -6,7 +6,7 @@
       "image": "../../assets/images/flyer_volunteer.png",
       "image_position": "right",
       "status": "open",
-      "link": "https://docs.google.com/forms/d/e/1FAIpQLScR5kA-R7Pv0on8Qeoezg8hBaP31UlwhJe5D3jwLSEaW7gekA/viewform"    
+      "link": "https://docs.google.com/forms/d/e/1FAIpQLScR5kA-R7Pv0on8Qeoezg8hBaP31UlwhJe5D3jwLSEaW7gekA/viewform"
     },
     {
       "id": "02",
@@ -15,25 +15,25 @@
       "image_position": "right",
       "status": "open",
       "dueDate": "7/31",
-      "link": "https://docs.google.com/forms/d/e/1FAIpQLSc4dsSs_Dqr4NmZoOA0PWUE-hKPK9ougv_Lj2eXl1P1GD7jzw/viewform"    
+      "link": "https://docs.google.com/forms/d/e/1FAIpQLSc4dsSs_Dqr4NmZoOA0PWUE-hKPK9ougv_Lj2eXl1P1GD7jzw/viewform"
     },
     {
       "id": "03",
-      "title": "Panel & Programming Application",
+      "title": "Panel &amp; Programming Application",
       "status": "open",
       "image": "../../assets/images/flyer_ep.png",
       "image_position": "right",
       "dueDate": "9/5",
-      "link": "https://docs.google.com/forms/d/e/1FAIpQLSfE6zzeMmbppmsyfleiweKm2VuKW5BKb4WmKnNSeDCcZwiuFw/viewform"    
+      "link": "https://docs.google.com/forms/d/e/1FAIpQLSfE6zzeMmbppmsyfleiweKm2VuKW5BKb4WmKnNSeDCcZwiuFw/viewform"
     },
     {
       "id": "04",
-      "title": "DJ & Performer Application",
+      "title": "DJ &amp; Performer Application",
       "status": "open",
       "image": "../../assets/images/flyer_dj.png",
       "image_position": "right",
       "dueDate": "9/5",
-      "link": "https://docs.google.com/forms/d/e/1FAIpQLScuJLrACDkO3UdryJ4WRsnaUWOmxvke6XYQvMHS8CHI1V284g/viewform"    
+      "link": "https://docs.google.com/forms/d/e/1FAIpQLScuJLrACDkO3UdryJ4WRsnaUWOmxvke6XYQvMHS8CHI1V284g/viewform"
     },
     {
       "id": "05",
