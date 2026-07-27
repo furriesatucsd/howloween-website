@@ -19,7 +19,10 @@
   </div>
 </section>
 {% endmacro %} #} {% for spotlight in spotlightData.spotlight %}
-<section class="py-5 {% if spotlight.background == 'light' %}bg-light{% endif %}">
+<section class="py-5  text-light  {% if spotlight.background == 'light' %}bg-light
+                                  {% elif spotlight.background == 'dark' %}bg-dark bg-opacity-80 text-light
+                                  {% elif spotlight.background == 'darker' %}bg-darker text-light
+                                  {% endif %}">
   <div class="container-fluid">
     <div class="row align-items-center g-4 g-lg-5">
       <div
@@ -37,7 +40,12 @@
         <p>{{ paragraph }}</p>
         {% endfor %} {% if spotlight.actions %}
           {% for k, action in spotlight.actions %}
-            <a href="{{ action.link }}" class="btn btn-dark">{{ action.text }}</a>
+            {% if action.icon %}
+            <a href="{{ action.link }}" class="btn btn-primary fs-5"><i class="{{ action.icon }}"></i>
+            {{ action.text }} 
+            </a>
+            {% else %} <a href="{{ action.link }}" class="btn btn-primary fs-5">{{ action.text }}</a>
+            {% endif %}
           {% endfor %}
         {% endif %}
       </div>
