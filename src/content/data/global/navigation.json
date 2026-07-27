@@ -2,7 +2,6 @@
   "main": [
     {
       "title": "Registration",
-      "type": "feature",
       "url": "/registration/"
     },
     {
@@ -41,10 +40,6 @@
         {
           "title": "Event Schedule",
           "url": "/programming/schedule/"
-        },
-        {
-          "title": "West Ballroom",
-          "url": "/programming/ballroom-west"
         }
       ]
     },
@@ -58,7 +53,7 @@
         },
         {
           "title": "Volunteering",
-          "url": "/volunteer/"
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLScR5kA-R7Pv0on8Qeoezg8hBaP31UlwhJe5D3jwLSEaW7gekA/viewform"
         }
       ]
     },
@@ -67,12 +62,12 @@
       "type": "dropdown",
       "items": [
         {
-          "title": "Our Traditions",
-          "url": "/traditions/"
+          "title": "Attendee Policies",
+          "url": "/policies/attendees"
         },
         {
-          "title": "Our Team",
-          "url": "/team/"
+          "title": "Vendor Policies",
+          "url": "/policies/vendors"
         }
       ]
     },
