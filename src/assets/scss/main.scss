@@ -22,3 +22,18 @@
 
 // Layouts
 @use './layouts/container';
+
+main {
+  min-height: 100vh;
+  flex-grow: 1;
+  color: white;
+}
+
+.bg-warning {
+  background-color: #c19401 !important;
+  color: #ffffff !important;
+}
+
+.bg-darker {
+  background-color: #111111;
+}

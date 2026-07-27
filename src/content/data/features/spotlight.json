@@ -2,42 +2,47 @@
   "spotlights": [
     {
       "id": "01",
-      "title": "Furries? at <b><i>MY<\/i><\/b> university!?",
-      "subtitle": "It's more likely than you think!",
-      "content": "Triton Tails (est. 2021) is a social club with over 500 members, devoted to appreciating and engaging with furry culture and media through a positive and lighthearted lens.\n\n Our shared interests bring us together in many forms: art-making, sharing media, watching films/movies, and crafting costumes and cosplay. Our events include game nights, study jams, VR hangouts, and festivals with hundreds of attendees—taking place across San Diego, LA, and beyond.\n\n We hope to showcase the best of what the fandom has to offer: a place for community, belonging, and having fun, whether or not you're a furry.",
+      "title": "Want to stay updated?",
+      "content": "Registration for Howloween will open up soon. If you want to be notified when it opens, and receive other news related to the event, you should join our Discord server or Telegram announcement channel :3",
       "image": "assets/images/spotlight01.jpg",
       "alt": "Furries at UCSD",
       "image_position": "right",
-      "background": "light"
+      "background": "darker",
+      "actions": {
+        "discord": {
+          "text": "Discord",
+          "link": "https://discord.gg/VBuMWcX7MA",
+          "icon": "fa-brands fa-discord"
+        },
+        "telegram": {
+          "text": "Telegram",
+          "link": "https://t.me/+wKf6Jj8EUnE1ZDgx",
+          "icon": "fa-brands fa-telegram"
+        }
+      }
     },
     {
       "id": "02",
-      "title": "What is a furry?",
-      "subtitle": "",
-      "content": "Furries are anyone who is interested in cool animal characters—like from video games, books, or shows. Think of Disney's Zootopia, Puss in Boots, and Sonic the Hedgehog. Furries often create their own original characters, called fursonas, which represent them in a fun and creative way.\n\n At its core, being a furry is about having fun, expressing yourself, and connecting with others who share an interest in cool animal characters!",
-      "image": "/assets/images/spotlight02.jpg",
-      "alt": "What is a furry",
-      "image_position": "left"
+      "title": "Get involved!",
+      "content": "Do you have an idea for a panel or art you want to sell? Or even just want to help make this event happen in any way you can? We currently have applications open for many different aspects of the event, so apply while you still can!",
+      "image": "/assets/images/spotlight_apps.png",
+      "alt": "Application Flyers Art",
+      "image_position": "left",
+      "actions": {
+        "applications": {
+          "text": "View all applications",
+          "link": "/apply"
+        }
+      }
     },
     {
       "id": "03",
-      "title": "How do I get involved?",
-      "subtitle": "Join our community and participate in our regular events!",
-      "content": "We have casual hangouts and study jams almost every day, and club meetups every week. Join our Discord to stay updated and sign-up for events.\n\n For our most active members: We also have club merch and membership cards available, which give you perks and discounts across campus!",
-      "image": "/assets/images/spotlight03.jpg",
-      "alt": "Get involved",
+      "title": "What is Howloween?",
+      "content": "Howloween is an annual Halloween-themed mini convention at UC San Diego, hosted by Triton Tails, UCSD's resident furry club. Attendees can enjoy a wide range of activities, from vendor fairs and gaming to costume and dance competitions, night raves, and more!\n\n Howloween started in 2024 with just an artist alley and a couple of rooms. Since then, it has grown into a much larger event, bringing in many different student orgs on campus for collaboration and hundreds of attendees each year.",
+      "image": "/assets/images/spotlight_howl.jpg",
+      "alt": "Howloween 2025 Group Photo",
       "image_position": "right",
-      "background": "light"
-    },
-    {
-      "id": "04",
-      "title": "For Companies &amp; Sponsors",
-      "subtitle": "Our Alumni and Career Network",
-      "content": "Our alumni network connects students with professionals and employers across various industries and academia worldwide. Our community includes top-performing furries in STEM, and we foster connections nationwide to create opportunities and collaborations for our members.\n\n We maintain a resume database to assist companies and recruiters in finding exceptional talent. If you're interested in sponsoring our organization, partnering with our events, or recruiting talent within our community, reach out to us!",
-      "image": "/assets/images/spotlight04.jpg",
-      "alt": "Alumni Network",
-      "image_position": "left",
-      "background": "dark"
+      "background": "darker"
     }
   ]
 }
