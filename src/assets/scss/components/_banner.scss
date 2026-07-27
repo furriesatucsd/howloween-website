@@ -30,11 +30,12 @@
     align-items: center;
     height: 100%;
     margin: 0 auto;
-    padding: 0;
+    padding-bottom: 0 !important;
     position: relative;
 
     @include respond-to(large) {
       flex-direction: column-reverse;
+      justify-content: space-between;
       align-items: center;
       height: auto;
       min-height: 100%;
@@ -65,12 +66,12 @@
 
   .banner-asset {
     width: 50%;
-    min-width: 500px;
+    min-width: 200px;
     max-width: 1000px;
 
     @include respond-to(large) {
-      min-width: 200px;
-      width: 100%;
+      min-width: 300px;
+      max-height: 10%;
     }
   }
 
@@ -89,8 +90,8 @@
     @include respond-to(large) {
       position: static;
       align-self: center;
-      width: 670px;
-      transform: none;
+      max-width: 670px;
+      transform: translateY(5%);
       pointer-events: auto;
     }
   }
