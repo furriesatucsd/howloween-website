@@ -1,0 +1,63 @@
+{# {% macro application(data) %}
+<section class="py-5 {% if data.background == 'light' %}bg-light{% endif %}">
+  <div class="container-fluid">
+    <div class="row align-items-center g-4 g-lg-5">
+      <div
+        class="col-lg-6 {% if data.image_position == 'right' %}order-lg-2{% endif %} mb-4 mb-lg-0 fade-in"
+      >
+        <img src="{{ data.image }}" alt="{{ data.alt }}" class="img-fluid rounded shadow w-100" />
+      </div>
+      <div class="col-lg-6 {% if data.image_position == 'right' %}order-lg-1{% endif %} fade-in">
+        <h2 class="display-5 fw-bold">{{ data.title | safe }}</h2>
+        {% if data.subtitle %}
+        <p class="lead {% if data.content %}mb-4{% endif %}">{{ data.subtitle }}</p>
+        {% endif %} {% for paragraph in data.content %}
+        <p>{{ paragraph }}</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endmacro %} #}
+<section class="py-5 text-light">
+  <div class="container-fluid">
+    <div class="row g-4 g-lg-5">
+      {% for application in applicationData.application %}
+      <div class="col-lg-6 fade-in">
+        <div
+          class="h-100 {% if application.background == 'light' %}bg-light {% elif application.background == 'dark' %}bg-dark bg-opacity-80 text-light {% elif application.background == 'darker' %}bg-black text-light {% endif %} rounded p-4"
+        >
+          {% if application.image %}
+          <img
+            src="{{ application.image }}"
+            class="d-block w-100 mb-4"
+            alt="{{ application.alt }}"
+          />
+          {% endif %}
+
+          <div class="applications">
+            <div>
+              <h2 class="display-6 fw-bold mb-2">{{ application.title | safe }}</h2>
+              <div>
+                {% if application.status == "open" %}
+                <span class="badge bg-success fs-5 d-inline-block mb-2">Open</span>
+                {% if application.dueDate %}
+                <p class="d-inline-block ms-3 fs-5 mb-0">Closes {{ application.dueDate }}</p>
+                {% endif %} {% elif application.status == "soon" %}
+                <span class="badge bg-warning fs-5 d-inline-block mb-2">Opening Soon</span>
+                {% elif application.status == "closed" %}
+                <span class="badge bg-danger fs-5 d-inline-block mb-2">Closed</span>
+                {% endif %}
+              </div>
+            </div>
+
+            {% if application.link %}
+            <a href="{{ application.link }}" class="btn btn-primary fs-4 flex-shrink-0">Apply</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

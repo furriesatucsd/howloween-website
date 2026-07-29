@@ -1,52 +1,29 @@
 ---
 layout: base.njk
 title: Home
-description: Howloween is a UCSD Triton Tails Haloween Event set to take place in October of 2026.
+description: A Halloween-themed mini-convention at UC San Diego hosted by Triton Tails, set to take place on October 11th, 2026.
 ---
 
 <!-- Page Banner -->
 <section class="banner text-white position-relative py-0">
   <!-- Full-width background image -->
-  <div class="banner-image position-absolute w-100 h-100"></div>
-
-  <!-- Content overlay -->
-  <div
-    class="container-fluid position-relative h-100 d-flex align-items-center justify-content-center"
-  >
-    <div class="row justify-content-center">
-      <div class="col-lg-10 col-xl-8 text-center fade-in content-visible">
-        <h1 class="display-1 fw-bolder mb-3">Howloween</h1>
-        <p class="lead fs-3 mb-3">Cinema Screams</p>
-        <p class="fs-5 mb-4">October 11th 2026 • 11Am-11PM • Price Center, UC San Diego </p>
-        <div class="d-flex gap-3 justify-content-center">
-          <a
-            href="https://furriesatucsd.github.io/"\
-            class="btn"
-            target="_blank"
-          >
-            <img src="assets/images/icons/TTIcon.png" alt="TT Icon"/>
-          </a>
-          <a
-            href="https://discord.com/invite/BPTtRtz3Fh"\
-            class="btn"
-            target="_blank"
-          >
-            <img src="assets/images/icons/discord.png" alt="Discord Icon"/>
-          </a>
-          <a
-            href="https://www.instagram.com/furriesatucsd"\
-            class="btn"
-            target="_blank"
-          >
-            <img src="assets/images/icons/instagram.png" alt="Discord Icon"/>
-          </a>
-          <a
-            href="https://linktr.ee/furriesatucsd"\
-            class="btn"
-            target="_blank"
-          >
-            <img src="assets/images/icons/linktree.png" alt="Discord Icon"/>
-          </a>
+  <div class="banner-image position-absolute w-100 h-100">
+    <!-- Content overlay -->
+    <div class="info-flex container-fluid">
+      <div class="banner-main"><img src="assets/images/howloween_main_2.png" /></div>
+      <div class="banner-asset-wrapper">
+        <div class="presents">
+          <p class="fs-3 mb-0">Triton Tails presents:</p>
+        </div>
+        <div class="banner-asset-row">
+          <img src="assets/images/howloween_title.png" class="banner-asset" />
+          <div class="banner-text">
+            <p class="fs-2">
+              October 11, 2026<br />
+              11AM - 11PM<br />
+              UC San Diego Price Center<br />
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -56,19 +33,3 @@ description: Howloween is a UCSD Triton Tails Haloween Event set to take place i
 <!-- Spotlight -->
 {% set spotlightData = { spotlight: spotlight.spotlights } %} {% include
 "../components/spotlight.njk" %}
-
-<!-- Photo Gallery -->
-{% set galleryData = { title: "Photo Gallery", description: "Explore some of our past events and see
-what we 've been up to." } %} {% set galleryData = galleryData | merge({photos: gallery.photos}) %}
-{% include "../components/photo-gallery.njk" %}
-
-<!-- Perks -->
-{% set tableData = { title: "Membership Perks", description: "Triton Tails members get perks and
-discounts across campus, as well as travel and hotel benefits.", background_class: "bg-light",
-container_fluid: "-fluid" } %} {% set tableData = tableData | merge({headers: perks.headers, data:
-perks.data}) %} {% include "../components/data-table.njk" %}
-
-<!-- Non-Furries Accordion -->
-{% set accordionData = { title: "Common Myths & FAQs", description: "Here are some common questions
-we get from non-furries:", faqs: nonfurries.faqs } %} {% include "../components/accordion-set.njk"
-%}
