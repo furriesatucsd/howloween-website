@@ -743,7 +743,39 @@ description: Registration page for Howloween 2026.
   // item Modal: Purchase Ticket from Submit Button
   var submitButton = document.querySelector('#item-modal-purchase'); 
   submitButton.addEventListener('click', function (e) {
-    
+    var itemInfo = JSON.parse(addToCartButton.dataset.itemInfo);
+    var variantInfo = JSON.parse(addToCartButton.dataset.variantInfo);
+    if (!itemInfo || !variantInfo) {
+      alert(
+        "Oops, we couldn't parse the item data. Please try again and let us know if this error keeps happening."
+      );
+      return;
+    }
+    //replace later with a non-magick number
+    var quantity = 1;
+
+    // If there is an external site, open it in a new tab and return early
+    if (variantInfo.externalUrl) {
+      window.open(variantInfo.externalUrl, '_blank');
+      return;
+    }
+
+    // Run sanity checks
+    var validation = validateCartItem({
+      price: variantInfo.priceId,
+      quantity: quantity,
+      itemInfo: itemInfo,
+      variantInfo: variantInfo,
+    });
+    if (!validation.isValid) {
+      alert(
+        "Oops, you can't add that to your cart. Please let us know if you think this is a mistake. (" +
+          validation.reason +
+          ')'
+      );
+      return;
+    }
+
   });
 
   // CART MODAL ACTIONS
