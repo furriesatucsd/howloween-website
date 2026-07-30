@@ -743,6 +743,7 @@ description: Registration page for Howloween 2026.
   // item Modal: Purchase Ticket from Submit Button
   var submitButton = document.querySelector('#item-modal-purchase'); 
   submitButton.addEventListener('click', function (e) {
+    //Add to Cart functionality
     var itemInfo = JSON.parse(addToCartButton.dataset.itemInfo);
     var variantInfo = JSON.parse(addToCartButton.dataset.variantInfo);
     if (!itemInfo || !variantInfo) {
@@ -753,13 +754,11 @@ description: Registration page for Howloween 2026.
     }
     //replace later with a non-magick number
     var quantity = 1;
-
     // If there is an external site, open it in a new tab and return early
     if (variantInfo.externalUrl) {
       window.open(variantInfo.externalUrl, '_blank');
       return;
     }
-
     // Run sanity checks
     var validation = validateCartItem({
       price: variantInfo.priceId,
@@ -775,8 +774,81 @@ description: Registration page for Howloween 2026.
       );
       return;
     }
+    // No duplicate items are allowed. Check if the item is already in the cart.
+    var isItemAlreadyInCart = false;
+    for (var i = 0; i < userShoppingCart.length; i++) {
+      if (userShoppingCart[i].price === variantInfo.priceId) {
+        isItemAlreadyInCart = true;
 
+        // If item is already in cart, just append the new quantity
+        userShoppingCart[i].quantity += quantity;
+        break;
+      }
+    }
+    // If item is not in cart, add it
+    if (!isItemAlreadyInCart) {
+      userShoppingCart.push({
+        price: variantInfo.priceId,
+        quantity: quantity,
+        itemInfo: itemInfo,
+        variantInfo: variantInfo,
+      });
+    }
+    // Send to GA
+    fireGAEvent('Clicked Add to Cart', {
+      added_item_name: itemInfo.name + ' - ' + variantInfo.name,
+    });
+
+    var name = itemModal.querySelector('#itemModalLabel').textContent;
+
+    if(name == "UCSD Tickets"){
+      purchaseUT();
+    }else if(name == "Non-UCSD Tickets"){
+      purchaseNT();
+    }else if (name == "Sponsor Tickets"){
+      purchaseST();
+    }else if(name == "Minor Tickets"){
+      purchaseMT();
+    }
+    
   });
+
+  //Purchase Functions
+  function purchaseUT(){
+    var name = document.getElementById('ppform-name').value;
+    var email = document.getElementById('ppform-email').value;
+    var badgeName = document.getElementById('ppform-badge').value;
+    var contact = document.getElementById('ppform-contact').value;
+  
+  }
+
+  function purchaseNT(){
+    var name = document.getElementById('ppform-name').value;
+    var email = document.getElementById('ppform-email').value;
+    var badgeName = document.getElementById('ppform-badge').value;
+    var contact = document.getElementById('ppform-contact').value;
+
+
+  }
+
+  function purchaseST(){
+    var name = document.getElementById('ppform-name').value;
+    var email = document.getElementById('ppform-email').value;
+    var badgeName = document.getElementById('ppform-badge').value;
+    var contact = document.getElementById('ppform-contact').value;
+    var hoodie = document.getElementById('ppform-hoodie-size').value; 
+
+
+  }
+
+  function purchaseMT(){
+    var name = document.getElementById('ppform-name').value;
+    var email = document.getElementById('ppform-email').value;
+    var badgeName = document.getElementById('ppform-badge').value;
+    var contact = document.getElementById('ppform-contact').value;
+
+
+  }
 
   // CART MODAL ACTIONS
 
