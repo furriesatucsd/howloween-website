@@ -3,7 +3,7 @@
 
 // Banner component styling
 .banner {
-  min-height: 67dvh;
+  min-height: 100vh;
   display: flex;
   padding: 0;
   overflow: hidden;
@@ -96,7 +96,14 @@
     }
   }
 
+  .character-image {
+    height: 100vh;
+    object-fit: cover;
+    object-position: center 70%;
+  }
+
   .container-fluid {
+    position: relative;
     z-index: 2;
     padding: 2rem 2rem;
   }
