@@ -187,18 +187,6 @@ description: Registration page for Howloween 2026.
         <div class="modal-footer" id="item-modal-footer-standard">
           <div class="cart-item-actions">
             <button 
-              id="item-modal-addtocart" 
-              class="btn btn-primary" 
-              onclick="
-              openCartModal();
-              fireGAEvent('Clicked View Cart After Adding to Cart');
-              "
-              type="button"
-            >
-              Submit
-            </button>
-
-            <button 
               id="item-modal-purchase" 
               class="btn btn-primary" 
               onclick="
@@ -614,24 +602,24 @@ description: Registration page for Howloween 2026.
   // Post Payment Form: Submit the form
   const ppformGoogleId = '1FAIpQLScD-LzhUBFRwoxNNT4jOAK7KZ9WdKwwENPRQED-h7YXKA0M_w'; // The ID of the Google Form to submit the data to
   function submitPPForm() {
+    var name = document.getElementById('ppform-name').value;
     var email = document.getElementById('ppform-email').value;
+    var badge = document.getElementById('ppform=badge').value; 
     var contact = document.getElementById('ppform-contact').value;
-    var pickupLocation = document.getElementById('ppform-pickup-location').value;
-    var tshirtSize = document.getElementById('ppform-tshirt-size').value;
-    var comments = document.getElementById('ppform-comments').value;
+    var hoodieSize = document.getElementById('ppform-hoodie-size').value;
 
     // Validate the responses
-    if (!email || !contact || !pickupLocation) {
+    if (!name || !email || !badge || ((name === "Sponsor Tickets") && !hoodieSize)) {
       alert('Please fill out all required fields.');
       return;
     }
 
     console.log('Post-payment form responses:', {
+      name,
       email,
+      badge,
       contact,
-      pickupLocation,
-      tshirtSize,
-      comments,
+      hoodieSize,
       userOrderId,
     });
 
@@ -640,9 +628,9 @@ description: Registration page for Howloween 2026.
       { entry: '866682780', value: userOrderId },
       { entry: '2036784843', value: email },
       { entry: '188858730', value: contact },
-      { entry: '139409841', value: pickupLocation },
-      { entry: '82496741', value: tshirtSize },
-      { entry: '750103793', value: comments },
+      { entry: '139409841', value: name },
+      { entry: '82496741', value: hoodieSize },
+      { entry: '750103793', value: badge },
     ];
     var ppformSubmissionResult = submitDataToGoogleForm(formData, ppformGoogleId);
 
@@ -655,6 +643,8 @@ description: Registration page for Howloween 2026.
     ppformModal.hide();
     alert("You're all set! If you have any questions, please reach out to us via Discord :3");
   }
+
+  
 
   // ITEM MODAL ACTIONS
   // Item Modal: Quantity
@@ -743,6 +733,8 @@ description: Registration page for Howloween 2026.
   // item Modal: Purchase Ticket from Submit Button
   var submitButton = document.querySelector('#item-modal-purchase'); 
   submitButton.addEventListener('click', function (e) {
+    //Test if Function is called 
+    console.log("Submit Button Pressed");
     //Add to Cart functionality
     var itemInfo = JSON.parse(addToCartButton.dataset.itemInfo);
     var variantInfo = JSON.parse(addToCartButton.dataset.variantInfo);
@@ -808,7 +800,6 @@ description: Registration page for Howloween 2026.
       console.log(name); 
     }
 
-
     if(!valid){
       removeCartItem(0);
       alert("Oops, you're email was not found on our registry.");
@@ -858,6 +849,8 @@ description: Registration page for Howloween 2026.
         );
       });
 
+      //Record Information
+      submitPPForm(); 
   });
 
   // CART MODAL ACTIONS

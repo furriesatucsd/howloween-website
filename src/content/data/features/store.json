@@ -8,7 +8,7 @@
         {
           "name": "UCSD Tickets",
           "shortDesc": "Purchase if you are a UCSD student or affiliated with UCSD",
-          "image": "/assets/images/store/Tile_Shirt_Howloween2025.png",
+          "image": "/assets/images/tickets/General_Ticket.png",
           "variants": [
             {
               "name": "default",
@@ -23,7 +23,7 @@
         {
           "name": "Non-UCSD Tickets",
           "shortDesc": "Purchase if you are not a UCSD student and are not affiliated with UCSD",
-          "image": "/assets/images/store/Tile_Bracelets_Howloween2025.png",
+          "image": "/assets/images/tickets/UCSD_Ticket.png",
           "variants": [
             {
               "name": "default",
@@ -38,7 +38,7 @@
         {
           "name": "Sponsor Tickets",
           "shortDesc": "Purchase if you are not a UCSD student and are not affiliated with UCSD",
-          "image": "/assets/images/store/Tile_Bracelets_Howloween2025.png",
+          "image": "/assets/images/tickets/Sponsor_Ticket.png",
           "variants": [
             {
               "name": "default",
@@ -48,12 +48,12 @@
             }
           ],
           "regDesc": "As a sponsor, please also enter in your correct shirt size.\nEnter the following information below:",
-          "regForm": "<label for=\"ppform-name\" class=\"form-label\">Name</label> <b></b> <input type=\"text\" class=\"form-control\" id=\"ppform-name\" required /></input> <b></b> <label for=\"ppform-email\" class=\"form-label\">Email Address</label> <b></b> <input type=\"text\" class=\"form-control\" id=\"ppform-email\" required /></input> <b></b> <label for=\"ppform-badge\" class=\"form-label\">Badge Name</label> <b></b> <input type=\"text\" class=\"form-control\" id=\"ppform-badge\" required /></input> <b></b> <label for=\"ppform-name\" class=\"form-contact\">Discord or Telegram (Optional)</label> <b></b> <input type=\"text\" class=\"form-control\" id=\"ppform-contact\"></input> <label for=\"ppform-hoodie-size\" class=\"form-label\">Hoodie Size</label> <b></b> <select class=\"form-select form-input-dropdown-small\" id=\"ppform-hoodie-size\"><option value=\"\" disabled selected></option> <option value=\"S\">S</option> <option value=\"M\">M</option> <option value=\"L\">L</option> <option value=\"XL\">XL</option> </select> <b></b>"
+          "regForm": "<label for=\"ppform-name\" class=\"form-label\">Name</label> <b></b> <input type=\"text\" class=\"form-control\" id=\"ppform-name\" required /></input> <b></b> <label for=\"ppform-email\" class=\"form-label\">Email Address</label> <b></b> <input type=\"text\" class=\"form-control\" id=\"ppform-email\" required /></input> <b></b> <label for=\"ppform-badge\" class=\"form-label\">Badge Name</label> <b></b> <input type=\"text\" class=\"form-control\" id=\"ppform-badge\" required /></input> <b></b> <label for=\"ppform-name\" class=\"form-contact\">Discord or Telegram (Optional)</label> <b></b> <input type=\"text\" class=\"form-control\" id=\"ppform-contact\"></input> <label for=\"ppform-hoodie-size\" class=\"form-label\">Hoodie Size</label> <b></b> <select class=\"form-select form-input-dropdown-small\" id=\"ppform-hoodie-size\"><option value=\"\" disabled selected required></option> <option value=\"S\">S</option> <option value=\"M\">M</option> <option value=\"L\">L</option> <option value=\"XL\">XL</option> </select> <b></b>"
         },
         {
           "name": "Minor Tickets",
           "shortDesc": "Purchase if you are not a UCSD student and are not affiliated with UCSD",
-          "image": "/assets/images/store/Tile_Bracelets_Howloween2025.png",
+          "image": "/assets/images/tickets/Minor_Ticket.png",
           "variants": [
             {
               "name": "default",
