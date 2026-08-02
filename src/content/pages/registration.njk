@@ -185,14 +185,15 @@ description: Registration page for Howloween 2026.
           </div>
         </div>
         <div class="modal-footer" id="item-modal-footer-standard">
+          <div class="modal-footer-price-display">
+              <p id="item-modal-price">$Price</p>
+              <p class="modal-footer-price-display-detail">Taxes already included</p>
+          </div>
+          <span class="cart-item-quantity" id="item-modal-quantity">1</span>
           <div class="cart-item-actions">
             <button 
               id="item-modal-purchase" 
-              class="btn btn-primary" 
-              onclick="
-              openCartModal();
-              fireGAEvent('Clicked View Cart After Adding to Cart');
-              "
+              class="btn btn-primary"
               type="button"
             >
               Submit
@@ -402,8 +403,8 @@ description: Registration page for Howloween 2026.
     var itemModal = document.getElementById('itemModal');
 
     // Clear variant buttons
-    itemModal.querySelector('.mcq').style.display = 'none';
-    itemModal.querySelector('.mcq-options').innerHTML = '';
+    //itemModal.querySelector('.mcq').style.display = 'none';
+    //itemModal.querySelector('.mcq-options').innerHTML = '';
 
     // Reset all text
     itemModal.querySelector('#item-modal-price').textContent = NOT_FOR_SALE_DESCRIPTION;
