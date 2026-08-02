@@ -799,56 +799,66 @@ description: Registration page for Howloween 2026.
       added_item_name: itemInfo.name + ' - ' + variantInfo.name,
     });
 
+    //Validation
     var name = itemModal.querySelector('#itemModalLabel').textContent;
+    var valid = true; 
 
-    if(name == "UCSD Tickets"){
-      purchaseUT();
-    }else if(name == "Non-UCSD Tickets"){
-      purchaseNT();
-    }else if (name == "Sponsor Tickets"){
-      purchaseST();
-    }else if(name == "Minor Tickets"){
-      purchaseMT();
+    if(name === "UCSD Ticket"){
+      //Check if UCSD email is valid
+      console.log(name); 
+    }
+
+
+    if(!valid){
+      removeCartItem(0);
+      alert("Oops, you're email was not found on our registry.");
+      return; 
     }
     
+    //Purchase functionality
+    // Show a quick notice
+    alert(
+      "We're sending you to Checkout! The store is owned and run by Robin Ocampo, a member of Triton Tails. Your order may appear on your statement as 'Robin O Merch' or 'RO-Merch'."
+    );
+
+    // Make a copy of the cart that is acceptable for Stripe.
+    var userShoppingCartCopy = [];
+    for (var i = 0; i < userShoppingCart.length; i++) {
+      userShoppingCartCopy.push({
+        price: userShoppingCart[i].price,
+        quantity: userShoppingCart[i].quantity,
+      }); // No other info is allowed
+    }
+
+    // Generate a new ID associated w/ this order
+    userOrderId = generateOrderId();
+
+    // Save any user data before redirecting to a new page.
+    saveSession();
+    fireGACartData('store_checkoutStarted');
+
+    // Make the call to Stripe.js to redirect to the checkout page
+    stripe
+      .redirectToCheckout({
+        lineItems: userShoppingCartCopy,
+        mode: 'payment',
+        successUrl: REDIRECT_DOMAIN + '?result=success&session_id={CHECKOUT_SESSION_ID}',
+        cancelUrl: REDIRECT_DOMAIN + '?result=canceled&session_id={CHECKOUT_SESSION_ID}',
+        clientReferenceId: userOrderId,
+      })
+      .then()
+      .catch(function (error) {
+        console.error('Unexpected error:', error.type, error.message);
+        alert(
+          'Oops -- Please try again and let us know if this error keeps happening. (' +
+            error.type +
+            ': ' +
+            error.message +
+            ')'
+        );
+      });
+
   });
-
-  //Purchase Functions
-  function purchaseUT(){
-    var name = document.getElementById('ppform-name').value;
-    var email = document.getElementById('ppform-email').value;
-    var badgeName = document.getElementById('ppform-badge').value;
-    var contact = document.getElementById('ppform-contact').value;
-  
-  }
-
-  function purchaseNT(){
-    var name = document.getElementById('ppform-name').value;
-    var email = document.getElementById('ppform-email').value;
-    var badgeName = document.getElementById('ppform-badge').value;
-    var contact = document.getElementById('ppform-contact').value;
-
-
-  }
-
-  function purchaseST(){
-    var name = document.getElementById('ppform-name').value;
-    var email = document.getElementById('ppform-email').value;
-    var badgeName = document.getElementById('ppform-badge').value;
-    var contact = document.getElementById('ppform-contact').value;
-    var hoodie = document.getElementById('ppform-hoodie-size').value; 
-
-
-  }
-
-  function purchaseMT(){
-    var name = document.getElementById('ppform-name').value;
-    var email = document.getElementById('ppform-email').value;
-    var badgeName = document.getElementById('ppform-badge').value;
-    var contact = document.getElementById('ppform-contact').value;
-
-
-  }
 
   // CART MODAL ACTIONS
 
