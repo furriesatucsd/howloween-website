@@ -3,7 +3,7 @@
     {
       "title": "Howloween Tickets",
       "description": "Purchase your 2026 Howloween Tickets Here!",
-      "isFeatured": true,
+      "isFeatured": false,
       "items": [
         {
           "name": "General Tickets",

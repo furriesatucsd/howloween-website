@@ -154,52 +154,58 @@ description: Registration page for Howloween 2026.
   <div class="modal fade" id="itemModal" tabindex="-1" aria-labelledby="itemModalLabel">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">
-          <div>
-            <h4 class="modal-title" id="itemModalLabel">Title</h4>
-            {#
-            <p>Short Description</p>
-            #}
-          </div>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="modal-body">
-          <img
-            id="item-modal-image"
-            alt="item modal image"
-            src="/assets/images/store/beach_1.png"
-          />
-          <div class="options-list">
-            <!-- Options -->
-            <div class="mcq"></div>
-
-            <!-- Description -->
-            <div id="item-modal-description"></div>
-            <b></b>
-            <div id="item-modal-form"></div>
-          </div>
-        </div>
-        <div class="modal-footer" id="item-modal-footer-standard">
-          <div class="modal-footer-price-display">
-              <p id="item-modal-price">$Price</p>
-              <p class="modal-footer-price-display-detail">Taxes already included</p>
-          </div>
-          <span class="cart-item-quantity" id="item-modal-quantity">1</span>
-          <div class="cart-item-actions">
-            <button 
-              id="item-modal-purchase" 
-              class="btn btn-primary"
+        <form
+          id="post-payment-form"
+          onsubmit="
+            event.preventDefault();
+            ticketPurchaseProcess();
+          "
+        >
+          <div class="modal-header">
+            <div>
+              <h4 class="modal-title" id="itemModalLabel">Title</h4>
+              {#
+              <p>Short Description</p>
+              #}
+            </div>
+            <button
               type="button"
-            >
-              Submit
-            </button>
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
-        </div>
+          <div class="modal-body">
+            <img
+              id="item-modal-image"
+              alt="item modal image"
+              src="/assets/images/store/beach_1.png"
+            />
+            <div class="options-list">
+              <!-- Options -->
+              <div class="mcq"></div>
+              <!-- Description -->
+              <div id="item-modal-description"></div>
+              <b></b>
+              <div id="item-modal-form"></div>
+            </div>
+          </div>
+          <div class="modal-footer" id="item-modal-footer-standard">
+            <div class="modal-footer-price-display">
+                <p id="item-modal-price"></p>
+                <p class="modal-footer-price-display-detail">Taxes already included</p>
+            </div>
+            <span class="cart-item-quantity" id="item-modal-quantity">1</span>
+            <div class="cart-item-actions">
+              <button 
+                class="btn btn-primary"
+                type="submit"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -403,20 +409,20 @@ description: Registration page for Howloween 2026.
     var itemModal = document.getElementById('itemModal');
 
     // Clear variant buttons
-    //itemModal.querySelector('.mcq').style.display = 'none';
+    itemModal.querySelector('.mcq').style.display = 'none';
     //itemModal.querySelector('.mcq-options').innerHTML = '';
 
     // Reset all text
     itemModal.querySelector('#item-modal-price').textContent = NOT_FOR_SALE_DESCRIPTION;
     itemModal.querySelector('#item-modal-description').textContent = NOT_FOR_SALE_DESCRIPTION;
-    itemModal.querySelector('#item-modal-quantity').textContent = '1';
+    itemModal.querySelector('#item-modal-quantity').textContent = '';
 
     // Reset the Price ID
-    itemModal.querySelector('#item-modal-addtocart').dataset.priceId = NOT_FOR_SALE_DESCRIPTION;
+    //itemModal.querySelector('#item-modal-addtocart').dataset.priceId = NOT_FOR_SALE_DESCRIPTION;
 
     // Reset the modal footer
     itemModal.querySelector('#item-modal-footer-standard').classList.remove('d-none');
-    itemModal.querySelector('#item-modal-footer-addedtocart').classList.add('d-none');
+    //itemModal.querySelector('#item-modal-footer-addedtocart').classList.add('d-none');
   }
 
   // Update the Item Modal with a given Variant
@@ -435,32 +441,33 @@ description: Registration page for Howloween 2026.
 
     // Check if it's an external URL or handled by the club store
     if (selectedVariant.externalUrl) {
-      itemModal.querySelector('#item-modal-addtocart').textContent = 'Link to website';
+      /*itemModal.querySelector('#item-modal-addtocart').textContent = 'Link to website';
       itemModal.querySelector('#item-modal-addtocart').classList.add('btn-primary');
       itemModal.querySelector('#item-modal-addtocart').classList.remove('btn-secondary');
+      */
 
       // Hide price and quantity buttons
       itemModal.querySelector('.modal-footer-price-display').classList.add('d-none');
       itemModal.querySelector('#item-modal-quantity').classList.add('d-none');
-      itemModal.querySelector('#item-modal-quantity-up').classList.add('d-none');
-      itemModal.querySelector('#item-modal-quantity-down').classList.add('d-none');
+      //itemModal.querySelector('#item-modal-quantity-up').classList.add('d-none');
+      //itemModal.querySelector('#item-modal-quantity-down').classList.add('d-none');
     } else {
       // Show price and quantity buttons
       itemModal.querySelector('.modal-footer-price-display').classList.remove('d-none');
       itemModal.querySelector('#item-modal-quantity').classList.remove('d-none');
-      itemModal.querySelector('#item-modal-quantity-up').classList.remove('d-none');
-      itemModal.querySelector('#item-modal-quantity-down').classList.remove('d-none');
+      //itemModal.querySelector('#item-modal-quantity-up').classList.remove('d-none');
+      //itemModal.querySelector('#item-modal-quantity-down').classList.remove('d-none');
 
       // Update the price
       if (selectedVariant.price) {
         itemModal.querySelector('#item-modal-price').textContent =
-          '$' + selectedVariant.price + ' each';
+          '$' + selectedVariant.price;
       } else {
         itemModal.querySelector('#item-modal-price').textContent = NOT_FOR_SALE_DESCRIPTION;
       }
 
       // Update the checkout button
-      if (!isValidPriceId(selectedVariant.priceId)) {
+      /*if (!isValidPriceId(selectedVariant.priceId)) {
         itemModal.querySelector('#item-modal-addtocart').textContent = 'Item is offsale';
         itemModal.querySelector('#item-modal-addtocart').classList.remove('btn-primary');
         itemModal.querySelector('#item-modal-addtocart').classList.add('btn-secondary');
@@ -468,14 +475,14 @@ description: Registration page for Howloween 2026.
         itemModal.querySelector('#item-modal-addtocart').textContent = 'Add to Cart';
         itemModal.querySelector('#item-modal-addtocart').classList.add('btn-primary');
         itemModal.querySelector('#item-modal-addtocart').classList.remove('btn-secondary');
-      }
+      }*/
     }
 
     // Insert the item info and variant info into the button
-    itemModal.querySelector('#item-modal-addtocart').dataset.itemInfo = JSON.stringify(item);
+    /*itemModal.querySelector('#item-modal-addtocart').dataset.itemInfo = JSON.stringify(item);
     itemModal.querySelector('#item-modal-addtocart').dataset.variantInfo =
       JSON.stringify(selectedVariant);
-
+    */
     // Update the image in the item modal
     itemModal.querySelector('#item-modal-image').src = item.image;
     // If there is an item-specific image, use it
@@ -650,7 +657,7 @@ description: Registration page for Howloween 2026.
   // ITEM MODAL ACTIONS
   // Item Modal: Quantity
   var quantity = document.querySelector('#item-modal-quantity');
-  document.querySelector('#item-modal-quantity-up').addEventListener('click', function () {
+  /*document.querySelector('#item-modal-quantity-up').addEventListener('click', function () {
     var currentQuantity = parseInt(quantity.textContent);
     quantity.textContent = currentQuantity + 1;
   });
@@ -659,10 +666,10 @@ description: Registration page for Howloween 2026.
     if (currentQuantity > 1) {
       quantity.textContent = currentQuantity - 1;
     }
-  });
+  });*/
 
   // Item Modal: Add to Cart Button
-  var addToCartButton = document.querySelector('#item-modal-addtocart');
+  /*var addToCartButton = document.querySelector('#item-modal-addtocart');
   addToCartButton.addEventListener('click', function (e) {
     // Get the item info and variant info from the button
     var itemInfo = JSON.parse(addToCartButton.dataset.itemInfo);
@@ -729,11 +736,10 @@ description: Registration page for Howloween 2026.
     fireGAEvent('Clicked Add to Cart', {
       added_item_name: itemInfo.name + ' - ' + variantInfo.name,
     });
-  });
+  });*/
 
-  // item Modal: Purchase Ticket from Submit Button
-  var submitButton = document.querySelector('#item-modal-purchase'); 
-  submitButton.addEventListener('click', function (e) {
+  // ITEM MODAL: Purchase Ticket from Submit Button
+  function ticketPurchaseProcess() {
     //Test if Function is called 
     console.log("Submit Button Pressed");
     //Add to Cart functionality
@@ -852,7 +858,7 @@ description: Registration page for Howloween 2026.
 
       //Record Information
       submitPPForm(); 
-  });
+  }
 
   // CART MODAL ACTIONS
 
