@@ -13,7 +13,7 @@
             {
               "name": "default",
               "price": 19.99,
-              "priceId": "",
+              "priceId": "price_1U0C8rPzYN4RDa4eCx87DO1R",
               "description": "Upon confirmation, you will be directed to our payment processor."
             }
           ],
@@ -28,7 +28,7 @@
             {
               "name": "default",
               "price": 14.99,
-              "priceId": "",
+              "priceId": "price_1U0C8rPzYN4RDa4eCx87DO1R",
               "description": "Upon confirmation, you will be directed to add and verify your UCSD email address. Once verification is completed you will be directed to the our payment processor."
             }
           ],
@@ -43,7 +43,7 @@
             {
               "name": "default",
               "price": 19.99,
-              "priceId": "",
+              "priceId": "price_1U0C8rPzYN4RDa4eCx87DO1R",
               "description": "Upon confirmation, you will be directed to our payment processor."
             }
           ],
@@ -58,7 +58,7 @@
             {
               "name": "default",
               "price": 19.99,
-              "priceId": "",
+              "priceId": "price_1U0C8rPzYN4RDa4eCx87DO1R",
               "description": "Upon confirmation, you will be directed to our payment processor."
             }
           ],
