@@ -6,30 +6,30 @@
       "isFeatured": false,
       "items": [
         {
-          "name": "General Tickets",
+          "name": "UCSD Tickets",
           "shortDesc": "Purchase if you are not a UCSD student and are not affiliated with UCSD",
           "image": "/assets/images/tickets/UCSD_Ticket.png",
+          "variants": [
+            {
+              "name": "default",
+              "price": 14.99,
+              "priceId": "price_1U0C8rPzYN4RDa4eCx87DO1R",
+              "description": "Upon confirmation, we will verify your UCSD email address. Once verification is completed, you will be directed to the our payment processor."
+            }
+          ],
+          "regDesc": "Enter the following information below:",
+          "regForm": "<div id=\"email-err\" class=\"alert alert-danger d-none\" role=\"alert\"></div><label for=\"ppform-name\" class=\"form-label\">Name</label> <b></b> <input type=\"text\" class=\"form-control\" id=\"ppform-name\" required /></input> <b></b> <label for=\"ppform-email\" class=\"form-label\">UCSD Email Address</label> <b></b> <input type=\"text\" class=\"form-control\" id=\"ppform-email\" required /></input> <b></b> <label for=\"ppform-badge\" class=\"form-label\">Badge Name</label> <b></b> <input type=\"text\" class=\"form-control\" id=\"ppform-badge\" required /></input> <b></b> <label for=\"ppform-contact\" class=\"form-contact\">Discord or Telegram (Optional)</label> <b></b> <input type=\"text\" class=\"form-control\" id=\"ppform-contact\"></input> <b></b>"
+        },
+        {
+          "name": "General Tickets",
+          "shortDesc": "Purchase if you are a UCSD student or affiliated with UCSD",
+          "image": "/assets/images/tickets/General_Ticket.png",
           "variants": [
             {
               "name": "default",
               "price": 19.99,
               "priceId": "price_1U0C8rPzYN4RDa4eCx87DO1R",
               "description": "Upon confirmation, you will be directed to our payment processor."
-            }
-          ],
-          "regDesc": "Enter the following information below:",
-          "regForm": "<label for=\"ppform-name\" class=\"form-label\">Name</label> <b></b> <input type=\"text\" class=\"form-control\" id=\"ppform-name\" required /></input> <b></b> <label for=\"ppform-email\" class=\"form-label\">Email Address</label> <b></b> <input type=\"text\" class=\"form-control\" id=\"ppform-email\" required /></input> <b></b> <label for=\"ppform-badge\" class=\"form-label\">Badge Name</label> <b></b> <input type=\"text\" class=\"form-control\" id=\"ppform-badge\" required /></input> <b></b> <label for=\"ppform-contact\" class=\"form-contact\">Discord or Telegram (Optional)</label> <b></b> <input type=\"text\" class=\"form-control\" id=\"ppform-contact\"></input> <b></b>"
-        },
-        {
-          "name": "UCSD Tickets",
-          "shortDesc": "Purchase if you are a UCSD student or affiliated with UCSD",
-          "image": "/assets/images/tickets/General_Ticket.png",
-          "variants": [
-            {
-              "name": "default",
-              "price": 14.99,
-              "priceId": "price_1U0C8rPzYN4RDa4eCx87DO1R",
-              "description": "Upon confirmation, you will be directed to add and verify your UCSD email address. Once verification is completed you will be directed to the our payment processor."
             }
           ],
           "regDesc": "Enter the following information below:", 

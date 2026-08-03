@@ -189,7 +189,7 @@ description: Registration page for Howloween 2026.
               <button 
                 id = "item-modal-submit"
                 class="btn btn-primary"
-                data-bs-dismiss="modal"
+                
                 type="submit"
               >
               </button>
@@ -655,7 +655,7 @@ description: Registration page for Howloween 2026.
       userOrderId,
     });
     console.log(metaData);
-    alert('Please fill out all required fields.');
+ 
     return metaData; 
   }
 
@@ -745,7 +745,7 @@ description: Registration page for Howloween 2026.
 
   // ITEM MODAL: Purchase Ticket from Submit Button
   var submitButton = document.querySelector('#item-modal-submit');
-  function ticketPurchaseProcess() {
+  async function ticketPurchaseProcess() {
     //Test if Function is called 
     console.log("Submit Button Pressed");
 
@@ -823,6 +823,33 @@ description: Registration page for Howloween 2026.
     
     //Purchase functionality
 
+    // Generate a new ID associated w/ this order
+    userOrderId = generateOrderId();
+
+    // Save any user data before redirecting to a new page.
+    saveSession();
+    fireGACartData('store_checkoutStarted');
+
+    submitButton.classList.add("btn-secondary");
+    submitButton.innerHTML = "Please wait...";
+
+    if (userShoppingCart[0].itemInfo.name == "UCSD Tickets") {
+      var email = document.getElementById('ppform-email').value;
+      var priceId = await verifyUCSDPrice(email);
+
+      if (priceId == null) {
+        let errorDiv = document.getElementById("email-err");
+        submitButton.classList.remove("btn-secondary");
+        submitButton.innerHTML = "Submit";
+
+        errorDiv.innerHTML = "Invalid UCSD email; double-check your email!";
+        errorDiv.classList.remove("d-none");
+        return;
+      }
+
+      userShoppingCart[0].price = priceId;
+    }
+
     // Make a copy of the cart that is acceptable for Stripe.
     var userShoppingCartCopy = [];
     for (var i = 0; i < userShoppingCart.length; i++) {
@@ -832,19 +859,36 @@ description: Registration page for Howloween 2026.
       }); // No other info is allowed
     }
 
-    // Generate a new ID associated w/ this order
-    userOrderId = generateOrderId();
-
-    // Save any user data before redirecting to a new page.
-    saveSession();
-    fireGACartData('store_checkoutStarted');
-
     var metaData = submitPPForm(); 
-
-    // Make the call to Stripe.js to redirect to the checkout page
     stripeHandler(userShoppingCartCopy, userOrderId, metaData);
  
   }
+
+  async function verifyUCSDPrice(email) {
+    const workerUrl = 'https://tt-stripe-worker.midavis.workers.dev/registration/verify-email';
+
+    try {
+        const response = await fetch(workerUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email })
+        });
+
+        const result = await response.json();
+        
+        if (result.error) {
+          return null;
+        }
+
+        return result.priceId;
+
+    } catch (err) {
+        console.error('Failed to verify email:', err);
+        throw err;
+    }
+}
 
   // CART MODAL ACTIONS
 
