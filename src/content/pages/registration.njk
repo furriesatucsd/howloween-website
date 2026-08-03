@@ -91,20 +91,8 @@ description: Registration page for Howloween 2026.
 
             <!-- Form with Email, Discord/Telegram, Desired Pickup Location (dropdown), and Tshirt Size (dropdown) -->
             <div class="mb-3 form-input">
-              <label for="ppform-email" class="form-label">Email Address</label>
-              <input type="email" class="form-control" id="ppform-email" required />
             </div>
             <div class="mb-3 form-input">
-              <label for="ppform-contact" class="form-label"
-                >Preferred Contact Info (Discord, Telegram, or Phone #)</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="ppform-contact"
-                placeholder="@username or Phone #"
-                required
-              />
             </div>
             <div class="mb-3 form-input">
               <label for="ppform-pickup-location" class="form-label">Desired Pickup Location</label>
@@ -591,7 +579,7 @@ description: Registration page for Howloween 2026.
   }
 
   // Generate and Initialize Stripe 
-  async function stripeHandler(userShoppingCartCopy, userOrderId){
+  async function stripeHandler(userShoppingCartCopy, userOrderId, metaData){
     try {
         const response = await fetch('https://tt-stripe-worker.midavis.workers.dev/registration/payment', {
             method: 'POST',
@@ -601,7 +589,8 @@ description: Registration page for Howloween 2026.
             body: JSON.stringify({
                 origin: window.location.origin,
                 cart: userShoppingCartCopy,
-                client_reference_id: userOrderId
+                client_reference_id: userOrderId,
+                metadata: metaData
             })
         });
 
@@ -641,17 +630,21 @@ description: Registration page for Howloween 2026.
   // Post Payment Form: Submit the form
   const ppformGoogleId = '1FAIpQLScD-LzhUBFRwoxNNT4jOAK7KZ9WdKwwENPRQED-h7YXKA0M_w'; // The ID of the Google Form to submit the data to
   function submitPPForm() {
+    let metaData = {};
     var name = document.getElementById('ppform-name').value;
     var email = document.getElementById('ppform-email').value;
     var badge = document.getElementById('ppform-badge').value; 
     var contact = document.getElementById('ppform-contact').value;
-    var hoodieSize = document.getElementById('ppform-hoodie-size').value;
-
-    // Validate the responses
-    if (!name || !email || !badge || ((name === "Sponsor Tickets") && !hoodieSize)) {
-      alert('Please fill out all required fields.');
-      return;
+    var hoodieSize = null;
+    if(document.getElementById('ppform-hoodie-size') !== null){
+      hoodieSize = document.getElementById('ppform-hoodie-size').value;
     }
+
+    metaData["full_name"] = name; 
+    metaData["email_address"] = email; 
+    metaData["badge_name"] = badge; 
+    metaData["contact_info"] = contact; 
+    metaData["hoodie_size"] = hoodieSize;
 
     console.log('Post-payment form responses:', {
       name,
@@ -661,26 +654,9 @@ description: Registration page for Howloween 2026.
       hoodieSize,
       userOrderId,
     });
-
-    // Send the form data via an HTTP Request
-    const formData = [
-      { entry: '866682780', value: userOrderId },
-      { entry: '2036784843', value: email },
-      { entry: '188858730', value: contact },
-      { entry: '139409841', value: name },
-      { entry: '82496741', value: hoodieSize },
-      { entry: '750103793', value: badge },
-    ];
-    var ppformSubmissionResult = submitDataToGoogleForm(formData, ppformGoogleId);
-
-    // Unable to check the result status because we're not using a backend proxy
-    /*if (!ppformSubmissionResult.success) {
-      alert("Error when trying to submit the form. Please try again and let us know if this error keeps happening. ("+ppformSubmissionResult.message+")");
-    }*/
-
-    // Close the modal
-    ppformModal.hide();
-    alert("You're all set! If you have any questions, please reach out to us via Discord :3");
+    console.log(metaData);
+    alert('Please fill out all required fields.');
+    return metaData; 
   }
 
   // ITEM MODAL ACTIONS
@@ -863,12 +839,11 @@ description: Registration page for Howloween 2026.
     saveSession();
     fireGACartData('store_checkoutStarted');
 
-    // Make the call to Stripe.js to redirect to the checkout page
-    stripeHandler(userShoppingCartCopy, userOrderId);
+    var metaData = submitPPForm(); 
 
-    //Record Information
-    //submitPPForm(); 
-    console.log("Action Complete"); 
+    // Make the call to Stripe.js to redirect to the checkout page
+    stripeHandler(userShoppingCartCopy, userOrderId, metaData);
+ 
   }
 
   // CART MODAL ACTIONS
