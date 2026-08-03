@@ -171,6 +171,7 @@ description: Registration page for Howloween 2026.
             <button
               type="button"
               class="btn-close"
+              id="button-close"
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
@@ -424,6 +425,8 @@ description: Registration page for Howloween 2026.
     // Reset the modal footer
     itemModal.querySelector('#item-modal-footer-standard').classList.remove('d-none');
     //itemModal.querySelector('#item-modal-footer-addedtocart').classList.add('d-none');
+    userShoppingCart = [];
+    localStorage.removeItem('userShoppingCart');
   }
 
   // Update the Item Modal with a given Variant
@@ -587,6 +590,33 @@ description: Registration page for Howloween 2026.
       });*/
   }
 
+  // Generate and Initialize Stripe 
+  async function stripeHandler(userShoppingCartCopy, userOrderId){
+    try {
+        const response = await fetch('https://tt-stripe-worker.midavis.workers.dev/registration/payment', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                origin: window.location.origin,
+                cart: userShoppingCartCopy,
+                client_reference_id: userOrderId
+            })
+        });
+
+        const data = await response.json();
+        
+        if (data.url) {
+            window.location.href = data.url;
+        } else {
+            alert('Checkout Error: ' + data.error);
+        }
+    } catch (err) {
+        console.error('Request failed:', err);
+    }
+  }
+
   // PAGE ACTIONS
   // Page: When a shop item is clicked, fill the Item Modal with the details of the item.
   document.querySelectorAll('.store-item').forEach(function (button) {
@@ -613,7 +643,7 @@ description: Registration page for Howloween 2026.
   function submitPPForm() {
     var name = document.getElementById('ppform-name').value;
     var email = document.getElementById('ppform-email').value;
-    var badge = document.getElementById('ppform=badge').value; 
+    var badge = document.getElementById('ppform-badge').value; 
     var contact = document.getElementById('ppform-contact').value;
     var hoodieSize = document.getElementById('ppform-hoodie-size').value;
 
@@ -742,6 +772,7 @@ description: Registration page for Howloween 2026.
   function ticketPurchaseProcess() {
     //Test if Function is called 
     console.log("Submit Button Pressed");
+
     //Add to Cart functionality
     var itemInfo = JSON.parse(submitButton.dataset.itemInfo);
     var variantInfo = JSON.parse(submitButton.dataset.variantInfo);
@@ -780,7 +811,7 @@ description: Registration page for Howloween 2026.
         isItemAlreadyInCart = true;
 
         // If item is already in cart, just append the new quantity
-        userShoppingCart[i].quantity += quantity;
+        userShoppingCart[i].quantity = 1;
         break;
       }
     }
@@ -815,10 +846,6 @@ description: Registration page for Howloween 2026.
     }
     
     //Purchase functionality
-    // Show a quick notice
-    alert(
-      "We're sending you to Checkout! The store is owned and run by Robin Ocampo, a member of Triton Tails. Your order may appear on your statement as 'Robin O Merch' or 'RO-Merch'."
-    );
 
     // Make a copy of the cart that is acceptable for Stripe.
     var userShoppingCartCopy = [];
@@ -837,28 +864,11 @@ description: Registration page for Howloween 2026.
     fireGACartData('store_checkoutStarted');
 
     // Make the call to Stripe.js to redirect to the checkout page
-    stripe
-      .redirectToCheckout({
-        lineItems: userShoppingCartCopy,
-        mode: 'payment',
-        successUrl: REDIRECT_DOMAIN + '?result=success&session_id={CHECKOUT_SESSION_ID}',
-        cancelUrl: REDIRECT_DOMAIN + '?result=canceled&session_id={CHECKOUT_SESSION_ID}',
-        clientReferenceId: userOrderId,
-      })
-      .then()
-      .catch(function (error) {
-        console.error('Unexpected error:', error.type, error.message);
-        alert(
-          'Oops -- Please try again and let us know if this error keeps happening. (' +
-            error.type +
-            ': ' +
-            error.message +
-            ')'
-        );
-      });
+    stripeHandler(userShoppingCartCopy, userOrderId);
 
-      //Record Information
-      submitPPForm(); 
+    //Record Information
+    //submitPPForm(); 
+    console.log("Action Complete"); 
   }
 
   // CART MODAL ACTIONS
