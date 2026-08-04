@@ -558,7 +558,7 @@ description: Registration page for Howloween 2026.
   // Generate and Initialize Stripe 
   async function stripeHandler(userShoppingCartCopy, userOrderId, metaData){
     try {
-        const response = await fetch(`${BASE_DOMAIN}/registration/payment`, {
+        const response = await fetch(`https://${BASE_DOMAIN}/registration/payment`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -842,9 +842,15 @@ description: Registration page for Howloween 2026.
   }
 
   async function verifyUCSDPrice(email) {
-    const workerUrl = `${BASE_DOMAIN}/registration/verify-email`;
+    const workerUrl = `https://${BASE_DOMAIN}/registration/verify-email`;
+
+    if (!email.endsWith("@ucsd.edu")) {
+      // don't consider it if it's not of the from "...@ucsd.edu"
+      return null;
+    }
 
     try {
+        console.log("test")
         const response = await fetch(workerUrl, {
             method: 'POST',
             headers: {
