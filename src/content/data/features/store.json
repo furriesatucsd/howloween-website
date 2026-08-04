@@ -30,7 +30,7 @@
               "description": "Please enter the information you want associated with your registration. Once you press \"Submit\", you'll be redirected to payment!"
             }
           ],
-          "regDesc": "Enter the following information below:", 
+          "regDesc": "Enter the following information below:",
           "regForm": "<label for=\"ppform-name\" class=\"form-label\">Name</label> <b></b> <input type=\"text\" class=\"form-control\" id=\"ppform-name\" required /></input> <b></b> <label for=\"ppform-email\" class=\"form-label\">Email Address</label> <b></b> <input type=\"text\" class=\"form-control\" id=\"ppform-email\" required /></input> <b></b> <label for=\"ppform-badge\" class=\"form-label\">Badge Name</label> <b></b> <input type=\"text\" class=\"form-control\" id=\"ppform-badge\" required /></input> <b></b> <label for=\"ppform-contact\" class=\"form-contact\">Discord or Telegram (Optional)</label> <b></b> <input type=\"text\" class=\"form-control\" id=\"ppform-contact\"></input> <b></b>"
         },
         {
