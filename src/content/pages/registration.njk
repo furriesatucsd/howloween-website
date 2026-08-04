@@ -225,18 +225,19 @@ description: Registration page for Howloween 2026.
   </div>
 
   <!-- Store Area -->
-  <section class="wrapper style1">
-    <div class="inner">
-      <div class="store-header">
-        <div class="store-header-text">
-          <h2>Event Tickets</h2>
-          <p>Purchase your Tickets Here!</p>
+  <section class="wrapper pb-0">
+    <section class="wrapper align-center p-0">
+      <div class="inner">
+        <div>
+          <h1>Registration</h1>
+          <p>
+            Get your ticket for Howloween: Cinema Screams! Tickets are discounted for early bird pricing <b>until September 20.</b>
+          </p>
         </div>
       </div>
-    </div>
-    <img id="store-banner" src="/assets/images/store/store_banner.jpeg" alt="Store Banner" />
+    </section>
   </section>
-  <section class="wrapper style1">
+  <section class="wrapper">
     <div class="inner">
       <div class="store-area">
         {% for collection in store.collections %}
@@ -260,7 +261,6 @@ description: Registration page for Howloween 2026.
               endif
               %}
             >
-              <div class="scroll-edge-overlay"></div>
               {% for item in collection.items %}
               <button
                 class="store-item"
@@ -290,6 +290,19 @@ description: Registration page for Howloween 2026.
     </div>
   </section>
 </div>
+
+<!-- Info stuff -->
+<section class="wrapper py-5 text-light">
+  <div class="inner">
+    <h4>What's the difference?</h4>
+    <p>The UCSD, General, and Minor tickets are all the same in terms of what you get access to at the event! The only distinctions are differing prices and forms 
+      that need to be submitted with UCSD and Minor tickets as opposed to General tickets. Please sign up for the correct one!
+    </p>
+
+    <p><b>Sponsor</b> tickets come with a few extra perks, including but not limited to:
+    </p>
+  </div>
+</section>
 
 <!-- Stripe Code -->
 <script src="https://js.stripe.com/v3/"></script>

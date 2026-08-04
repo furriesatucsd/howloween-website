@@ -55,18 +55,12 @@
   gap: 16px;
   align-self: stretch;
 }
-.scroll-edge-overlay {
-  width: 50px;
-  height: 100%;
-  position: absolute;
-  right: 0px;
-  background: linear-gradient(270deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
-}
 
 /* Items */
 .store-item {
   display: flex;
   flex-direction: column;
+  width: 250px;
 
   /* Button style */
   text-align: left;
@@ -85,6 +79,7 @@
   border-radius: 16px;
   object-fit: cover;
   margin-bottom: 8px;
+  align-self: center;
 }
 
 .store-row-featured img {
