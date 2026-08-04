@@ -811,8 +811,8 @@ description: Registration page for Howloween 2026.
     submitButton.innerHTML = "Please wait...";
 
     if (userShoppingCart[0].itemInfo.name == "UCSD Ticket") {
-      var email = document.getElementById('ppform-email').value;
-      var priceId = await verifyUCSDPrice(email);
+      const email = document.getElementById('ppform-email').value;
+      let priceId = await verifyUCSDPrice(email);
 
       if (priceId == null) {
         let errorDiv = document.getElementById("email-err");
@@ -869,6 +869,14 @@ description: Registration page for Howloween 2026.
 
     } catch (err) {
         console.error('Failed to verify email:', err);
+        
+        let errorDiv = document.getElementById("email-err");
+        submitButton.classList.remove("btn-secondary");
+        submitButton.innerHTML = "Submit";
+
+        errorDiv.innerHTML = "Invalid UCSD email; double-check your email!";
+        errorDiv.classList.remove("d-none");
+
         throw err;
     }
 }
