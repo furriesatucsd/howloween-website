@@ -1,4 +1,5 @@
 const path = require('path');
+const { DateTime } = require('luxon');
 
 // Export formatDate function for testing
 const formatDate = function (value, format) {
@@ -40,7 +41,9 @@ const getAllJsonFiles = (dir) => {
 
 module.exports = function (eleventyConfig) {
   // Add formatDate filter
-  eleventyConfig.addFilter('formatDate', formatDate);
+  eleventyConfig.addFilter('formatDate', (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('LL/dd/yy');
+  });
 
   // Add merge filter
   eleventyConfig.addFilter('merge', function (obj1, obj2) {

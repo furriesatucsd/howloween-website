@@ -1,3 +1,8 @@
+---
+title: Base Template
+date: git Last Modified
+---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -76,7 +81,13 @@
 
     <!-- Main Content -->
     {% if content %}
-    <main>{{ content | safe }}</main>
+    <main>
+      {{ content | safe }} {% if date %}
+      <section class="container">
+        <p><i class="fa-solid fa-pen-to-square"></i> Last updated: {{ page.date | formatDate }}</p>
+      </section>
+      {% endif %}
+    </main>
     {% else %}
     <main>{% include "../content/components/coming-soon.njk" %}</main>
     {% endif %} {% include "../content/components/footer.njk" %}
