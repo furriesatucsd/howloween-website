@@ -38,9 +38,11 @@
     {
       "id": "05",
       "title": "Floor Wars Sign-Up",
+      "status": "open",
       "image": "../../assets/images/flyer_fw.png",
       "image_position": "right",
-      "status": "soon"
+      "dueDate": "9/20",
+      "link": "https://docs.google.com/forms/d/e/1FAIpQLScwuJq-V92iiWd1iAkZegmR98iseBo4mDnQCmdG8W2ZbrH0bQ/viewform"
     }
   ]
 }
