@@ -73,7 +73,17 @@
     },
     {
       "title": "About",
-      "url": "/about/"
+      "type": "dropdown",
+      "items": [
+        {
+          "title": "About Triton Tails",
+          "url": "/about"
+        },
+        {
+          "title": "Contact",
+          "url": "/about/contact"
+        }
+      ]
     }
   ]
 }
