@@ -3,10 +3,11 @@
 
 // Banner component styling
 .banner {
-  min-height: 67dvh;
+  min-height: 100vh;
   display: flex;
   padding: 0;
-  overflow: hidden;
+  overflow-x: visible;
+  overflow-y: hidden;
 
   // Non-furries page banner
   &.text-black {
@@ -77,13 +78,13 @@
 
   .banner-main {
     position: absolute;
-    bottom: 0;
+    bottom: -5vh;
     left: 0;
     right: auto;
     margin: 0;
-    max-width: 800px;
+    height: 100vh;
+    max-width: 100%;
     width: 100%;
-    transform: translateY(5%);
     z-index: 2;
     pointer-events: none;
 
@@ -91,12 +92,29 @@
       position: static;
       align-self: center;
       max-width: 670px;
-      transform: translateY(5%);
+      bottom: auto;
       pointer-events: auto;
     }
   }
 
+  .character-image {
+    flex-shrink: 0;
+    height: 100%;
+    width: auto;
+    display: block;
+    object-fit: cover;
+    overflow-y: hidden;
+    object-position: 40% 40%;
+
+    @include respond-to(large) {
+      height: auto;
+      width: 100%;
+      max-height: 80vh;
+    }
+  }
+
   .container-fluid {
+    position: absolute;
     z-index: 2;
     padding: 2rem 2rem;
   }
