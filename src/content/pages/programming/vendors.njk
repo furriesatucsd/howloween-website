@@ -1,0 +1,28 @@
+---
+layout: base.njk
+title: Vendors
+description: Vendor fair layout and vendors for Howloween 2026.
+---
+
+<!-- Page Banner -->
+<section class="wrapper align-center">
+  <div class="inner">
+    <div>
+      <h1>All Applications</h1>
+      <p>
+        Interested in helping to make Howloween a bigger and better event? You're in the right
+        place!
+      </p>
+      <p>
+        For the most recent information regarding application availability and deadlines, please
+        check our announcements channel on Discord.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Vendor Fair map -->
+
+<!-- Table of Vendors -->
+{% set tableData = { vendor: vendor.vendors } %} {% include
+"../components/vendor-table.njk" %}

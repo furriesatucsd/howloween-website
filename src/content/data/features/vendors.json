@@ -1,0 +1,169 @@
+{
+  "headers": ["Table", "Vendor(s)"],
+  "vendors": [
+    {
+      "table": 1,
+      "vendor": "Shibazume; Quarks"
+    },
+    {
+      "table": 2,
+      "vendor": "kirakoart; james olichney"
+    },
+    {
+      "table": 3,
+      "vendor": "cloolias; condylicious"
+    },
+    {
+      "table": 4,
+      "vendor": "Jordydraws"
+    },
+    {
+      "table": 5,
+      "vendor": "Stardust Studio 828"
+    },
+    {
+      "table": 6,
+      "vendor": "BOWLOFWOLFIEOS"
+    },
+    {
+      "table": 7,
+      "vendor": "Strawberry Bluu"
+    },
+    {
+      "table": 8,
+      "vendor": "Clovercatch; tulipsmeadow"
+    },
+    {
+      "table": 9,
+      "vendor": "Lapisoth; korialis"
+    },
+    {
+      "table": 10,
+      "vendor": "cytryshop; Stephanie Liang"
+    },
+    {
+      "table": 11,
+      "vendor": "Reinhart; Bibbiosis"
+    },
+    {
+      "table": 12,
+      "vendor": "J.U. Studio; Alperen Ayan"
+    },
+    {
+      "table": 13,
+      "vendor": "HyperWasHere; Vixombie"
+    },
+    {
+      "table": 14,
+      "vendor": "Sneilkun; kyealtia"
+    },
+    {
+      "table": 15,
+      "vendor": "Katerpillar Crafts ; Pillow Lord"
+    },
+    {
+      "table": 16,
+      "vendor": "f; Erika Kita"
+    },
+    {
+      "table": 17,
+      "vendor": "Sihlouette; chairie.arts"
+    },
+    {
+      "table": 18,
+      "vendor": "NyamenRamen"
+    },
+    {
+      "table": 19,
+      "vendor": "Benjimaru"
+    },
+    {
+      "table": 20,
+      "vendor": "Aztec Paws @ SDSU; Okopi"
+    },
+    {
+      "table": 21,
+      "vendor": "Bokchoy; Sunny Xiaolong"
+    },
+    {
+      "table": 22,
+      "vendor": "Taurson; DrakeMagick"
+    },
+    {
+      "table": 23,
+      "vendor": "vvlee; Azzy"
+    },
+    {
+      "table": 24,
+      "vendor": "Aejiee; geminop3"
+    },
+    {
+      "table": 25,
+      "vendor": "Sukadia; Karma"
+    },
+    {
+      "table": 26,
+      "vendor": "LOVERSHALO; J"
+    },
+    {
+      "table": 27,
+      "vendor": "Nekoweko"
+    },
+    {
+      "table": 28,
+      "vendor": "MossyVamp; Gangrenehound"
+    },
+    {
+      "table": 29,
+      "vendor": "Doodle Drawz"
+    },
+    {
+      "table": 30,
+      "vendor": "Animal Workshop"
+    },
+    {
+      "table": 31,
+      "vendor": "Commonpolypody; Mel's Makerspace"
+    },
+    {
+      "table": 32,
+      "vendor": "Cinni's OC Oasis"
+    },
+    {
+      "table": 33,
+      "vendor": "Holiday Fox"
+    },
+    {
+      "table": 34,
+      "vendor": "Hyde Hermit Studio"
+    },
+    {
+      "table": 35,
+      "vendor": "Celadox; aosenai"
+    },
+    {
+      "table": 36,
+      "vendor": "Painting Pixie; Hani"
+    },
+    {
+      "table": "A",
+      "vendor": "Triton Tails; Lemonaid + Xeelo"
+    },
+    {
+      "table": "B",
+      "vendor": "MIAC"
+    },
+    {
+      "table": "C",
+      "vendor": "Artspark"
+    },
+    {
+      "table": "D",
+      "vendor": "Animation Club; Shoujo Spark"
+    },
+    {
+      "table": "E",
+      "vendor": "Triton Minecraft; Mariachi La Joya Del Sur"
+    }
+  ]
+}
