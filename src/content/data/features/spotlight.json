@@ -4,7 +4,6 @@
       "id": "00",
       "title": "Registration is open!",
       "content": "Get your tickets for Howloween, UCSD's very own furry mini-con! Our event is open to everyone, including furries, cosplayers, and more, whether you're a UCSD student or not. Registering before September 20 will also net you an early-bird discount!",
-      "background": "darker",
       "actions": {
         "registration": {
           "text": "Registration page",
