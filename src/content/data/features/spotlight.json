@@ -1,9 +1,20 @@
 {
   "spotlights": [
     {
+      "id": "00",
+      "title": "Registration is open!",
+      "content": "Get your tickets for Howloween, UCSD's very own furry mini-con! Our event is open to everyone, including furries, cosplayers, and more, whether you're a UCSD student or not. Registering before September 20 will also net you an early-bird discount!",
+      "actions": {
+        "registration": {
+          "text": "Registration page",
+          "link": "/registration/"
+        }
+      }
+    },
+    {
       "id": "01",
       "title": "Want to stay updated?",
-      "content": "Registration for Howloween will open up soon. If you want to be notified when it opens, and receive other news related to the event, you should join our Discord server or Telegram announcement channel :3",
+      "content": "If you want to stay updated on news related to the event, you should join our Discord server or Telegram announcement channel :3",
       "image": "assets/images/spotlight01.jpg",
       "alt": "Furries at UCSD",
       "image_position": "right",
