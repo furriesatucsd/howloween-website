@@ -10,30 +10,26 @@
     },
     {
       "id": "02",
-      "title": "Panel &amp; Programming Application",
-      "status": "open",
-      "image": "../../assets/images/flyer_ep.png",
-      "image_position": "right",
-      "dueDate": "9/5",
-      "link": "https://docs.google.com/forms/d/e/1FAIpQLSfE6zzeMmbppmsyfleiweKm2VuKW5BKb4WmKnNSeDCcZwiuFw/viewform"
-    },
-    {
-      "id": "03",
-      "title": "DJ &amp; Performer Application",
-      "status": "open",
-      "image": "../../assets/images/flyer_dj.png",
-      "image_position": "right",
-      "dueDate": "9/5",
-      "link": "https://docs.google.com/forms/d/e/1FAIpQLScuJLrACDkO3UdryJ4WRsnaUWOmxvke6XYQvMHS8CHI1V284g/viewform"
-    },
-    {
-      "id": "04",
       "title": "Floor Wars Sign-Up",
       "status": "open",
       "image": "../../assets/images/flyer_fw.png",
       "image_position": "right",
       "dueDate": "9/20",
       "link": "https://docs.google.com/forms/d/e/1FAIpQLScwuJq-V92iiWd1iAkZegmR98iseBo4mDnQCmdG8W2ZbrH0bQ/viewform"
+    },
+    {
+      "id": "03",
+      "title": "Panel &amp; Programming Application",
+      "status": "closed",
+      "image": "../../assets/images/flyer_ep.png",
+      "image_position": "right"
+    },
+    {
+      "id": "04",
+      "title": "DJ &amp; Performer Application",
+      "status": "closed",
+      "image": "../../assets/images/flyer_dj.png",
+      "image_position": "right"
     },
     {
       "id": "05",
