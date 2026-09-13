@@ -1,0 +1,66 @@
+{
+  "headers": [
+    "Host",
+    "Name",
+    "Description",
+    "Location",
+    "Duration",
+    "Time",
+    "Preferences",
+    "Socials"
+  ],
+  "data": [
+    {
+      "content": [
+        "Xeelo-Meelo",
+        "Closet Cosplay 101",
+        "Cosplay is something that can be fun and accessible to everyone! And some don't need super advanced skills like or lots of expensive materials to create a good cosplay! Some can even be made with some extra cash on the side, time, and effort! Learn how to make a cosplay right from your closet! With or without basic skills like painting, sewing, or even thrifting on the weekends!",
+        "Roosevelt College Room",
+        "1 Hour",
+        "11:30AM - 12:30AM",
+        "Costume competition, Group Photo, Fursuit Parade, Rave",
+        "https://linktr.ee/x3elom3elo"
+      ],
+      "link": "https://linktr.ee/x3elom3elo"
+    },
+    {
+      "content": [
+        "Triton Tails",
+        "Sketchbook Swap",
+        "Sketchbooks moving all round! Artists and more welcome to come in and trade sketchbooks! Share your drawings, and leave a memory for other members of the con to take home and enjoy!",
+        "Bear Room",
+        "2 Hours",
+        "11AM - 1PM ",
+        "--",
+        "https://tritontails.org/"
+      ],
+      "link": "https://tritontails.org/"
+    },
+    {
+      "content": [
+        "Roblox + RBXDev at UCSD",
+        "How to make a Furry Rave Hangout Game on Roblox",
+        "10 min: Introduction and Logistics 50 min: Presentation 10 min: Q&A (If we are able to get guest speakers) 60 min: Panel with Roblox Devs",
+        "Marshall College Room ",
+        "1 Hour",
+        "12:30PM - 1:30PM",
+        "Rave and Group Photo",
+        "Instagram: @robloxatucsd"
+      ],
+      "link": "https://www.instagram.com/robloxatucsd/"
+    },
+    {
+      "content": [
+        "Slyde, the Furry Health & Wellness Coach",
+        "Getting Unstuck in Life: The Science behind Behavioral Change and How Coaches can Help",
+        "Making changes to your life can be scary, but you don't have to do it alone! Come join and learn about the emerging field of coaching, the science behind behavioral change, and how YOU could make changes in your own life to live the life you want.",
+        "Marshall College Room ",
+        "1 Hour",
+        "12PM - 1PM",
+        "No, place me whenever! Maybe early afternoon? 1pm ish?",
+        "Bluesky: @furry.coach"
+      ],
+      "link": "https://bsky.app/profile/furry.coach"
+    }
+  ]
+}
