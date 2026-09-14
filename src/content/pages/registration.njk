@@ -215,10 +215,10 @@ description: Registration page for Howloween 2026.
                 <b>{{ item.name }}</b>
                 {% if item.shortDesc %}
                 <!-- Display the short description, if there is one -->
-                {{ item.shortDesc }} {% elif item.variants and item.variants|length > 0 and
-                item.variants[0].price %}
+                {{ item.shortDesc }} {% elif item.variants and item.variants | length > 0 and item
+                .variants[0] .price %}
                 <!-- Display the price, if there is one -->
-                {% if item.variants[0].priceId and item.variants[0].priceId != "" %} ${{
+                {% if item .variants[0] .priceId and item .variants[0] .priceId != "" %} ${{
                 item.variants[0].price }} {% else %} ${{ item.variants[0].price }} • Offsale {%
                 endif %} {% endif %}
               </button>
@@ -313,12 +313,18 @@ description: Registration page for Howloween 2026.
 
     // Check if the item has a valid priceId
     if (!isValidPriceId(cartItem.price)) {
-      return { isValid: false, reason: 'Item is offsale or Invalid priceId.' + cartItem.price };
+      return {
+        isValid: false,
+        reason: 'Item is offsale or Invalid priceId.' + cartItem.price,
+      };
     }
 
     // Check if the item has a valid quantity
     if (cartItem.quantity === null || cartItem.quantity < 1) {
-      return { isValid: false, reason: 'Invalid quantity.' + cartItem.quantity };
+      return {
+        isValid: false,
+        reason: 'Invalid quantity.' + cartItem.quantity,
+      };
     }
 
     // Make sure it has a valid itemInfo and variantInfo
@@ -1140,9 +1146,7 @@ description: Registration page for Howloween 2026.
       );
 
       // Fire Google Analytics: Time since last session
-      fireGAEvent('Returning store customer', {
-        days_since_last_store: diffDays,
-      });
+      fireGAEvent('Returning store customer', { days_since_last_store: diffDays });
 
       if (diffDays > RESET_AFTER_N_DAYS) {
         console.log(
