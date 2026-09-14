@@ -24,14 +24,20 @@
                 <!-- If there is only one cell in the row, make it span all cols -->
                 {% if row | length == 1 %}
                 <td colspan="{{ tableData.headers | length }}">{{ row.content[0] }}</td>
-                {% else %} {% for cell in row.content %} {% if loop.index == 8 %}
+                {% else %} {% for cell in row.content %} {% if loop.index == 3 %}
                 <td>
-                  <a href="{{ row.link }}" class="btn btn-primary fs-5">{{ cell }}</a>
+                  {%for link in row.link %}
+                  <a
+                    href="{{ link }}"
+                    style="color: #007bff; text-decoration: underline; font-size: 16px"
+                    >{{ row.linkDisplay[loop.index - 1] }}</a
+                  ><br />
+                  {% endfor %}
                 </td>
-                {%elif loop.index == 3 %}
-                <td style="font-size: 15px">{{ cell }}</td>
+                {%elif loop.index == 7 %}
+                <td style="{{ row.descSize }}">{{ cell }}</td>
                 {% else %}
-                <td>{{ cell }}</td>
+                <td style="font-size: 20px">{{ cell }}</td>
                 {% endif %} {% endfor %} {% endif %}
               </tr>
               {% endfor %}
