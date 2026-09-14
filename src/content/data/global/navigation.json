@@ -40,6 +40,10 @@
         {
           "title": "Event Schedule",
           "url": "/programming/schedule/"
+        },
+        {
+          "title": "Performances",
+          "url": "/programming/performances"
         }
       ]
     },

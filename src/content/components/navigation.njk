@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container-fluid">
     <a href="/" class="navbar-brand d-flex align-items-center">
-      <img src="/assets/images/howloween-icon.png" alt="Triton Tails Howloween Logo" class="me-2" />
+      <img src="/assets/images/howloween-icon.png" alt="Triton Tails Howloween Logo" class="me-2"/>
       <span class="fw-bold">Howloween</span>
     </a>
     <button
@@ -18,9 +18,10 @@
 
     <div class="collapse navbar-collapse" id="navbarMain">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        {% for item in navigation.main %} {% if item.type == "feature" %}
-        <li class="nav-item feature">
-          <a
+        {% for item in navigation.main %}
+          {% if item.type == "feature" %}
+            <li class="nav-item feature">
+              <a
             class="nav-link {% if page.url == item.url %}active{% endif %}"
             href="{{ item.url }}"
             {%
@@ -31,24 +32,24 @@
             endif
             %}
           >
-            {{ item.title }}
-          </a>
-        </li>
-        {% elif item.type == "dropdown" %}
-        <li class="nav-item dropdown">
-          <a
+                {{ item.title }}
+              </a>
+            </li>
+          {% elif item.type == "dropdown" %}
+            <li class="nav-item dropdown">
+              <a
             class="nav-link dropdown-toggle"
             href="#"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            {{ item.title }}
-          </a>
-          <ul class="dropdown-menu">
-            {% for subitem in item.items %}
-            <li>
-              <a
+                {{ item.title }}
+              </a>
+              <ul class="dropdown-menu">
+                {% for subitem in item.items %}
+                  <li>
+                    <a
                 class="dropdown-item {% if page.url == subitem.url %}active{% endif %}"
                 href="{{ subitem.url }}"
                 {%
@@ -59,15 +60,15 @@
                 endif
                 %}
               >
-                {{ subitem.title }}
-              </a>
+                      {{ subitem.title }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
             </li>
-            {% endfor %}
-          </ul>
-        </li>
-        {% else %}
-        <li class="nav-item">
-          <a
+          {% else %}
+            <li class="nav-item">
+              <a
             class="nav-link {% if page.url == item.url %}active{% endif %}"
             href="{{ item.url }}"
             {%
@@ -78,10 +79,11 @@
             endif
             %}
           >
-            {{ item.title }}
-          </a>
-        </li>
-        {% endif %} {% endfor %}
+                {{ item.title }}
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
       </ul>
     </div>
   </div>
