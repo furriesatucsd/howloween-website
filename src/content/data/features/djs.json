@@ -1,0 +1,48 @@
+{
+  "djlist": [
+    {
+      "id": "01",
+      "dj-name": "MNSTR WUSKY",
+      "genre": "UKG/Speed, Garage",
+      "time": "6PM - 7PM",
+      "instagram": "https://www.instagram.com/monsterwusky/",
+      "twitter": "https://x.com/MonsterWusky",
+      "tiktok": "https://www.tiktok.com/@monsterwusky",
+      "mixcloud": "https://www.mixcloud.com/mike-sanchez-leon2/"
+    },
+    {
+      "id": "02",
+      "dj-name": "Zero Gravity",
+      "genre": "Trap/Bass, House/Dubstep",
+      "time": "7PM - 8PM",
+      "instagram": "https://www.instagram.com/zer0_gravity_music",
+      "soundcloud": "https://soundcloud.com/zero-gravity-444565529"
+    },
+    {
+      "id": "03",
+      "dj-name": "fever",
+      "genre": "Techno",
+      "time": "8PM - 9PM",
+      "instagram": "https://www.instagram.com/feverishfeel/"
+    },
+    {
+      "id": "04",
+      "dj-name": "MANEDBENTO!",
+      "genre": "Dubstep/Hard Techno",
+      "time": "9PM - 10PM",
+      "instagram": "https://www.instagram.com/manedbento/",
+      "twitter": "https://x.com/manedbento",
+      "tiktok": "https://www.tiktok.com/@manedbento",
+      "soundcloud": "https://soundcloud.com/manedbento",
+      "spotify": "https://open.spotify.com/artist/3Tls1YrzO8LhdZjaG32MyH"
+    },
+    {
+      "id": "05",
+      "dj-name": "Hushpuppy",
+      "genre": "Pop/Techno",
+      "time": "10PM - 11PM",
+      "bluesky": "https://bsky.app/profile/hushpuppy.bsky.social",
+      "twitter": "https://x.com/Hushpuppymusic"
+    }
+  ]
+}
