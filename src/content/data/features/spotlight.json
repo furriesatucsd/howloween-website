@@ -3,11 +3,16 @@
     {
       "id": "00",
       "title": "Registration is open!",
-      "content": "Get your tickets for Howloween, UCSD's very own furry mini-con! Our event is open to everyone, including furries, cosplayers, and more, whether you're a UCSD student or not. Registering before September 20 will also net you an early-bird discount!",
+      "content": "Get your tickets for Howloween, UCSD's very own furry mini-con! Our event is open to everyone, including furries, cosplayers, and more, whether you're a UCSD student or not. Registering by September 20 will also net you an early-bird discount!",
+      "image": "/assets/images/spotlight_reg.png",
+      "alt": "Registration Tickets Display Art",
+      "image_position": "right",
+      "background": "darker",
       "actions": {
         "registration": {
-          "text": "Registration page",
-          "link": "/registration/"
+          "text": "Register now!",
+          "link": "/registration/",
+          "icon": "fa-solid fa-arrow-right"
         }
       }
     },
@@ -17,8 +22,7 @@
       "content": "If you want to stay updated on news related to the event, you should join our Discord server or Telegram announcement channel :3",
       "image": "assets/images/spotlight01.jpg",
       "alt": "Furries at UCSD",
-      "image_position": "right",
-      "background": "darker",
+      "image_position": "left",
       "actions": {
         "discord": {
           "text": "Discord",
@@ -38,7 +42,8 @@
       "content": "Do you have an idea for a panel or art you want to sell? Or even just want to help make this event happen in any way you can? We currently have applications open for many different aspects of the event, so apply while you still can!",
       "image": "/assets/images/spotlight_apps.png",
       "alt": "Application Flyers Art",
-      "image_position": "left",
+      "image_position": "right",
+      "background": "darker",
       "actions": {
         "applications": {
           "text": "View all applications",
@@ -52,8 +57,7 @@
       "content": "Howloween is an annual Halloween-themed mini convention at UC San Diego, hosted by Triton Tails, UCSD's resident furry club. Attendees can enjoy a wide range of activities, from vendor fairs and gaming to costume and dance competitions, night raves, and more!\n\n Howloween started in 2024 with just an artist alley and a couple of rooms. Since then, it has grown into a much larger event, bringing in many different student orgs on campus for collaboration and hundreds of attendees each year.",
       "image": "/assets/images/spotlight_howl.jpg",
       "alt": "Howloween 2025 Group Photo",
-      "image_position": "right",
-      "background": "darker"
+      "image_position": "left"
     }
   ]
 }
