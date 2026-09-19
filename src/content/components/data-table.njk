@@ -24,7 +24,7 @@
                 <!-- If there is only one cell in the row, make it span all cols -->
                 {% if row | length == 1 %}
                 <td colspan="{{ tableData.headers | length }}">{{ row.content[0] }}</td>
-                {% else %} {% for cell in row.content %} {% if loop.index == 3 %}
+                {% else %} {% for cell in row.content %} {% if loop.index == 1 %}
                 <td>
                   {%for link in row.link %}
                   <a
@@ -34,7 +34,7 @@
                   ><br />
                   {% endfor %}
                 </td>
-                {%elif loop.index == 7 %}
+                {%elif loop.index == 5 %}
                 <td style="{{ row.descSize }}">{{ cell }}</td>
                 {% else %}
                 <td style="font-size: 20px">{{ cell }}</td>
