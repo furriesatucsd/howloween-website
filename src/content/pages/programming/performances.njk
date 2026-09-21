@@ -4,17 +4,17 @@ title: Performances
 description: List of performers for Howloween 2026.
 ---
 
-<header>
-  <hgroup>
+<section class="wrapper">
+  <div class="inner">
     <h1>Performances</h1>
     <p>Here's your list of performers for Howloween 2026!</p>
-  </hgroup>
-</header>
 
-<!-- Performances -->
-{% for show in performance.performances %}
-<h2>{{ show["performer-name"] }}</h2>
-<h3>{{ show["performance-name"] }}</h3>
-<p>Scheduled Time: {{ show["scheduled-time"] }}</p>
-<p>{{ show["event-description"] }}</p>
-{% endfor %}
+    <!-- Performances -->
+    {% for show in performance.performances %}
+      <h2>{{ show["performer-name"] }}</h2>
+      <h3>{{ show["performance-name"] }}</h3>
+      <p>Scheduled Time: {{ show["scheduled-time"] }}</p>
+      <p>{{ show["event-description"] }}</p>
+    {% endfor %}
+  </div>
+</section>
