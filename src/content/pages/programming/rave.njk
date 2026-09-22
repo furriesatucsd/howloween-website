@@ -3,7 +3,6 @@ layout: base.njk
 title: Howloween Rave
 description: Information on the rave hosted for Howloween 2026.
 ---
-
 <section class="wrapper">
   <div class="inner">
     <main>
@@ -25,24 +24,21 @@ description: Information on the rave hosted for Howloween 2026.
           <h3>{{ ppl["dj-name"] }}</h3>
           <p>{{ ppl["genre"] }}</p>
           <p>{{ ppl["time"] }}</p>
-          {% for platform in[
-            "instagram",
-            "twitter",
-            "tiktok",
-            "mixcloud",
-            "soundcloud",
-            "bluesky",
-            "spotify"
-          ] %}
-            {% if ppl[platform] %}
-              <p>{{ platform | capitalize }}: <a href="{{ ppl[platform] }}">{{ ppl[platform] }}</a>
-              </p>
-            {% endif %}
-          {% endfor %}
+          {% if ppl.socials %}
+            {% for k, social in ppl.socials %}
+              {% if
+              social.icon %}
+                <a href="{{ social.link }}" class="btn btn-primary fs-5">
+                  <i class="{{ social.icon }}"></i>
+                  {{ social.text }}
+                </a>
+              {% else %}
+                <a href="{{ social.link }}" class="btn btn-primary fs-5">{{ social.text }}</a>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
         </section>
-        {% if not loop.last %}
-          <hr/>
-        {% endif %}
+        {% if not loop.last %}<hr>{% endif %}
       {% endfor %}
     </main>
   </div>

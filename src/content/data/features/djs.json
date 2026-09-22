@@ -5,44 +5,110 @@
       "dj-name": "MNSTR WUSKY",
       "genre": "UKG/Speed, Garage",
       "time": "6PM - 7PM",
-      "instagram": "https://www.instagram.com/monsterwusky/",
-      "twitter": "https://x.com/MonsterWusky",
-      "tiktok": "https://www.tiktok.com/@monsterwusky",
-      "mixcloud": "https://www.mixcloud.com/mike-sanchez-leon2/"
+      "socials": {
+        "instagram": {
+          "text": "Instagram",
+          "link": "https://www.instagram.com/monsterwusky/",
+          "icon": "fa-brands fa-instagram"
+        },
+        "twitter": {
+          "text": "Twitter",
+          "link": "https://x.com/MonsterWusky",
+          "icon": "fa-brands fa-twitter"
+        },
+        "tiktok": {
+          "text": "TikTok",
+          "link": "https://www.tiktok.com/@monsterwusky",
+          "icon": "fa-brands fa-tiktok"
+        },
+        "mixcloud": {
+          "text": "Mixcloud",
+          "link": "https://www.mixcloud.com/mike-sanchez-leon2",
+          "icon": "fa-brands fa-mixcloud"
+        }
+      }
     },
     {
       "id": "02",
       "dj-name": "Zero Gravity",
       "genre": "Trap/Bass, House/Dubstep",
       "time": "7PM - 8PM",
-      "instagram": "https://www.instagram.com/zer0_gravity_music",
-      "soundcloud": "https://soundcloud.com/zero-gravity-444565529"
+      "socials": {
+        "instagram": {
+          "text": "Instagram",
+          "link": "https://www.instagram.com/zer0_gravity_music",
+          "icon": "fa-brands fa-instagram"
+        },
+        "soundcloud": {
+          "text": "Soundcloud",
+          "link": "https://soundcloud.com/zero-gravity-444565529",
+          "icon": "fa-brands fa-soundcloud"
+        }
+      }
     },
     {
       "id": "03",
       "dj-name": "fever",
       "genre": "Techno",
       "time": "8PM - 9PM",
-      "instagram": "https://www.instagram.com/feverishfeel/"
+      "socials": {
+        "instagram": {
+          "text": "Instagram",
+          "link": "https://www.instagram.com/feverishfeel/",
+          "icon": "fa-brands fa-instagram"
+        }
+      }
     },
     {
       "id": "04",
       "dj-name": "MANEDBENTO!",
       "genre": "Dubstep/Hard Techno",
       "time": "9PM - 10PM",
-      "instagram": "https://www.instagram.com/manedbento/",
-      "twitter": "https://x.com/manedbento",
-      "tiktok": "https://www.tiktok.com/@manedbento",
-      "soundcloud": "https://soundcloud.com/manedbento",
-      "spotify": "https://open.spotify.com/artist/3Tls1YrzO8LhdZjaG32MyH"
+      "socials": {
+        "instagram": {
+          "text": "Instagram",
+          "link": "https://www.instagram.com/manedbento/",
+          "icon": "fa-brands fa-instagram"
+        },
+        "twitter": {
+          "text": "Twitter",
+          "link": "https://x.com/manedbento",
+          "icon": "fa-brands fa-twitter"
+        },
+        "tiktok": {
+          "text": "TikTok",
+          "link": "https://www.tiktok.com/@manedbento",
+          "icon": "fa-brands fa-tiktok"
+        },
+        "soundcloud": {
+          "text": "Soundcloud",
+          "link": "https://soundcloud.com/manedbento",
+          "icon": "fa-brands fa-soundcloud"
+        },
+        "spotify": {
+          "text": "Spotify",
+          "link": "https://open.spotify.com/artist/3Tls1YrzO8LhdZjaG32MyH",
+          "icon": "fa-brands fa-spotify"
+        }
+      }
     },
     {
       "id": "05",
       "dj-name": "Hushpuppy",
       "genre": "Pop/Techno",
       "time": "10PM - 11PM",
-      "bluesky": "https://bsky.app/profile/hushpuppy.bsky.social",
-      "twitter": "https://x.com/Hushpuppymusic"
+      "socials": {
+        "bluesky": {
+          "text": "Bluesky",
+          "link": "https://bsky.app/profile/hushpuppy.bsky.social",
+          "icon": "fa-brands fa-bluesky"
+        },
+        "twitter": {
+          "text": "Twitter",
+          "link": "https://x.com/Hushpuppymusic",
+          "icon": "fa-brands fa-twitter"
+        }
+      }
     }
   ]
 }
