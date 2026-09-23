@@ -1,45 +1,45 @@
 ---
 layout: base.njk
-title: Howloween Rave
+title: Rave
 description: Information on the rave hosted for Howloween 2026.
 ---
+
+<section class="wrapper align-center title-banner">
+  <div class="inner">
+    <h1>Rave</h1>
+  </div>
+</section>
 <section class="wrapper">
   <div class="inner">
     <main>
       <p>
-    As per Howloween tradition, the whole con ends off on a rave hosted in West Ballroom! Attendees
-    with a valid badge can attend and dance the night away with featured DJs!
-  </p>
+        As per Howloween tradition, the whole con ends off on a rave hosted in West Ballroom.
+        Attendees with a valid UCSD, General, or Sponsor badge can attend and dance the night away
+        with featured DJs! Attendees with Minor badges are not allowed to attend the rave, as per
+        the safety of these individuals.
+      </p>
       <p>
-    The end-of-night Rave will begin at 6PM, and go through until 11PM with our special guest
-    Hushpuppy closing out the show!
-  </p>
-      <p>
-    Attendees with Minor Badges are not allowed to attend the Rave, as per the safety of these
-    individuals.
-  </p>
-      <h2>DJs:</h2>
+        The end-of-night Rave will begin at 6PM, and go through until 11PM with our special guest
+        Hushpuppy closing out the show!
+      </p>
+      <h2>DJ Lineup</h2>
       {% for ppl in djs.djlist %}
-        <section class="dj">
-          <h3>{{ ppl["dj-name"] }}</h3>
-          <p>{{ ppl["genre"] }}</p>
-          <p>{{ ppl["time"] }}</p>
-          {% if ppl.socials %}
-            {% for k, social in ppl.socials %}
-              {% if
-              social.icon %}
-                <a href="{{ social.link }}" class="btn btn-primary fs-5">
-                  <i class="{{ social.icon }}"></i>
-                  {{ social.text }}
-                </a>
-              {% else %}
-                <a href="{{ social.link }}" class="btn btn-primary fs-5">{{ social.text }}</a>
-              {% endif %}
-            {% endfor %}
-          {% endif %}
-        </section>
-        {% if not loop.last %}<hr>{% endif %}
-      {% endfor %}
+      <section class="dj">
+        <h3>{{ ppl["dj-name"] }}</h3>
+        <p>{{ ppl["genre"] }}</p>
+        <p>{{ ppl["time"] }}</p>
+        {% if ppl.socials %} {% for k, social in ppl.socials %} {% if social.icon %}
+        <a href="{{ social.link }}" class="btn btn-primary fs-5">
+          <i class="{{ social.icon }}"></i>
+          {{ social.text }}
+        </a>
+        {% else %}
+        <a href="{{ social.link }}" class="btn btn-primary fs-5">{{ social.text }}</a>
+        {% endif %} {% endfor %} {% endif %}
+      </section>
+      {% if not loop.last %}
+      <hr />
+      {% endif %} {% endfor %}
     </main>
   </div>
 </section>

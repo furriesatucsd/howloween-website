@@ -4,18 +4,28 @@ title: Performances
 description: List of performers for Howloween 2026.
 ---
 
-<section class="wrapper">
+<section class="wrapper align-center title-banner">
   <div class="inner">
     <h1>Performances</h1>
-    <p>Here's your list of performers for Howloween 2026!</p>
+  </div>
+</section>
 
-    <!-- Performances -->
+<section class="wrapper">
+  <div class="inner">
+    <p>
+      Performances take place in the Price Center Theatre throughout the day of the event. They are
+      open for all attendees with a valid badge to attend!
+      <!-- Performances -->
+    </p>
+
+    <h2>Performance Lineup</h2>
     {% for show in performance.performances %}
-      <h2>{{ show["performer-name"] }}</h2>
-      <h3>{{ show["performance-name"] }}</h3>
-      <p>Scheduled Time: {{ show["scheduled-time"] }}</p>
-      <p>{{ show["event-description"] }}</p>
-      {% if not loop.last %}<hr>{% endif %}
-    {% endfor %}
+    <h3>{{ show["performer-name"] }}</h3>
+    <h4><em>{{ show["performance-name"] }}</em></h4>
+    <p>{{ show["scheduled-time"] }}</p>
+    <p>{{ show["event-description"] }}</p>
+    {% if not loop.last %}
+    <hr />
+    {% endif %} {% endfor %}
   </div>
 </section>
