@@ -32,6 +32,6 @@ description: Information regarding Panels.
 </section>
 
 <!--Panels Table-->
-{% set tableData = { title: "Panels List", description: "", background_class: "bg-dark", container_fluid: "-fluid" } %} {%
-set tableData = tableData | merge({headers: panelinfo.headers, data: panelinfo.data}) %} {% include
-"../../components/data-table.njk" %}
+{% set tableData = { title: "Panels List", description: "", background_class: "bg-dark",
+container_fluid: "-fluid" } %} {% set tableData = tableData | merge({headers: panelinfo.headers,
+data: panelinfo.data}) %} {% include "../../components/data-table.njk" %}
