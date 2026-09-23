@@ -4,10 +4,8 @@
     <div class="row justify-content-center">
       <div class="col-lg-{{ tableData.col_width | default('10') }}">
         {% if tableData.title %}
-        <h2 class="display-5 fw-bold text-center mb-4">{{ tableData.title }}</h2>
-        {% endif %} {% if tableData.description %}
-        <p class="lead text-center mb-5">{{ tableData.description }}</p>
-        {% endif %}
+        <h2>{{ tableData.title }}</h2>
+        {% endif %} 
 
         <div class="table-responsive">
           <table class="table table-striped table-hover">

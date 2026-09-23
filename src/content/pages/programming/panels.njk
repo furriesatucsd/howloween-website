@@ -15,7 +15,6 @@ description: Information regarding Panels.
 
 <section class="wrapper">
   <div class="inner">
-    <h2>Information on Panels</h2>
     <p>
       Panels are free to be hosted by the community! Whether its a meetup to meet and talk to others
       with similar interestes, a workshop to showcase how to craft, or even a panel to have fun,
@@ -33,7 +32,7 @@ description: Information regarding Panels.
 </section>
 
 <!--Panels Table-->
-{% set tableData = { title: "Panels", description: "The recurring events, activities, and other
+{% set tableData = { title: "Panels List", description: "The recurring events, activities, and other
 traditions of our furry community.", background_class: "bg-dark", container_fluid: "-fluid" } %} {%
 set tableData = tableData | merge({headers: panelinfo.headers, data: panelinfo.data}) %} {% include
 "../../components/data-table.njk" %}
