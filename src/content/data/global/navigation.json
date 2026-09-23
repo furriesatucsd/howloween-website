@@ -10,8 +10,8 @@
       "url": "/venue/",
       "items": [
         {
-          "title": "Floor Plans",
-          "url": "/venue/floor-plans/"
+          "title": "Event Maps",
+          "url": "/venue/map/"
         },
         {
           "title": "Food & Drink",
