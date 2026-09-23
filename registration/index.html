@@ -196,6 +196,26 @@
               </a>
             </li>
             
+            <li>
+              <a
+                class="dropdown-item "
+                href="/programming/performances"
+                
+              >
+                Performances
+              </a>
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item "
+                href="/programming/rave"
+                
+              >
+                Rave
+              </a>
+            </li>
+            
           </ul>
         </li>
           
@@ -649,12 +669,18 @@
 
     // Check if the item has a valid priceId
     if (!isValidPriceId(cartItem.price)) {
-      return { isValid: false, reason: 'Item is offsale or Invalid priceId.' + cartItem.price };
+      return {
+        isValid: false,
+        reason: 'Item is offsale or Invalid priceId.' + cartItem.price,
+      };
     }
 
     // Check if the item has a valid quantity
     if (cartItem.quantity === null || cartItem.quantity < 1) {
-      return { isValid: false, reason: 'Invalid quantity.' + cartItem.quantity };
+      return {
+        isValid: false,
+        reason: 'Invalid quantity.' + cartItem.quantity,
+      };
     }
 
     // Make sure it has a valid itemInfo and variantInfo
@@ -1476,9 +1502,7 @@
       );
 
       // Fire Google Analytics: Time since last session
-      fireGAEvent('Returning store customer', {
-        days_since_last_store: diffDays,
-      });
+      fireGAEvent('Returning store customer', { days_since_last_store: diffDays });
 
       if (diffDays > RESET_AFTER_N_DAYS) {
         console.log(
@@ -1534,7 +1558,7 @@
 </script>
  
       <section class="container">
-        <p><i class="fa-solid fa-pen-to-square"></i> Last updated: 09/17/26</p>
+        <p><i class="fa-solid fa-pen-to-square"></i> Last updated: 09/23/26</p>
       </section>
       
     </main>
