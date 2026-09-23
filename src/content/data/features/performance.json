@@ -1,0 +1,34 @@
+{
+  "performances": [
+    {
+      "id": "01",
+      "performer-name": "Yaniware",
+      "performance-name": "Yani Mew Mew Magic",
+      "performance-type": "Dance",
+      "duration": "1 Hour",
+      "scheduled-time": "1:00PM-1:30PM",
+      "performer-socials": "Instagram: @yaniware/@miaowani",
+      "event-description": "Opening up the Dance Competition with their stellar dances is Yaniware! UC San Diego's very own icon bringing Mew Mew Magic to Howloween! Come see their dances to open up and lead us into our Dance Competition!"
+    },
+    {
+      "id": "02",
+      "performer-name": "Real Big Top!",
+      "performance-name": "Real Big Top!",
+      "performance-type": "Alternative Circus Music / Band Performance",
+      "duration": "1 Hour",
+      "scheduled-time": "5:30PM - 6:30PM",
+      "performer-socials": "Instagram: @realbigtop",
+      "event-description": "ITS TIME FOR SOME REAL BIG CLOWNING! With their Alternative Clown Music, You'd think the circus was in town, because it is! Live Today at Howloween! Catch the various acts and talents and clownings at Howloween!"
+    },
+    {
+      "id": "03",
+      "performer-name": "Yammo The Yeen",
+      "performance-name": "Standup Comediyeen",
+      "performance-type": "Standup Comedy",
+      "duration": "1 Hour",
+      "scheduled-time": "7:30PM - 8:30PM",
+      "performer-socials": "Instagram:@adario1",
+      "event-description": "Yapping his way all across the nation, Yammo The Yeen brings the comedy from cons across the globe to here at UC San Diego for the first time! Catch the Comediyeen's Exclusive UC San Diego Show here at Howloween!"
+    }
+  ]
+}
