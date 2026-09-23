@@ -10,8 +10,8 @@
       "url": "/venue/",
       "items": [
         {
-          "title": "Floor Plans",
-          "url": "/venue/floor-plans/"
+          "title": "Event Maps",
+          "url": "/venue/map/"
         },
         {
           "title": "Food & Drink",
@@ -44,6 +44,14 @@
         {
           "title": "Panels",
           "url": "/programming/panels/"
+        },
+        {
+          "title": "Performances",
+          "url": "/programming/performances"
+        },
+        {
+          "title": "Rave",
+          "url": "/programming/rave"
         }
       ]
     },
