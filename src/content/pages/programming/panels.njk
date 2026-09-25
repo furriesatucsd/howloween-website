@@ -24,14 +24,14 @@ description: Information regarding Panels.
     <div class="wrapper align-center">
       <img
         src="../../../assets/images/Panel_Img.png"
-        alt="Gilman Parking Structure"
+        alt="Overview Image of Panels Schedule"
         class="img-fluid rounded shadow w-100"
       />
     </div>
+    <h2>Panels List</h2>
   </div>
+  <!--Panels Table-->
+  {% set tableData = { title: "", description: "", container_fluid: "-fluid" } %} {% set tableData =
+  tableData | merge({headers: panelinfo.headers, data: panelinfo.data}) %} {% include
+  "../../components/data-table.njk" %}
 </section>
-
-<!--Panels Table-->
-{% set tableData = { title: "Panels List", description: "", background_class: "bg-dark",
-container_fluid: "-fluid" } %} {% set tableData = tableData | merge({headers: panelinfo.headers,
-data: panelinfo.data}) %} {% include "../../components/data-table.njk" %}
