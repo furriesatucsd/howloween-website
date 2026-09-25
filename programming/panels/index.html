@@ -1,0 +1,761 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Panels • Howloween</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Information regarding Panels." />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Site Assets -->
+    <link rel="stylesheet" href="/assets/main.css" />
+    <script type="module" src="/assets/main.js"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/sf-hollywood-hills-3" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- GA4 -->
+    
+    <script>
+      // Check hostname at runtime
+      if (window.location.hostname === 'furriesatucsd.github.io') {
+        // Load GA4 script dynamically
+        const gaScript = document.createElement('script');
+        gaScript.async = true;
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-FL8NYH375F';
+        document.head.appendChild(gaScript);
+
+        // Initialize GA4
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-FL8NYH375F');
+      } else {
+        console.warn(
+          'Google Analytics is not enabled for this hostname:',
+          window.location.hostname
+        );
+      }
+    </script>
+    
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <a href="/" class="navbar-brand d-flex align-items-center">
+      <img src="/assets/images/howloween-icon.png" alt="Triton Tails Howloween Logo" class="me-2" />
+      <span class="fw-bold">Howloween</span>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarMain"
+      aria-controls="navbarMain"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+         
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            href="/registration/"
+            
+          >
+            Registration
+          </a>
+        </li>
+          
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Venue
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li>
+              <a
+                class="dropdown-item "
+                href="/venue/map/"
+                
+              >
+                Event Maps
+              </a>
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item "
+                href="/venue/food/"
+                
+              >
+                Food &amp; Drink
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+          
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Travel
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li>
+              <a
+                class="dropdown-item "
+                href="/travel/parking/"
+                
+              >
+                Parking
+              </a>
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item "
+                href="/travel/transit/"
+                
+              >
+                Public Transit
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+          
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Programming
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li>
+              <a
+                class="dropdown-item "
+                href="/programming/schedule/"
+                
+              >
+                Event Schedule
+              </a>
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item active"
+                href="/programming/panels/"
+                
+              >
+                Panels
+              </a>
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item "
+                href="/programming/performances"
+                
+              >
+                Performances
+              </a>
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item "
+                href="/programming/rave"
+                
+              >
+                Rave
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+          
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Get Involved
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li>
+              <a
+                class="dropdown-item "
+                href="/apply/"
+                
+              >
+                View All Applications
+              </a>
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item "
+                href="https://docs.google.com/forms/d/e/1FAIpQLScR5kA-R7Pv0on8Qeoezg8hBaP31UlwhJe5D3jwLSEaW7gekA/viewform"
+                
+              >
+                Volunteering
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+          
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Policies
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li>
+              <a
+                class="dropdown-item "
+                href="/policies/attendees"
+                
+              >
+                Attendee Policies
+              </a>
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item "
+                href="/policies/vendors"
+                
+              >
+                Vendor Policies
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+          
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            About
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li>
+              <a
+                class="dropdown-item "
+                href="/about"
+                
+              >
+                About Triton Tails
+              </a>
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item "
+                href="/about/contact"
+                
+              >
+                Contact
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+         
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <!-- Main Content -->
+    
+    <main>
+      
+<!--Panels Diescription-->
+<section class="wrapper align-center title-banner">
+  <div class="inner">
+    <div>
+      <h1>Panels</h1>
+    </div>
+  </div>
+</section>
+
+<section class="wrapper">
+  <div class="inner">
+    <p>
+      Panels are free to be hosted by the community! Whether its a meetup to meet and talk to others
+      with similar interestes, a workshop to showcase how to craft, or even a panel to have fun,
+      maybe learn something new, or even play some games! Panels will be spread out throughout the
+      con with even more opportunity to make your Howloween experience ever more unique.
+    </p>
+    <div class="wrapper align-center">
+      <img
+        src="../../../assets/images/Panel_Img.png"
+        alt="Overview Image of Panels Schedule"
+        class="img-fluid rounded shadow w-100"
+      />
+    </div>
+    <h2>Panels List</h2>
+  </div>
+  <!--Panels Table-->
+    <!-- Data Table -->
+<section class="py-5 ">
+  <div class="container-fluid fade-in">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        
+
+        <div class="table-responsive">
+          <table class="table table-striped table-hover">
+            <thead class="table-primary">
+              <tr>
+                
+                <th scope="col">Host</th>
+                
+                <th scope="col">Name</th>
+                
+                <th scope="col">Location</th>
+                
+                <th scope="col">Time</th>
+                
+                <th scope="col">Description</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              
+              <tr>
+                <!-- If there is only one cell in the row, make it span all cols -->
+                  
+                <td>
+                  
+                  <a
+                    href="https://linktr.ee/x3elom3elo"
+                    style="color: #007bff; text-decoration: underline; font-size: 16px"
+                    >Xeelo</a
+                  ><br />
+                  
+                </td>
+                  
+                <td style="font-size: 20px">Closet Cosplay 101</td>
+                  
+                <td style="font-size: 20px">Roosevelt College Room</td>
+                  
+                <td style="font-size: 20px">11:30AM - 12:30AM</td>
+                  
+                <td style="font-size: 15px">Cosplay is something that can be fun and accessible to everyone! And some don&#39;t need super advanced skills like or lots of expensive materials to create a good cosplay! Some can even be made with some extra cash on the side, time, and effort! Learn how to make a cosplay right from your closet! With or without basic skills like painting, sewing, or even thrifting on the weekends!</td>
+                  
+              </tr>
+              
+              <tr>
+                <!-- If there is only one cell in the row, make it span all cols -->
+                  
+                <td>
+                  
+                  <a
+                    href="https://tritontails.org/"
+                    style="color: #007bff; text-decoration: underline; font-size: 16px"
+                    >Triton Tails</a
+                  ><br />
+                  
+                </td>
+                  
+                <td style="font-size: 20px">Sketchbook Swap</td>
+                  
+                <td style="font-size: 20px">Bear Room</td>
+                  
+                <td style="font-size: 20px">11AM - 1PM </td>
+                  
+                <td style="font-size: 15px">Sketchbooks moving all round! Artists and more welcome to come in and trade sketchbooks! Share your drawings, and leave a memory for other members of the con to take home and enjoy!</td>
+                  
+              </tr>
+              
+              <tr>
+                <!-- If there is only one cell in the row, make it span all cols -->
+                  
+                <td>
+                  
+                  <a
+                    href="https://www.instagram.com/robloxatucsd/"
+                    style="color: #007bff; text-decoration: underline; font-size: 16px"
+                    >robloxatucsd</a
+                  ><br />
+                  
+                </td>
+                  
+                <td style="font-size: 20px">How to make a Furry Rave Hangout Game on Roblox</td>
+                  
+                <td style="font-size: 20px">Marshall College Room </td>
+                  
+                <td style="font-size: 20px">12:30PM - 1:30PM</td>
+                  
+                <td style="font-size: 15px">10 min: Introduction and Logistics 50 min: Presentation 10 min: Q&amp;A (If we are able to get guest speakers) 60 min: Panel with Roblox Devs</td>
+                  
+              </tr>
+              
+              <tr>
+                <!-- If there is only one cell in the row, make it span all cols -->
+                  
+                <td>
+                  
+                  <a
+                    href="https://bsky.app/profile/furry.coach"
+                    style="color: #007bff; text-decoration: underline; font-size: 16px"
+                    >furry.coach</a
+                  ><br />
+                  
+                </td>
+                  
+                <td style="font-size: 20px">Getting Unstuck in Life: The Science behind Behavioral Change and How Coaches can Help</td>
+                  
+                <td style="font-size: 20px">Marshall College Room </td>
+                  
+                <td style="font-size: 20px">12PM - 1PM</td>
+                  
+                <td style="font-size: 15px">Making changes to your life can be scary, but you don&#39;t have to do it alone! Come join and learn about the emerging field of coaching, the science behind behavioral change, and how YOU could make changes in your own life to live the life you want.</td>
+                  
+              </tr>
+              
+              <tr>
+                <!-- If there is only one cell in the row, make it span all cols -->
+                  
+                <td>
+                  
+                  <a
+                    href="https://tritontails.org/"
+                    style="color: #007bff; text-decoration: underline; font-size: 16px"
+                    >Triton Tails</a
+                  ><br />
+                  
+                </td>
+                  
+                <td style="font-size: 20px">Special Guest Meet &amp; Greet and Q&amp;A Sponsor Panel</td>
+                  
+                <td style="font-size: 20px">Roosevelt College Room</td>
+                  
+                <td style="font-size: 20px">2:30PM - 3:30PM</td>
+                  
+                <td style="font-size: 15px">A private panel for our Special Guests and our con sponsors, as an added perk to being a sponsor for this event, You&#39;ll get to meet this years special guests, get to ask questions, and get to really know who our special guests are and how much they mean to Triton Tails and the furry community as a whole!</td>
+                  
+              </tr>
+              
+              <tr>
+                <!-- If there is only one cell in the row, make it span all cols -->
+                  
+                <td>
+                  
+                  <a
+                    href="https://linktr.ee/x3elom3elo"
+                    style="color: #007bff; text-decoration: underline; font-size: 16px"
+                    >Xeelo</a
+                  ><br />
+                  
+                </td>
+                  
+                <td style="font-size: 20px">Cinema Screams Jeopardy!</td>
+                  
+                <td style="font-size: 20px">Red Shoe Room</td>
+                  
+                <td style="font-size: 20px">2PM - 3:30PM </td>
+                  
+                <td style="font-size: 15px">Welcome to everyone&#39;s favorite game show! Now with a special Howloween Twist too it as we bring out fun Trivia that the audience will split into teams for, and compete to win prizes based on who&#39;s collected the most throughout the game! Think you know your horror trivia? From Famous films, to actors, shows and even more unexpected elements... Get ready to pick your brain before the horde arrives for it first.</td>
+                  
+              </tr>
+              
+              <tr>
+                <!-- If there is only one cell in the row, make it span all cols -->
+                  
+                <td>
+                  
+                </td>
+                  
+                <td style="font-size: 20px">Furry Mahjong</td>
+                  
+                <td style="font-size: 20px">Game Room</td>
+                  
+                <td style="font-size: 20px">2PM - 4PM</td>
+                  
+                <td style="font-size: 15px">Come learn how to play Japanese Mahjong (Riichi) with furries!</td>
+                  
+              </tr>
+              
+              <tr>
+                <!-- If there is only one cell in the row, make it span all cols -->
+                  
+                <td>
+                  
+                  <a
+                    href="https://tritontails.org/"
+                    style="color: #007bff; text-decoration: underline; font-size: 16px"
+                    >Triton Tails</a
+                  ><br />
+                  
+                </td>
+                  
+                <td style="font-size: 20px">University Meetup</td>
+                  
+                <td style="font-size: 20px">Red Shoe Room</td>
+                  
+                <td style="font-size: 20px">3PM - 4PM</td>
+                  
+                <td style="font-size: 15px">University Furs from far and wide all come tonight to this spot! Whether youre a UC Student, CSU, Private or Public University, or even coming from universities far and wide all over and beyond California, nows your chance to meet up with other university students, make connections, network and lots lots more! You&#39;ll never know who you can find and what connections you can make here, you might even be meeting your future coworkers here!</td>
+                  
+              </tr>
+              
+              <tr>
+                <!-- If there is only one cell in the row, make it span all cols -->
+                  
+                <td>
+                  
+                  <a
+                    href="https://bsky.app/profile/geminop3.bsky.social"
+                    style="color: #007bff; text-decoration: underline; font-size: 16px"
+                    >geminop3</a
+                  ><br />
+                  
+                  <a
+                    href="https://www.instagram.com/geminop3/"
+                    style="color: #007bff; text-decoration: underline; font-size: 16px"
+                    >geminop3</a
+                  ><br />
+                  
+                  <a
+                    href="https://www.tumblr.com/geminop3"
+                    style="color: #007bff; text-decoration: underline; font-size: 16px"
+                    >geminop3</a
+                  ><br />
+                  
+                </td>
+                  
+                <td style="font-size: 20px">Jojo&#39;s Anthropomorphic Adventure: Guessing Tendency</td>
+                  
+                <td style="font-size: 20px">Roosevelt College Room</td>
+                  
+                <td style="font-size: 20px">5:30PM - 6:30PM</td>
+                  
+                <td style="font-size: 15px">Guess the Jojo’s Bizarre Adventure character and the animal they&#39;re based on to score points! Top 3 (with tie-breakers) win custom art!</td>
+                  
+              </tr>
+              
+              <tr>
+                <!-- If there is only one cell in the row, make it span all cols -->
+                  
+                <td>
+                  
+                  <a
+                    href="https://x.com/EbanTheRaccoon"
+                    style="color: #007bff; text-decoration: underline; font-size: 16px"
+                    >EbanTheRaccoon</a
+                  ><br />
+                  
+                </td>
+                  
+                <td style="font-size: 20px">Costume/Fursuit Figure Drawing Class</td>
+                  
+                <td style="font-size: 20px">Red Shoe + Bear Room</td>
+                  
+                <td style="font-size: 20px">5:30PM - 7:30PM</td>
+                  
+                <td style="font-size: 15px">Enroll with the qr code to get a chance to be elected as a figure drawing subject! *Looking for cosplayers and fursuiters (full or partial) *Please share a photo of what you will be wearing to the panel *You may be elected as a substitute (not sure about this one, we can just ask the class who would like to sub in case of an emergency!) *Please choose a position you can hold for your safety! Hello class! For today, we will be drawing 6 subjects for 5 minutes each to create rotoscope animations! The animations will be available on the Triton Tails Discord Server with credit to the artists and subject. Paper and pencils will be provided.</td>
+                  
+              </tr>
+              
+              <tr>
+                <!-- If there is only one cell in the row, make it span all cols -->
+                  
+                <td>
+                  
+                  <a
+                    href="https://bsky.app/profile/did:plc:7dlrvnqltdcmgrhechnma6bt"
+                    style="color: #007bff; text-decoration: underline; font-size: 16px"
+                    >snagglepussy</a
+                  ><br />
+                  
+                  <a
+                    href="https://www.instagram.com/snagglepussee_cos/"
+                    style="color: #007bff; text-decoration: underline; font-size: 16px"
+                    >snagglepussee_cos</a
+                  ><br />
+                  
+                </td>
+                  
+                <td style="font-size: 20px">The Descendants Panel</td>
+                  
+                <td style="font-size: 20px">Marshall College Room </td>
+                  
+                <td style="font-size: 20px">6PM - 7PM</td>
+                  
+                <td style="font-size: 15px">Join Arai as they speak about the worldbuilding and international implications of the Disney Descendants franchise.</td>
+                  
+              </tr>
+              
+              <tr>
+                <!-- If there is only one cell in the row, make it span all cols -->
+                  
+                <td>
+                  
+                </td>
+                  
+                <td style="font-size: 20px">Horror in Music</td>
+                  
+                <td style="font-size: 20px">Roosevelt College Room</td>
+                  
+                <td style="font-size: 20px">7:30PM - 9PM</td>
+                  
+                <td style="font-size: 15px">While not as prominent a theme in music compared to other genres, horror is still a prominent part of many horror artists. From campy theatrics to cold nihilistic dread, themes of terror have pervaded our music in many ways. Join me through a musical journey, where we analyze how 5 music artists convey fear.</td>
+                  
+              </tr>
+              
+              <tr>
+                <!-- If there is only one cell in the row, make it span all cols -->
+                  
+                <td>
+                  
+                  <a
+                    href="https://www.instagram.com/bousoudiva39/"
+                    style="color: #007bff; text-decoration: underline; font-size: 16px"
+                    >bousoudiva39</a
+                  ><br />
+                  
+                  <a
+                    href="https://linktr.ee/sandiegofurries"
+                    style="color: #007bff; text-decoration: underline; font-size: 16px"
+                    >SDF</a
+                  ><br />
+                  
+                </td>
+                  
+                <td style="font-size: 20px">THE KARAOKE THEATER</td>
+                  
+                <td style="font-size: 20px">Red Shoe + Bear Room</td>
+                  
+                <td style="font-size: 20px">9PM - 11PM</td>
+                  
+                <td style="font-size: 15px">Come join and sing your heart out for two hours at this karaoke panel! Featuring your most fab and karaoke diva Panda from San Diego Furries. No professional vocals needed, no spectacular stage presence needed; just get on the stage and SING!!!</td>
+                  
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</section>
+ 
+      <section class="container">
+        <p><i class="fa-solid fa-pen-to-square"></i> Last updated: 09/25/26</p>
+      </section>
+      
+    </main>
+     <!-- Footer -->
+<footer class="bg-black text-white py-4 text-center">
+  <div class="container">
+    <div class="mb-3 d-inline-block">
+      <a href="https://tritontails.org" target="_blank" class="btn btn-outline-light btn-lg"
+        >Main Website</a
+      >
+    </div>
+    <div class="mb-3 ms-2 d-inline-block">
+      <a href="https://linktr.ee/furriesatucsd" target="_blank" class="btn btn-outline-light btn-lg"
+        >Our Links &amp; Socials</a
+      >
+    </div>
+    <div>
+      <p>Triton Tails - Furries at UC San Diego</p>
+      <p class="small">
+        &copy; Invalid DateTime Triton Tails. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- External Scripts -->
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  </body>
+</html>
