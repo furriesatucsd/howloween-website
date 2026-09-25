@@ -4,9 +4,7 @@
     <div class="row justify-content-center">
       <div class="col-lg-{{ tableData.col_width | default('10') }}">
         {% if tableData.title %}
-        <h2 class="display-5 fw-bold text-center mb-4">{{ tableData.title }}</h2>
-        {% endif %} {% if tableData.description %}
-        <p class="lead text-center mb-5">{{ tableData.description }}</p>
+        <h2>{{ tableData.title }}</h2>
         {% endif %}
 
         <div class="table-responsive">
@@ -23,10 +21,22 @@
               <tr>
                 <!-- If there is only one cell in the row, make it span all cols -->
                 {% if row | length == 1 %}
-                <td colspan="{{ tableData.headers | length }}">{{ row[0] }}</td>
-                {% else %} {% for cell in row %}
-                <td>{{ cell }}</td>
-                {% endfor %} {% endif %}
+                <td colspan="{{ tableData.headers | length }}">{{ row.content[0] }}</td>
+                {% else %} {% for cell in row.content %} {% if loop.index == 1 %}
+                <td>
+                  {%for link in row.link %}
+                  <a
+                    href="{{ link }}"
+                    style="color: #007bff; text-decoration: underline; font-size: 16px"
+                    >{{ row.linkDisplay[loop.index - 1] }}</a
+                  ><br />
+                  {% endfor %}
+                </td>
+                {%elif loop.index == 5 %}
+                <td style="{{ row.descSize }}">{{ cell }}</td>
+                {% else %}
+                <td style="font-size: 20px">{{ cell }}</td>
+                {% endif %} {% endfor %} {% endif %}
               </tr>
               {% endfor %}
             </tbody>
