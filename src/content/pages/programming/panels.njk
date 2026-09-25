@@ -1,0 +1,37 @@
+---
+layout: base.njk
+title: Panels
+description: Information regarding Panels.
+---
+
+<!--Panels Diescription-->
+<section class="wrapper align-center title-banner">
+  <div class="inner">
+    <div>
+      <h1>Panels</h1>
+    </div>
+  </div>
+</section>
+
+<section class="wrapper">
+  <div class="inner">
+    <p>
+      Panels are free to be hosted by the community! Whether its a meetup to meet and talk to others
+      with similar interestes, a workshop to showcase how to craft, or even a panel to have fun,
+      maybe learn something new, or even play some games! Panels will be spread out throughout the
+      con with even more opportunity to make your Howloween experience ever more unique.
+    </p>
+    <div class="wrapper align-center">
+      <img
+        src="../../../assets/images/Panel_Img.png"
+        alt="Overview Image of Panels Schedule"
+        class="img-fluid rounded shadow w-100"
+      />
+    </div>
+    <h2>Panels List</h2>
+  </div>
+  <!--Panels Table-->
+  {% set tableData = { title: "", description: "", container_fluid: "-fluid" } %} {% set tableData =
+  tableData | merge({headers: panelinfo.headers, data: panelinfo.data}) %} {% include
+  "../../components/data-table.njk" %}
+</section>

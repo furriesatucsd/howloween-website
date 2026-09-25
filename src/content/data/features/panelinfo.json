@@ -1,0 +1,168 @@
+{
+  "headers": ["Host", "Name", "Location", "Time", "Description"],
+  "data": [
+    {
+      "content": [
+        "Xeelo-Meelo",
+        "Closet Cosplay 101",
+        "Roosevelt College Room",
+        "11:30AM - 12:30AM",
+        "Cosplay is something that can be fun and accessible to everyone! And some don't need super advanced skills like or lots of expensive materials to create a good cosplay! Some can even be made with some extra cash on the side, time, and effort! Learn how to make a cosplay right from your closet! With or without basic skills like painting, sewing, or even thrifting on the weekends!"
+      ],
+      "descSize": "font-size: 15px",
+      "linkDisplay": ["Xeelo"],
+      "link": ["https://linktr.ee/x3elom3elo"]
+    },
+    {
+      "content": [
+        "Triton Tails",
+        "Sketchbook Swap",
+        "Bear Room",
+        "11AM - 1PM ",
+        "Sketchbooks moving all round! Artists and more welcome to come in and trade sketchbooks! Share your drawings, and leave a memory for other members of the con to take home and enjoy!"
+      ],
+      "descSize": "font-size: 15px",
+      "linkDisplay": ["Triton Tails"],
+      "link": ["https://tritontails.org/"]
+    },
+    {
+      "content": [
+        "Roblox + RBXDev at UCSD",
+        "How to make a Furry Rave Hangout Game on Roblox",
+        "Marshall College Room ",
+        "12:30PM - 1:30PM",
+        "10 min: Introduction and Logistics 50 min: Presentation 10 min: Q&A (If we are able to get guest speakers) 60 min: Panel with Roblox Devs"
+      ],
+      "descSize": "font-size: 15px",
+      "linkDisplay": ["robloxatucsd"],
+      "link": ["https://www.instagram.com/robloxatucsd/"]
+    },
+    {
+      "content": [
+        "Slyde, the Furry Health & Wellness Coach",
+        "Getting Unstuck in Life: The Science behind Behavioral Change and How Coaches can Help",
+        "Marshall College Room ",
+        "12PM - 1PM",
+        "Making changes to your life can be scary, but you don't have to do it alone! Come join and learn about the emerging field of coaching, the science behind behavioral change, and how YOU could make changes in your own life to live the life you want."
+      ],
+      "descSize": "font-size: 15px",
+      "linkDisplay": ["furry.coach"],
+      "link": ["https://bsky.app/profile/furry.coach"]
+    },
+    {
+      "content": [
+        "Triton Tails + Special Guests",
+        "Special Guest Meet & Greet and Q&A Sponsor Panel",
+        "Roosevelt College Room",
+        "2:30PM - 3:30PM",
+        "A private panel for our Special Guests and our con sponsors, as an added perk to being a sponsor for this event, You'll get to meet this years special guests, get to ask questions, and get to really know who our special guests are and how much they mean to Triton Tails and the furry community as a whole!"
+      ],
+      "descSize": "font-size: 15px",
+      "linkDisplay": ["Triton Tails"],
+      "link": ["https://tritontails.org/"]
+    },
+    {
+      "content": [
+        "Xeelo-Meelo",
+        "Cinema Screams Jeopardy!",
+        "Red Shoe Room",
+        "2PM - 3:30PM ",
+        "Welcome to everyone's favorite game show! Now with a special Howloween Twist too it as we bring out fun Trivia that the audience will split into teams for, and compete to win prizes based on who's collected the most throughout the game! Think you know your horror trivia? From Famous films, to actors, shows and even more unexpected elements... Get ready to pick your brain before the horde arrives for it first."
+      ],
+      "descSize": "font-size: 15px",
+      "linkDisplay": ["Xeelo"],
+      "link": ["https://linktr.ee/x3elom3elo"]
+    },
+    {
+      "content": [
+        "Furry Mahjong",
+        "Furry Mahjong",
+        "Game Room",
+        "2PM - 4PM",
+        "Come learn how to play Japanese Mahjong (Riichi) with furries!"
+      ],
+      "descSize": "font-size: 15px",
+      "linkDisplay": ["Furry Mahjong"],
+      "link": []
+    },
+    {
+      "content": [
+        "Triton Tails",
+        "University Meetup",
+        "Red Shoe Room",
+        "3PM - 4PM",
+        "University Furs from far and wide all come tonight to this spot! Whether youre a UC Student, CSU, Private or Public University, or even coming from universities far and wide all over and beyond California, nows your chance to meet up with other university students, make connections, network and lots lots more! You'll never know who you can find and what connections you can make here, you might even be meeting your future coworkers here!"
+      ],
+      "descSize": "font-size: 15px",
+      "linkDisplay": ["Triton Tails"],
+      "link": ["https://tritontails.org/"]
+    },
+    {
+      "content": [
+        "geminop3",
+        "Jojo's Anthropomorphic Adventure: Guessing Tendency",
+        "Roosevelt College Room",
+        "5:30PM - 6:30PM",
+        "Guess the Jojo’s Bizarre Adventure character and the animal they're based on to score points! Top 3 (with tie-breakers) win custom art!"
+      ],
+      "descSize": "font-size: 15px",
+      "linkDisplay": ["geminop3", "geminop3", "geminop3"],
+      "link": [
+        "https://bsky.app/profile/geminop3.bsky.social",
+        "https://www.instagram.com/geminop3/",
+        "https://www.tumblr.com/geminop3"
+      ]
+    },
+    {
+      "content": [
+        "Eban",
+        "Costume/Fursuit Figure Drawing Class",
+        "Red Shoe + Bear Room",
+        "5:30PM - 7:30PM",
+        "Enroll with the qr code to get a chance to be elected as a figure drawing subject! *Looking for cosplayers and fursuiters (full or partial) *Please share a photo of what you will be wearing to the panel *You may be elected as a substitute (not sure about this one, we can just ask the class who would like to sub in case of an emergency!) *Please choose a position you can hold for your safety! Hello class! For today, we will be drawing 6 subjects for 5 minutes each to create rotoscope animations! The animations will be available on the Triton Tails Discord Server with credit to the artists and subject. Paper and pencils will be provided."
+      ],
+      "descSize": "font-size: 15px",
+      "linkDisplay": ["EbanTheRaccoon"],
+      "link": ["https://x.com/EbanTheRaccoon"]
+    },
+    {
+      "content": [
+        "Arai (evil)",
+        "The Descendants Panel",
+        "Marshall College Room ",
+        "6PM - 7PM",
+        "Join Arai as they speak about the worldbuilding and international implications of the Disney Descendants franchise."
+      ],
+      "descSize": "font-size: 15px",
+      "linkDisplay": ["snagglepussy", "snagglepussee_cos"],
+      "link": [
+        "https://bsky.app/profile/did:plc:7dlrvnqltdcmgrhechnma6bt",
+        "https://www.instagram.com/snagglepussee_cos/"
+      ]
+    },
+    {
+      "content": [
+        "Alex Araña",
+        "Horror in Music",
+        "Roosevelt College Room",
+        "7:30PM - 9PM",
+        "While not as prominent a theme in music compared to other genres, horror is still a prominent part of many horror artists. From campy theatrics to cold nihilistic dread, themes of terror have pervaded our music in many ways. Join me through a musical journey, where we analyze how 5 music artists convey fear."
+      ],
+      "descSize": "font-size: 15px",
+      "linkDisplay": ["Alex Araña"],
+      "link": []
+    },
+    {
+      "content": [
+        "Panda Bear: Bousou",
+        "THE KARAOKE THEATER",
+        "Red Shoe + Bear Room",
+        "9PM - 11PM",
+        "Come join and sing your heart out for two hours at this karaoke panel! Featuring your most fab and karaoke diva Panda from San Diego Furries. No professional vocals needed, no spectacular stage presence needed; just get on the stage and SING!!!"
+      ],
+      "descSize": "font-size: 15px",
+      "linkDisplay": ["bousoudiva39", "SDF"],
+      "link": ["https://www.instagram.com/bousoudiva39/", "https://linktr.ee/sandiegofurries"]
+    }
+  ]
+}
