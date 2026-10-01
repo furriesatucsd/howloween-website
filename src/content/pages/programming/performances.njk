@@ -3,12 +3,19 @@ layout: base.njk
 title: Performances
 description: List of performers for Howloween 2026.
 ---
+<section class="wrapper align-center title-banner">
+  <div class="inner">
+    <div>
+      <hgroup>
+        <h1>Performances</h1>
+        <p>Here's your list of performers for Howloween 2026!</p>
+      </hgroup>
+    </div>
+  </div>
+</section>
 
 <section class="wrapper">
   <div class="inner">
-    <h1>Performances</h1>
-    <p>Here's your list of performers for Howloween 2026!</p>
-
     <!-- Performances -->
     {% for show in performance.performances %}
       <h2>{{ show["performer-name"] }}</h2>
