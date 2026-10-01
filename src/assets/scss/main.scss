@@ -34,11 +34,16 @@ main {
 
 .bg-warning {
   background-color: #c19401 !important;
-  color: #ffffff !important;
+  color: #000000 !important;
 }
 
 .bg-darker {
   background-color: #111111;
+}
+
+.bg-white {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 a {
