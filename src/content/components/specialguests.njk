@@ -1,0 +1,43 @@
+<h2>Special Guests</h2>
+{% for guest in guestData.guest %}
+    <section
+  class="py-5 text-light {% if guest.background == 'light' %}bg-light {% elif guest.background == 'dark' %}bg-dark bg-opacity-80 text-light {% elif guest.background == 'darker' %}bg-darker text-light {% endif %}"
+>
+        <div class="container-fluid">
+            <div class="row align-items-center g-4 g-lg-5">
+                <div
+        class="col-lg-6 {% if guest.image_position == 'right' %}order-lg-2{% endif %} mb-4 mb-lg-0 fade-in"
+      >
+                    <img src="{{ guest.image }}" class="d-block w-100" alt="{{ guest.alt }}"/>
+                </div>
+                <div
+        class="col-lg-6 {% if guest.image_position == 'right'%}order-lg-1{% endif %} fade-in"
+      >
+                    <h2 class="display-5 fw-bold">{{ guest.name | safe }}</h2>
+                    {% if guest.subtitle %}
+                        <p class="lead {% if guest.description %}mb-4{% endif %}">{{ guest.subtitle }}</p>
+                    {% endif %}
+                    {% for paragraph in guest
+                        .description
+                        .split("\n\n") %}
+                        <p>{{ paragraph }}</p>
+                    {% endfor %}
+                    {% if guest.actions %}
+                        {% for k, action in guest.actions %}
+                            {% if
+                            action.icon %}
+                                <a href="{{ action.link }}" class="btn btn-primary fs-5"
+          >
+                                    <i class="{{ action.icon }}"></i>
+                                    {{ action.text }}
+                                </a>
+                            {% else %}
+                                <a href="{{ action.link }}" class="btn btn-primary fs-5">{{ action.text }}</a>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endfor %}

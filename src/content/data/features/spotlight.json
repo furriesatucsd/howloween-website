@@ -3,7 +3,7 @@
     {
       "id": "00",
       "title": "Registration is open!",
-      "content": "Get your tickets for Howloween, UCSD's very own furry mini-con! Our event is open to everyone, including furries, cosplayers, and more, whether you're a UCSD student or not.",
+      "content": "Ge t your tickets for Howloween, UCSD's very own furry mini-con! Our event is open to everyone, including furries, cosplayers, and more, whether you're a UCSD student or not.",
       "image": "/assets/images/spotlight_reg.png",
       "alt": "Registration Tickets Display Art",
       "image_position": "right",
@@ -58,51 +58,6 @@
       "image": "/assets/images/spotlight_howl.jpg",
       "alt": "Howloween 2025 Group Photo",
       "image_position": "left"
-    }
-  ],
-  "guests": [
-    {
-      "id": "01",
-      "name": "DJ Hushpuppy",
-      "image": "/assets/images/hushpuppy.webp",
-      "description": "",
-      "actions": {
-        "bluesky": {
-          "text": "Bluesky",
-          "link": "https://bksy.app/profile/hushpuppy.bsky.social",
-          "icon": "fa-brands fa-bluesky"
-        },
-        "twitter": {
-          "text": "Twitter",
-          "link": "https://x.com/Hushpuppymusic",
-          "icon": "fa-brands fa-twitter"
-        }
-      }
-    },
-    {
-      "id": "02",
-      "name": "DoodleDrawz",
-      "image": "/assets/images/doodledrawz.png",
-      "description": "🎨 Doodle Drawz is a proud advocate for those with chronic illness/disabilities. Having one himself, Doodle always looks for opportunities to advocate for representation for those with chronic illnesses or disabilities in the fandom. He’s also a proud member and advocate for the Trans 🏳️‍⚧️  and Asexual 🖤 🩶 🤍 💜 community as well! \n\nDoodle is a dedicated fursuit maker of 5 years, and a furry artist of 10+ years, who has won two floor wars competitions 🕺 🪩\n\n  🎃 We are SO excited to have them as one of this year's Howloween Special Guests, and you can see them at this year’s Vendor Fair, or a Special Sponsor Q&A Panel as well! 🎃",
-      "actions": {}
-    },
-    {
-      "id": "03",
-      "name": "Benji Maru",
-      "image": "/assets/images/Benji.jpg",
-      "description": "Benji is a lovely artist who has amassed a following from their cozy and inclusive art. He even made his own silhouette and reveal art.  He has also delved into fursuit making, having made fursuits for himself and his boyfriend. \n\n✨ We are so excited to have Benji as our THIRD Guest of Honor for Howloween, and hope you all are too! ✨",
-      "actions": {
-        "instagram": {
-          "text": "Instagram",
-          "link": "https://instagram.com/benji.maru",
-          "icon": "fa-brands fa-instagram"
-        },
-        "twitter": {
-          "text": "Twitter",
-          "link": "https://x.com/thebenjimaru",
-          "icon": "fa-brands fa-twitter"
-        }
-      }
     }
   ]
 }

@@ -1,3 +1,4 @@
+<!-- NOTE: Remove "safe" if the input is user submitted so you don't get pwned -->
 {% for spotlight in spotlightData.spotlight %}
   <section
   class="py-5 text-light {% if spotlight.background == 'light' %}bg-light {% elif spotlight.background == 'dark' %}bg-dark bg-opacity-80 text-light {% elif spotlight.background == 'darker' %}bg-darker text-light {% endif %}"
@@ -40,17 +41,3 @@
     </div>
   </section>
 {% endfor %}
-{% for guests in spotlightData.spotlight %}
-  <h2>Special Guests</h2>
-  <section
-  class="py-5 text-light {% if guest.background == 'light' %}bg-light {% elif guest.background == 'dark' %}bg-dark bg-opacity-80 text-light {% elif guest.background == 'darker' %}bg-darker text-light {% endif %}">
-    <div class="container-fluid">
-      <div class="row align-items-center g-4 g-lg-5">
-        <div
-        class="col-lg-6 {% if guest.image_position == 'right' %}order-lg-2{% endif %} mb-4 mb-lg-0 fade-in"
-      >
-          <img src="{{ guest.image }}" class="d-block w-100" alt="{{ spotlight.alt }}"/>
-        </div>
-        <div
-        class="col-lg-6 {% if spotlight.image_position == 'right'%}order-lg-1{% endif %} fade-in"
-      >
