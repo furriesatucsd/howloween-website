@@ -24,15 +24,13 @@
                 <td colspan="{{ tableData.headers | length }}">{{ row.content[0] }}</td>
                 {% else %} {% for cell in row.content %} {% if loop.index == 1 %}
                 <td>
-                    {% if row.link and row.link | length %}
-                      {% for link in row.link %}<a
-                        href="{{ link }}"
-                        style="color: #007bff; text-decoration: underline; font-size: 16px"
-                        {{ row.linkDisplay[loop.index - 1] }}</a><br />
-                      {% endfor %}
-                    {% else %}
-                      {{ cell }}
-                    {% endif %}
+                  {% if row.link and row.link | length %} {% for link in row.link %}<a
+                    href="{{ link }}"
+                    style="text-decoration: underline"
+                  >
+                    {{ row.linkDisplay[loop.index - 1] }}</a
+                  ><br />
+                  {% endfor %} {% else %} {{ cell }} {% endif %}
                 </td>
                 {%elif loop.index == 5 %}
                 <td style="{{ row.descSize }}">{{ cell }}</td>
