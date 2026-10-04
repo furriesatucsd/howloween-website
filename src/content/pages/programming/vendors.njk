@@ -5,24 +5,36 @@ description: Vendor fair layout and vendors for Howloween 2026.
 ---
 
 <!-- Page Banner -->
-<section class="wrapper align-center">
+<section class="wrapper align-center title-banner">
   <div class="inner">
-    <div>
-      <h1>All Applications</h1>
-      <p>
-        Interested in helping to make Howloween a bigger and better event? You're in the right
-        place!
-      </p>
-      <p>
-        For the most recent information regarding application availability and deadlines, please
-        check our announcements channel on Discord.
-      </p>
-    </div>
+    <h1>Vendor Fair</h1>
   </div>
 </section>
 
-<!-- Vendor Fair map -->
+<section class="wrapper">
+  <div class="inner">
+    <p>
+      The Vendor Fair can be found in the <strong>Price Center East Ballroom</strong> with operating
+      hours of <strong>1PM to 9PM</strong>.
+    </p>
+    <p>
+      <a href="../../../assets/images/documents/vendor_fair.pdf" target="_blank">Click here</a> for
+      a PDF version of the map and vendor list.
+    </p>
 
-<!-- Table of Vendors -->
-{% set tableData = { vendor: vendor.vendors } %} {% include
-"../components/vendor-table.njk" %}
+    <!-- Vendor Fair map -->
+    <h2>Vendor Fair Map</h2>
+    <img
+      src="../../../assets/images/vendor_map.png"
+      alt="Vendor Fair Map"
+      width="67%"
+      class="rounded mx-auto mt-5 mb-5 d-block"
+    />
+
+    <!-- Table of Vendors -->
+    <h2>Vendor List</h2>
+    {% set tableData = { title: "", description: "", container_fluid: "-fluid" } %} {% set tableData
+    = tableData | merge({headers: vendors.headers, data: vendors.data}) %} {% include
+    "../../components/data-table.njk" %}
+  </div>
+</section>

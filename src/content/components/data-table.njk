@@ -8,8 +8,8 @@
         {% endif %}
 
         <div class="table-responsive">
-          <table class="table table-striped table-hover">
-            <thead class="table-primary">
+          <table class="table table-dark table-striped table-hover">
+            <thead class="table-danger">
               <tr>
                 {% for header in tableData.headers %}
                 <th scope="col">{{ header }}</th>
@@ -20,17 +20,19 @@
               {% for row in tableData.data %}
               <tr>
                 <!-- If there is only one cell in the row, make it span all cols -->
-                {% if row | length == 1 %}
+                {% if row.content | length == 1 %}
                 <td colspan="{{ tableData.headers | length }}">{{ row.content[0] }}</td>
                 {% else %} {% for cell in row.content %} {% if loop.index == 1 %}
                 <td>
-                  {%for link in row.link %}
-                  <a
-                    href="{{ link }}"
-                    style="color: #007bff; text-decoration: underline; font-size: 16px"
-                    >{{ row.linkDisplay[loop.index - 1] }}</a
-                  ><br />
-                  {% endfor %}
+                    {% if row.link and row.link | length %}
+                      {% for link in row.link %}<
+                        href="{{ link }}"
+                        style="color: #007bff; text-decoration: underline; font-size: 16px"
+                        {{ row.linkDisplay[loop.index - 1] }}</a><br />
+                      {% endfor %}
+                    {% else %}
+                      {{ cell }}
+                    {% endif %}
                 </td>
                 {%elif loop.index == 5 %}
                 <td style="{{ row.descSize }}">{{ cell }}</td>
