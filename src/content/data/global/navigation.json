@@ -38,12 +38,12 @@
       "type": "dropdown",
       "items": [
         {
-          "title": "Vendor Fair",
-          "url": "/programming/vendors/"
-        },
-        {
           "title": "Event Schedule",
           "url": "/programming/schedule/"
+        },
+        {
+          "title": "Vendor Fair",
+          "url": "/programming/vendors/"
         },
         {
           "title": "Panels",
