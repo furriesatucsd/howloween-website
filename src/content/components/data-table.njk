@@ -25,7 +25,7 @@
                 {% else %} {% for cell in row.content %} {% if loop.index == 1 %}
                 <td>
                     {% if row.link and row.link | length %}
-                      {% for link in row.link %}<
+                      {% for link in row.link %}<a
                         href="{{ link }}"
                         style="color: #007bff; text-decoration: underline; font-size: 16px"
                         {{ row.linkDisplay[loop.index - 1] }}</a><br />
