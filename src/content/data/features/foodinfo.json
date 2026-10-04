@@ -1,0 +1,57 @@
+{
+  "headers": ["", "Food", "Hours", "", "Discount"],
+  "data": [
+    {
+      "content": ["YougurtWorldLogo.jpg", "Yogurt World", "12pm-6pm", "(858) 558-8989", "10% off"],
+      "link": ["https://www.instagram.com/yogurtworld.ucsd/?hl=en"]
+    },
+    {
+      "content": [
+        "TapiocaExpressLogo.jpg",
+        "Tapioca Express",
+        "10:30am-11pm",
+        "(858) 678-8821",
+        "10% off"
+      ],
+      "link": ["http://www.tapiocaexpress.com/%22"]
+    },
+    {
+      "content": ["BurgerKingLogo.jpg", "Burger King", "8am-12am", "(858) 247-0498", ""],
+      "link": ["https://www.bk.com/"]
+    },
+    {
+      "content": ["DirtyBirdsLogo.jpg", "Dirty Bird", "12pm-5pm", "(858) 750-2121", ""],
+      "link": ["https://www.dirtybirdsbarandgrill.com/"]
+    },
+    {
+      "content": ["Flavorfull.jpg", "Flavorfull", "11am-8pm", "(858) 203-3364", ""],
+      "link": ["https://www.myflavorfull.com/"]
+    },
+    {
+      "content": ["SantoriniLogo.jpg", "Santorini", "11am-8pm", "(858) 622-0067", ""],
+      "link": ["http://santoriniislandgrill.net/locations/"]
+    },
+    {
+      "content": ["StarbucksLogo.jpg", "Starbucks", "9:30am-6pm", "(858) 534-5562", ""],
+      "link": [
+        "https://www.starbucks.com/store-locator/store/1010196/univ-of-cal-san-diego-price-c-9500-gilman-dr-la-jolla-ca-92093-us"
+      ]
+    },
+    {
+      "content": ["SubwayLogo.jpg", "Subway", "9:30am-12am", "(858) 638-8275", ""],
+      "link": ["https://www.subway.com/en-us"]
+    },
+    {
+      "content": ["SunshineLogo.jpg", "Sunsine Market", "10am-5pm", "(858) 534-4248", ""],
+      "link": ["https://hdh-web.ucsd.edu/dining/apps/diningservices"]
+    },
+    {
+      "content": ["TacoBell.jpg", "Taco Bell", "9:30am-12am", "(858) 457-8421", ""],
+      "link": ["https://www.tacobell.com/"]
+    },
+    {
+      "content": ["BluePapperLogo.jpg", "Blue Pepper", "11am-4pm", "(858) 203-3654", ""],
+      "link": ["https://www.bluepepperucsd.com/"]
+    }
+  ]
+}

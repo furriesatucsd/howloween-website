@@ -3,3 +3,26 @@ layout: base.njk
 title: Food & Drink
 description: Nearby food (with discounts!) and drink for Howloween.
 ---
+
+<section class="wrapper align-center title-banner">
+  <div class="inner">
+    <div>
+      <h1>Food & Discounts</h1>
+    </div>
+  </div>
+</section>
+
+<section class="wrapper">
+  <div class="inner">
+    <p>
+      During Howloween, attendees will have access to a variety of foods found within and around
+      Price Center Hall. Additonally, certain food establishments will also be offering discounts to
+      attendees for the event.
+    </p>
+    <p>List of Food Vendors and applicable discounts:</p>
+    <!--Food Table-->
+    {% set tableData = { title: "", description: "", container_fluid: "-fluid" } %} {% set tableData
+    = tableData | merge({headers: foodinfo.headers, data: foodinfo.data}) %} {% include
+    "../../components/list-table.njk" %}
+  </div>
+</section>
