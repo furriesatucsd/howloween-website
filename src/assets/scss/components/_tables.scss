@@ -14,3 +14,15 @@
     vertical-align: middle;
   }
 }
+
+.table-danger {
+  --bs-table-bg: rgba(0, 0, 0, 0);
+  --bs-table-color: white;
+}
+
+.table-dark {
+  --bs-table-bg: rgb(20, 18, 18);
+  --bs-table-striped-bg: rgb(24, 21, 21);
+  --bs-table-hover-bg: rgb(31, 22, 23);
+  --bs-table-border-color: rgb(24, 21, 21);
+}
