@@ -58,6 +58,21 @@
       "image": "/assets/images/spotlight_howl.jpg",
       "alt": "Howloween 2025 Group Photo",
       "image_position": "left"
+    },
+    {
+      "id": "04",
+      "title": "Special Guests",
+      "content": "Howloween is pleased to introduce you to our special guests: DJ Hushpuppy, Doodle Drawz, and Benji Maru!",
+      "image": "/assets/images/placeholder.webp",
+      "alt": "TEMPORARY PLACEHOLDER",
+      "image_position": "right",
+      "background": "darker",
+      "actions": {
+        "specialguests": {
+          "text": "Special Guests",
+          "link": "/specialguests"
+        }
+      }
     }
   ]
 }

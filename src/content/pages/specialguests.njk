@@ -1,0 +1,35 @@
+---
+layout: base.njk
+title: Special Guests
+description: Special guests for Triton Tails Howloween.
+---
+
+<section class="wrapper align-center title-banner">
+  <div class="inner">
+    <h1>Special Guests</h1>
+  </div>
+</section>
+
+<section class="wrapper">
+  <div class="inner">
+    {% for guest in specialguests.guests %}
+    <section class="guests">
+      {% if guest.image %}
+      <figure>
+        <img src="{{ guest.image }}" alt="{{ guest.alt }}" />
+      </figure>
+      {% endif %}
+      <h2>{{ guest["name"] }}</h2>
+      <p>{{ guest["description"] }}</p>
+      {% if guest.actions %} {% for k, action in guest.actions %} {% if action.icon %}
+      <a href="{{ action.link }}" class="btn btn-primary fs-5">
+        <i class="{{ action.icon }}"></i>
+        {{ action.text }}
+      </a>
+      {% else %}
+      <a href="{{ action.link }}" class="btn btn-primary fs-5">{{ action.text }}</a>
+      {% endif %} {% endfor %} {% endif %}
+    </section>
+    {% endfor %}
+  </div>
+</section>
