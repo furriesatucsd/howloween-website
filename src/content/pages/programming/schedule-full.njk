@@ -1,0 +1,24 @@
+---
+layout: bare.njk
+title: Event Schedule
+description: Full-page schedule of events and other programming for Howloween.
+---
+
+{% from "schedule.njk" import renderSchedule %}
+
+<section class="p-5">
+  <h2 class="mt-3">Schedule</h2>
+  {{ renderSchedule(schedule) }}
+</section>
+
+<script>
+  document.addEventListener('click', (ev) => {
+    const trigger = ev.target.closest('[data-dialog]');
+    if (trigger) {
+      document.getElementById(trigger.dataset.dialog)?.showModal();
+      return;
+    }
+
+    if (ev.target instanceof HTMLDialogElement) ev.target.close();
+  });
+</script>

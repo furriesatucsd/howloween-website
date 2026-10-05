@@ -1,0 +1,326 @@
+{
+  "startHour": 10,
+  "endHour": 24,
+  "rooms": [
+    {
+      "id": "bear",
+      "name": "Bear Room"
+    },
+    {
+      "id": "redshoe",
+      "name": "Red Shoe Room"
+    },
+    {
+      "id": "roosevelt",
+      "name": "Roosevelt College Room"
+    },
+    {
+      "id": "marshall",
+      "name": "Marshall College Room"
+    },
+    {
+      "id": "statue",
+      "name": "King Triton Statue"
+    },
+    {
+      "id": "pricecenter",
+      "name": "Price Center Theatre"
+    },
+    {
+      "id": "westballroom",
+      "name": "West Ballroom"
+    },
+    {
+      "id": "eastballroom",
+      "name": "East Ballroom"
+    },
+    {
+      "id": "mpr",
+      "name": "MPR"
+    },
+    {
+      "id": "greentable",
+      "name": "Green Table Room"
+    },
+    {
+      "id": "dance",
+      "name": "Dance Studio"
+    }
+  ],
+  "events": [
+    {
+      "title": "Vendor Fair",
+      "type": "special",
+      "room": "eastballroom",
+      "start": "13:00",
+      "end": "21:00"
+    },
+    {
+      "title": "Gaming Lounge",
+      "type": "special",
+      "room": "mpr",
+      "start": "11:00",
+      "end": "23:00"
+    },
+    {
+      "title": "Artist Lounge",
+      "type": "special",
+      "room": "greentable",
+      "start": "11:00",
+      "end": "23:00"
+    },
+    {
+      "title": "Headless and Costume Lounge",
+      "type": "special",
+      "room": "dance",
+      "start": "11:00",
+      "end": "23:00"
+    },
+    {
+      "title": "Little Shop of Horrors (1960)",
+      "type": "special",
+      "host": "Triton Tails",
+      "room": "pricecenter",
+      "start": "11:00",
+      "end": "12:30"
+    },
+    {
+      "title": "Closet Cosplay 101",
+      "host": "Xeelo-Meelo",
+      "room": "roosevelt",
+      "start": "11:30",
+      "end": "12:30",
+      "description": "Cosplay is something that can be fun and accessible to everyone! And some don't need super advanced skills like or lots of expensive materials to create a good cosplay! Some can even be made with some extra cash on the side, time, and effort! Learn how to make a cosplay right from your closet! With or without basic skills like painting, sewing, or even thrifting on the weekends!"
+    },
+    {
+      "title": "Sketchbook Swap",
+      "host": "Triton Tails",
+      "room": "redshoe",
+      "start": "11:00",
+      "end": "13:00",
+      "description": "Sketchbooks moving all round! Artists and more welcome to come in and trade sketchbooks! Share your drawings, and leave a memory for other members of the con to take home and enjoy!"
+    },
+    {
+      "title": "Gaming Tournament",
+      "host": "Emerald",
+      "room": "mpr",
+      "start": "12:00",
+      "end": "16:00"
+    },
+    {
+      "title": "Make a Furry Rave Hangout Game on Roblox",
+      "host": "Roblox + RBXDev at UCSD",
+      "room": "bear",
+      "start": "12:30",
+      "end": "13:30",
+      "description": "10 min: Introduction and Logistics\n50 min: Presentation\n10 min: Q&A (If we are able to get guest speakers)\n60 min: Panel with Roblox Devs"
+    },
+    {
+      "title": "Getting Unstuck in Life: The Science behind Behavioral Change and How Coaches can Help",
+      "host": "Slyde, the Furry Health & Wellness Coach",
+      "room": "marshall",
+      "start": "12:00",
+      "end": "13:00",
+      "description": "Making changes to your life can be scary, but you don't have to do it alone! Come join and learn about the emerging field of coaching, the science behind behavioral change, and how YOU could make changes in your own life to live the life you want."
+    },
+    {
+      "title": "Cinema Screams Jeopardy!",
+      "host": "Xeelo-Meelo",
+      "room": "bear",
+      "start": "14:00",
+      "end": "15:30",
+      "description": "Welcome to everyone's favorite game show! Now with a special Howloween Twist too it as we bring out fun Trivia that the audience will split into teams for, and compete to win prizes based on who's collected the most throughout the game! Think you know your horror trivia? From Famous films, to actors, shows and even more unexpected elements... Get ready to pick your brain before the horde arrives for it first."
+    },
+    {
+      "title": "Floor Wars",
+      "type": "special",
+      "host": "Triton Tails",
+      "room": "pricecenter",
+      "start": "14:00",
+      "end": "16:00"
+    },
+    {
+      "title": "Special Guest Meet & Greet and Q&A Sponsor Panel",
+      "type": "special",
+      "host": "Triton Tails + Special Guests",
+      "room": "roosevelt",
+      "start": "14:30",
+      "end": "15:30",
+      "description": "A private panel for our Special Guests and our con sponsors, as an added perk to being a sponsor for this event, You'll get to meet this years special guests, get to ask questions, and get to really know who our special guests are and how much they mean to Triton Tails and the furry community as a whole!"
+    },
+    {
+      "title": "University Meetup",
+      "host": "Triton Tails",
+      "room": "redshoe",
+      "start": "15:00",
+      "end": "16:00",
+      "description": "University Furs from far and wide all come tonight to this spot! Whether youre a UC Student, CSU, Private or Public University, or even coming from universities far and wide all over and beyond California, nows your chance to meet up with other university students, make connections, network and lots lots more! You'll never know who you can find and what connections you can make here, you might even be meeting your future coworkers here!"
+    },
+    {
+      "title": "Group Photo & Fursuit Parade",
+      "type": "special",
+      "host": "Triton Tails",
+      "room": "statue",
+      "start": "16:00",
+      "end": "17:00"
+    },
+    {
+      "title": "Furry Mahjong",
+      "host": "Furry Mahjong",
+      "room": "mpr",
+      "start": "17:10",
+      "end": "19:00",
+      "description": "Come learn how to play Japanese Mahjong (Riichi) with furries!"
+    },
+    {
+      "title": "Jojo's Anthropomorphic Adventure: Guessing Tendency",
+      "host": "geminop3",
+      "room": "roosevelt",
+      "start": "17:30",
+      "end": "18:30",
+      "description": "Guess the Jojo’s Bizarre Adventure character and the animal they're based on to score points! Top 3 (with tie-breakers) win custom art!"
+    },
+    {
+      "title": "Costume/Fursuit Figure Drawing Class",
+      "host": "Eban",
+      "room": "redshoe",
+      "start": "17:30",
+      "end": "19:30",
+      "description": "Hello artist! For today's class we're drawing 10 volunteers from different angles to create a rotoscope animation. It will be divided into two sessions so that you can go back to experiencing Howloween (5:30-6:30pm, 6:30-7:30pm). Paper and pencil will be provided, and you can see the animation on the Triton Tails discord server! Volunteer applications close an hour prior to the panel. Interested volunteers can apply using the form linked below!",
+      "links": [
+        {
+          "label": "Volunteer Application",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSf_lt2CitmOkqHgZNdCGAxA6T8yxlPEV4YJl3_xAqJDSb_cuw/viewform"
+        }
+      ]
+    },
+    {
+      "title": "Costume/Fursuit Figure Drawing Class",
+      "host": "Eban",
+      "room": "bear",
+      "start": "17:30",
+      "end": "19:30",
+      "description": "Hello artist! For today's class we're drawing 10 volunteers from different angles to create a rotoscope animation. It will be divided into two sessions so that you can go back to experiencing Howloween (5:30-6:30pm, 6:30-7:30pm). Paper and pencil will be provided, and you can see the animation on the Triton Tails discord server! Volunteer applications close an hour prior to the panel. Interested volunteers can apply using the form linked below!",
+      "links": [
+        {
+          "label": "Volunteer Application",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSf_lt2CitmOkqHgZNdCGAxA6T8yxlPEV4YJl3_xAqJDSb_cuw/viewform"
+        }
+      ]
+    },
+    {
+      "title": "The Descendants Panel",
+      "host": "Arai (evil)",
+      "room": "marshall",
+      "start": "18:00",
+      "end": "19:00",
+      "description": "Join Arai as they speak about the worldbuilding and international implications of the Disney Descendants franchise."
+    },
+    {
+      "title": "Horror in Music",
+      "host": "Alex Araña",
+      "room": "roosevelt",
+      "start": "19:30",
+      "end": "21:00",
+      "description": "While not as prominent a theme in music compared to other genres, horror is still a prominent part of many horror artists. From campy theatrics to cold nihilistic dread, themes of terror have pervaded our music in many ways. Join me through a musical journey, where we analyze how 5 music artists convey fear."
+    },
+    {
+      "title": "THE KARAOKE THEATER",
+      "host": "Panda Bear: Bousou",
+      "room": "redshoe",
+      "start": "21:00",
+      "end": "23:00",
+      "description": "Come join and sing your heart out for two hours at this karaoke panel! Featuring your most fab and karaoke diva Panda from San Diego Furries. No professional vocals needed, no spectacular stage presence needed; just get on the stage and SING!!!"
+    },
+    {
+      "title": "THE KARAOKE THEATER",
+      "host": "Panda Bear: Bousou",
+      "room": "bear",
+      "start": "21:00",
+      "end": "23:00",
+      "description": "Come join and sing your heart out for two hours at this karaoke panel! Featuring your most fab and karaoke diva Panda from San Diego Furries. No professional vocals needed, no spectacular stage presence needed; just get on the stage and SING!!!"
+    },
+    {
+      "title": "Yani Mew Mew Magic",
+      "host": "Yaniware",
+      "room": "pricecenter",
+      "type": "performance",
+      "start": "13:00",
+      "end": "13:30",
+      "description": "Opening up the Dance Competition with their stellar dances is Yaniware! UC San Diego's very own icon bringing Mew Mew Magic to Howloween! Come see their dances to open up and lead us into our Dance Competition!"
+    },
+    {
+      "title": "Real Big Top!",
+      "host": "Real Big Top!",
+      "room": "pricecenter",
+      "type": "performance",
+      "start": "17:30",
+      "end": "18:30",
+      "description": "ITS TIME FOR SOME REAL BIG CLOWNING! With their Alternative Clown Music, You'd think the circus was in town, because it is! Live Today at Howloween! Catch the various acts and talents and clownings at Howloween!"
+    },
+    {
+      "title": "Standup Comediyeen",
+      "host": "Yammo The Yeen",
+      "room": "pricecenter",
+      "type": "performance",
+      "start": "19:30",
+      "end": "20:30",
+      "description": "Yapping his way all across the nation, Yammo The Yeen brings the comedy from cons across the globe to here at UC San Diego for the first time! Catch the Comediyeen's Exclusive UC San Diego Show here at Howloween!"
+    },
+    {
+      "title": "MNSTR WUSKY",
+      "room": "westballroom",
+      "type": "dj",
+      "start": "18:00",
+      "end": "19:00",
+      "description": "UKG/Speed, Garage"
+    },
+    {
+      "title": "Zero Gravity",
+      "room": "westballroom",
+      "type": "dj",
+      "start": "19:00",
+      "end": "20:00",
+      "description": "Trap/Bass, House/Dubstep"
+    },
+    {
+      "title": "fever",
+      "room": "westballroom",
+      "type": "dj",
+      "start": "20:00",
+      "end": "21:00",
+      "description": "Techno"
+    },
+    {
+      "title": "Costume Contest",
+      "type": "special",
+      "host": "Triton Tails",
+      "room": "pricecenter",
+      "start": "20:30",
+      "end": "21:30"
+    },
+    {
+      "title": "MANEDBENTO!",
+      "room": "westballroom",
+      "type": "dj",
+      "start": "21:00",
+      "end": "22:00",
+      "description": "Dubstep/Hard Techno"
+    },
+    {
+      "title": "Hushpuppy",
+      "room": "westballroom",
+      "type": "dj",
+      "start": "22:00",
+      "end": "23:00",
+      "description": "Pop/Techno"
+    },
+    {
+      "title": "Short Films Showcase",
+      "host": "Triton Tails",
+      "room": "pricecenter",
+      "start": "22:30",
+      "end": "23:30"
+    }
+  ]
+}

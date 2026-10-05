@@ -1,0 +1,32 @@
+.schedule {
+  --hour-h: 4.5rem;
+  display: grid;
+  grid-template-columns: 4rem repeat(var(--rooms), minmax(10rem, 1fr));
+  min-width: min-content;
+}
+
+.schedule-time {
+  height: var(--hour-h);
+  transform: translateY(-0.5em);
+}
+
+.schedule-column {
+  position: relative;
+  height: calc(var(--hours) * var(--hour-h));
+  border-left: 1px solid white;
+  background-image: linear-gradient(white, 1px, transparent 1px);
+  background-size: 100% var(--hour-h);
+  background-color: rgb(20, 18, 18);
+}
+
+.event {
+  position: absolute;
+  left: 0.5em;
+  right: 0.5em;
+  top: calc(var(--start) * var(--hour-h) / 60);
+  height: calc(var(--dur) * var(--hour-h) / 60 - 2px);
+  overflow: hidden;
+}
+.event:hover {
+  filter: brightness(1.1);
+}
