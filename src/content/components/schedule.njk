@@ -1,0 +1,91 @@
+{# macro to convert 24hr -> 12hr #} {% macro t12(t) %}{% set p = t.split(":") %}{% set h = p[0] |
+int %}{{ (h % 12) or 12 }}{% if p[1] != "00" %}:{{ p[1] }}{% endif %} {{ "AM" if h < 12 else "PM"
+}}{% endmacro %} {% macro renderSchedule(data, prefix="ev") %} {# types have label (for modal),
+title (for key), and variant (uses bootstrap colors yay) #} {% set types = { "panel": { "label":
+"Panel", "title": "Panels", "variant": "primary" }, "performance": { "label": "Performance",
+"title": "Performances", "variant": "danger" }, "special": { "label": "Special", "title": "Special",
+"variant": "warning" }, "dj": { "label": "DJ", "title": "DJs", "variant": "success" } } %} {% set
+startH = data.startHour %} {% set endH = data.endHour %} {% set dayStart = startH * 60 %} {# key #}
+<div class="d-flex flex-wrap gap-2 mb-3">
+  {% for key, t in types %}<span class="badge text-bg-{{ t.variant }}">{{ t.title }}</span>{% endfor
+  %}
+</div>
+
+{# grid view #}
+<div class="overflow-x-auto">
+  <div class="schedule" style="--rooms: {{ data.rooms | length }}; --hours: {{ endH - startH }};">
+    <div></div>
+    {# add room titles on top #} {% for room in data.rooms %}
+    <div class="text-center pb-2">{{ room.name }}</div>
+    {% endfor %} {# add time labels along side #}
+    <div aria-hidden="true">
+      {% for h in range(startH, endH) %}
+      <div class="schedule-time small text-end pe-2">
+        {{ (h % 12) or 12 }} {{ "AM" if h < 12 else "PM" }}
+      </div>
+      {% endfor %}
+    </div>
+
+    {% for room in data.rooms %} {# for each room, put all the events in that col #}
+    <div class="schedule-column" role="list" aria-label="{{ room.name }}">
+      {% for e in data.events %} {% if e.room == room.id %} {% set t = types[e.type or "panel"] or
+      types.panel %} {% set s = e.start.split(":") %}{% set f = e.end.split(":") %} {% set startMin
+      = (s[0] | int) * 60 + (s[1] | int) - dayStart %} {% set endMin = (f[0] | int) * 60 + (f[1] |
+      int) - dayStart %} {# each event is represented by a button that you can click to bring up a
+      modal w/ description #}
+      <button
+        type="button"
+        role="listitem"
+        class="event btn btn-sm text-start p-1 {% if e.color %}text-white{% else %}text-bg-{{ t.variant }}{% endif %}"
+        data-bs-toggle="modal"
+        data-bs-target="#{{ prefix }}-{{ loop.index }}"
+        style="--start: {{ startMin }}; --dur: {{ endMin - startMin }};{% if e.color %} background-color: {{ e.color }};{% endif %}"
+      >
+        <span class="d-block fw-semibold">{{ e.title }}</span>
+      </button>
+      {% endif %} {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{# modals #} {% for room in data.rooms %}{% for e in data.events %} {% if e.room == room.id %} {%
+set t = types[e.type or "panel"] or types.panel %} {% set id = prefix + "-" + loop.index %}
+<div
+  class="modal fade"
+  id="{{ id }}"
+  tabindex="-1"
+  aria-labelledby="{{ id }}-title"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <span class="badge text-bg-{{ t.variant }} mb-1">{{ t.label }}</span>
+          <h2 class="modal-title fs-5" id="{{ id }}-title">{{ e.title }}</h2>
+          <p>{{ room.name }}, {{ t12(e.start) }} – {{ t12(e.end) }}</p>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        {% if e.host %}
+        <p class="fw-semibold">Host: {{ e.host }}</p>
+        {% endif %}
+        <p style="white-space: pre-line">{{ e.description }}</p>
+        {% if e.links %}
+        <div class="d-flex flex-wrap gap-2">
+          {% for l in e.links %}<a
+            class="btn btn-outline-secondary btn-sm"
+            href="{{ l.url }}"
+            target="_blank"
+            rel="noopener"
+            >{{ l.label }}</a
+          >{% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %} {% endfor %}{% endfor %} {% endmacro %}

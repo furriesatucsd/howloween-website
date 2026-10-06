@@ -1,0 +1,40 @@
+---
+layout: base.njk
+title: Vendor Fair
+description: Vendor fair map and vendors list for Howloween.
+---
+
+<!-- Page Banner -->
+<section class="wrapper align-center title-banner">
+  <div class="inner">
+    <h1>Vendor Fair</h1>
+  </div>
+</section>
+
+<section class="wrapper">
+  <div class="inner">
+    <p>
+      The Vendor Fair can be found in the <strong>Price Center East Ballroom</strong> with operating
+      hours of <strong>1PM to 9PM</strong>.
+    </p>
+    <p>
+      <a href="../../../assets/images/documents/vendor_fair.pdf" target="_blank">Click here</a> for
+      a PDF version of the map and vendor list.
+    </p>
+
+    <!-- Vendor Fair map -->
+    <h2>Vendor Fair Map</h2>
+    <img
+      src="../../../assets/images/vendor_map.png"
+      alt="Vendor Fair Map"
+      width="67%"
+      class="rounded mx-auto mt-5 mb-5 d-block"
+    />
+
+    <!-- Table of Vendors -->
+    <h2>Vendor List</h2>
+    {% set tableData = { title: "", description: "", container_fluid: "-fluid" } %} {% set tableData
+    = tableData | merge({headers: vendors.headers, data: vendors.data}) %} {% include
+    "../../components/data-table.njk" %}
+  </div>
+</section>
