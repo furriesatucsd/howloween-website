@@ -70,7 +70,7 @@
       "actions": {
         "specialguests": {
           "text": "Special Guests",
-          "link": "/specialguests"
+          "link": "/programming/special-guests"
         }
       }
     }
