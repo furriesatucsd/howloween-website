@@ -39,6 +39,14 @@
       "name": "MPR"
     },
     {
+      "id": "westmpr",
+      "name": "MPR West"
+    },
+    {
+      "id": "eastmpr",
+      "name": "MPR East"
+    },
+    {
       "id": "greentable",
       "name": "Green Table Room"
     },
@@ -58,9 +66,18 @@
     {
       "title": "Gaming Lounge",
       "type": "special",
-      "room": "mpr",
+      "room": "eastmpr",
       "start": "11:00",
       "end": "23:00"
+    },
+    {
+      "title": "Rhythm Game Arcade",
+      "type": "special",
+      "host": "Dance and Rhythm Game Club",
+      "room": "westmpr",
+      "start": "12:00",
+      "end": "20:00",
+      "description": "Enjoy free-play style rhythm games set up by UCSD's Dance and Rhythm Game Club! We'll have DDR, Pump it Up, Taiko no Tatsujin, SDVX, Wacca, Chunithm, and Sound Voltex~"
     },
     {
       "title": "Artist Lounge",
