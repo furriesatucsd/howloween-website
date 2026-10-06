@@ -3,7 +3,7 @@
     {
       "id": "00",
       "title": "Registration is open!",
-      "content": "Get your tickets for Howloween, UCSD's very own furry mini-con! Our event is open to everyone, including furries, cosplayers, and more, whether you're a UCSD student or not.",
+      "content": "Ge t your tickets for Howloween, UCSD's very own furry mini-con! Our event is open to everyone, including furries, cosplayers, and more, whether you're a UCSD student or not.",
       "image": "/assets/images/spotlight_reg.png",
       "alt": "Registration Tickets Display Art",
       "image_position": "right",
@@ -58,6 +58,21 @@
       "image": "/assets/images/spotlight_howl.jpg",
       "alt": "Howloween 2025 Group Photo",
       "image_position": "left"
+    },
+    {
+      "id": "04",
+      "title": "Special Guests",
+      "content": "Howloween is pleased to introduce you to our special guests: DJ Hushpuppy, Doodle Drawz, and Benji Maru!",
+      "image": "/assets/images/tritontails_specialguests.png",
+      "alt": "Our Special Guests for Triton Tails",
+      "image_position": "right",
+      "background": "darker",
+      "actions": {
+        "specialguests": {
+          "text": "Special Guests",
+          "link": "/programming/special-guests"
+        }
+      }
     }
   ]
 }

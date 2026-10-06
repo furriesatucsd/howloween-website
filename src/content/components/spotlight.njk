@@ -1,24 +1,5 @@
-{# {% macro spotlight(data) %}
-<section class="py-5 {% if data.background == 'light' %}bg-light{% endif %}">
-  <div class="container-fluid">
-    <div class="row align-items-center g-4 g-lg-5">
-      <div
-        class="col-lg-6 {% if data.image_position == 'right' %}order-lg-2{% endif %} mb-4 mb-lg-0 fade-in"
-      >
-        <img src="{{ data.image }}" alt="{{ data.alt }}" class="img-fluid rounded shadow w-100" />
-      </div>
-      <div class="col-lg-6 {% if data.image_position == 'right' %}order-lg-1{% endif %} fade-in">
-        <h2 class="display-5 fw-bold">{{ data.title | safe }}</h2>
-        {% if data.subtitle %}
-        <p class="lead {% if data.content %}mb-4{% endif %}">{{ data.subtitle }}</p>
-        {% endif %} {% for paragraph in data.content %}
-        <p>{{ paragraph }}</p>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</section>
-{% endmacro %} #} {% for spotlight in spotlightData.spotlight %}
+<!-- NOTE: Remove "safe" if the input is user submitted so you don't get pwned -->
+{% for spotlight in spotlightData.spotlight %}
 <section
   class="py-5 text-light {% if spotlight.background == 'light' %}bg-light {% elif spotlight.background == 'dark' %}bg-dark bg-opacity-80 text-light {% elif spotlight.background == 'darker' %}bg-darker text-light {% endif %}"
 >
@@ -39,11 +20,12 @@
         <p>{{ paragraph }}</p>
         {% endfor %} {% if spotlight.actions %} {% for k, action in spotlight.actions %} {% if
         action.icon %}
-        <a href="{{ action.link }}" class="btn btn-primary fs-5"
-          ><i class="{{ action.icon }}"></i>
+        <a href="{{ action.link }}" class="btn btn-primary fs-5">
+          <i class="{{ action.icon }}"></i>
           {{ action.text }}
         </a>
-        {% else %} <a href="{{ action.link }}" class="btn btn-primary fs-5">{{ action.text }}</a>
+        {% else %}
+        <a href="{{ action.link }}" class="btn btn-primary fs-5">{{ action.text }}</a>
         {% endif %} {% endfor %} {% endif %}
       </div>
     </div>
