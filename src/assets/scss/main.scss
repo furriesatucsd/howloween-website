@@ -21,7 +21,9 @@
 @use './components/store';
 @use './components/forms';
 @use './components/rave';
+@use './components/guests';
 @use './components/title_banner';
+@use './components/schedule';
 
 // Layouts
 @use './layouts/container';
@@ -34,11 +36,16 @@ main {
 
 .bg-warning {
   background-color: #c19401 !important;
-  color: #ffffff !important;
+  color: #000000 !important;
 }
 
 .bg-darker {
   background-color: #111111;
+}
+
+.bg-white {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 a {

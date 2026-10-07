@@ -1,5 +1,40 @@
 ---
 layout: base.njk
 title: Event Schedule
-description: Event schedule information for Howloween 2026.
+description: Schedule of events and other programming for Howloween.
 ---
+
+{% from "schedule.njk" import renderSchedule %}
+<section class="wrapper align-center title-banner">
+  <div class="inner">
+    <div>
+      <h1>Event Schedule</h1>
+    </div>
+  </div>
+</section>
+
+<section class="wrapper">
+  <div class="inner">
+    <p>
+      This event schedule is interactive! You may scroll horizontally to view all rooms and click on
+      events to see their descriptions.
+    </p>
+
+    <a href="../schedule-full" target="_blank">Click here</a> to view the schedule in a new tab.
+
+    <h2 class="mt-3">Schedule</h2>
+    {{ renderSchedule(schedule) }}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('[data-dialog]');
+    if (trigger) {
+      document.getElementById(trigger.dataset.dialog).showModal();
+      return;
+    }
+
+    if (e.target instanceof HTMLDialogElement) e.target.close();
+  });
+</script>
