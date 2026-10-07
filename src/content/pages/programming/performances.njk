@@ -6,6 +6,17 @@ description: List of performers for Howloween 2026.
 
 <section class="wrapper align-center title-banner">
   <div class="inner">
+    <div>
+      <hgroup>
+        <h1>Performances</h1>
+        <p>Here's your list of performers for Howloween 2026!</p>
+      </hgroup>
+    </div>
+  </div>
+</section>
+
+<section class="wrapper align-center title-banner">
+  <div class="inner">
     <h1>Performances</h1>
   </div>
 </section>
@@ -21,7 +32,9 @@ description: List of performers for Howloween 2026.
     <h2>Performance Lineup</h2>
     {% for show in performance.performances %}
     <h3>{{ show["performer-name"] }}</h3>
-    <h4><em>{{ show["performance-name"] }}</em></h4>
+    <h4>
+      <em>{{ show["performance-name"] }}</em>
+    </h4>
     <p>{{ show["scheduled-time"] }}</p>
     <p>{{ show["event-description"] }}</p>
     {% if not loop.last %}
