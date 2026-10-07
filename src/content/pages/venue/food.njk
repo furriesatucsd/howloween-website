@@ -19,7 +19,7 @@ description: Nearby food (with discounts!) and drink for Howloween.
       Price Center Hall. Additonally, certain food establishments will also be offering discounts to
       attendees for the event.
     </p>
-    <p>List of Food Vendors and applicable discounts:</p>
+    <h2>Food Vendors</h2>
     <!--Food Table-->
     {% set tableData = { title: "", description: "", container_fluid: "-fluid" } %} {% set tableData
     = tableData | merge({headers: foodinfo.headers, data: foodinfo.data}) %} {% include

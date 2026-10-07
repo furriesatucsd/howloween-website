@@ -1,5 +1,5 @@
 {
-  "headers": ["", "Food", "Hours", "", "Discount"],
+  "headers": ["Food", "", "Hours", "", "Discount"],
   "data": [
     {
       "content": ["YougurtWorldLogo.jpg", "Yogurt World", "12pm-6pm", "(858) 558-8989", "10% off"],
@@ -20,7 +20,7 @@
       "link": ["https://www.bk.com/"]
     },
     {
-      "content": ["DirtyBirdsLogo.jpg", "Dirty Bird", "12pm-5pm", "(858) 750-2121", ""],
+      "content": ["DirtyBirdsLogo.jpg", "Dirty Birds", "12pm-5pm", "(858) 750-2121", ""],
       "link": ["https://www.dirtybirdsbarandgrill.com/"]
     },
     {
