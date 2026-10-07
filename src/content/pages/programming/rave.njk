@@ -24,27 +24,22 @@ description: Information on the rave hosted for Howloween 2026.
       </p>
       <h2>DJ Lineup</h2>
       {% for ppl in djs.djlist %}
-        <section class="dj">
-          <h3>{{ ppl["dj-name"] }}</h3>
-          <p>{{ ppl["genre"] }}</p>
-          <p>{{ ppl["time"] }}</p>
-          {% if ppl.socials %}
-            {% for k, social in ppl.socials %}
-              {% if social.icon %}
-                <a href="{{ social.link }}" class="btn btn-primary fs-5">
-                  <i class="{{ social.icon }}"></i>
-                  {{ social.text }}
-                </a>
-              {% else %}
-                <a href="{{ social.link }}" class="btn btn-primary fs-5">{{ social.text }}</a>
-              {% endif %}
-            {% endfor %}
-          {% endif %}
-        </section>
-        {% if not loop.last %}
-          <hr/>
-        {% endif %}
-      {% endfor %}
+      <section class="dj">
+        <h3>{{ ppl["dj-name"] }}</h3>
+        <p>{{ ppl["genre"] }}</p>
+        <p>{{ ppl["time"] }}</p>
+        {% if ppl.socials %} {% for k, social in ppl.socials %} {% if social.icon %}
+        <a href="{{ social.link }}" class="btn btn-primary fs-5">
+          <i class="{{ social.icon }}"></i>
+          {{ social.text }}
+        </a>
+        {% else %}
+        <a href="{{ social.link }}" class="btn btn-primary fs-5">{{ social.text }}</a>
+        {% endif %} {% endfor %} {% endif %}
+      </section>
+      {% if not loop.last %}
+      <hr />
+      {% endif %} {% endfor %}
     </main>
   </div>
 </section>
