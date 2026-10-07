@@ -1,4 +1,3 @@
-<!-- Data Table -->
 <section class="py-5 {{ tableData.background_class | default('') }}">
   <div class="container{{ tableData.container_fluid | default('') }} fade-in">
     <div class="row justify-content-center">
@@ -12,7 +11,7 @@
             <thead class="table-danger">
               <tr>
                 {% for header in tableData.headers %}
-                <th scope="col" style="#ffff">{{ header }}</th>
+                <th scope="col">{{ header }}</th>
                 {% endfor %}
               </tr>
             </thead>
@@ -20,23 +19,21 @@
               {% for row in tableData.data %}
               <tr>
                 <!-- If there is only one cell in the row, make it span all cols -->
-                {% if row.content | length == 1 %}
-                <td colspan="{{ tableData.headers | length }}">{{ row.content[0] }}</td>
-                {% else %} {% for cell in row.content %} {% if loop.index == 1 %}
+                {% for cell in row.content %} {% if loop.index == 1 %}
                 <td>
-                  {% if row.link and row.link | length %} {% for link in row.link %}<a
-                    href="{{ link }}"
-                    style="text-decoration: underline"
-                  >
-                    {{ row.linkDisplay[loop.index - 1] }}</a
-                  ><br />
-                  {% endfor %} {% else %} {{ cell }} {% endif %}
+                  <img src="../../assets/images/food&discounts/{{ cell }}" alt="{{ cell }}" />
                 </td>
-                {%elif loop.index == 5 %}
-                <td style="{{ row.descSize }}">{{ cell }}</td>
+                {%elif loop.index == 2%}
+                <td style="font-size: 20px">
+                  <a
+                    href="{{row.link[0]}}"
+                    style="color: #007bff; text-decoration: underline; font-size: 16px"
+                    >{{cell}}</a
+                  >
+                </td>
                 {% else %}
                 <td style="font-size: 20px">{{ cell }}</td>
-                {% endif %} {% endfor %} {% endif %}
+                {% endif %} {% endfor %}
               </tr>
               {% endfor %}
             </tbody>
