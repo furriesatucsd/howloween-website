@@ -25,6 +25,7 @@ description: Information on the rave hosted for Howloween 2026.
       <h2>DJ Lineup</h2>
       {% for ppl in djs.djlist %}
       <section class="dj">
+        <img class="djimage" src="{{ ppl.image }}" alt="{{ ppl.alt }}" />
         <h3>{{ ppl["dj-name"] }}</h3>
         <p>{{ ppl["genre"] }}</p>
         <p>{{ ppl["time"] }}</p>
