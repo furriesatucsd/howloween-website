@@ -5,16 +5,14 @@
       "title": "Staff/Volunteer Application",
       "image": "../../assets/images/flyer_volunteer.png",
       "image_position": "right",
-      "status": "open",
-      "link": "https://docs.google.com/forms/d/e/1FAIpQLScR5kA-R7Pv0on8Qeoezg8hBaP31UlwhJe5D3jwLSEaW7gekA/viewform"
+      "status": "closed"
     },
     {
       "id": "02",
       "title": "Floor Wars Sign-Up",
-      "status": "open",
+      "status": "closed",
       "image": "../../assets/images/flyer_fw.png",
-      "image_position": "right",
-      "link": "https://docs.google.com/forms/d/e/1FAIpQLScwuJq-V92iiWd1iAkZegmR98iseBo4mDnQCmdG8W2ZbrH0bQ/viewform"
+      "image_position": "right"
     },
     {
       "id": "03",
