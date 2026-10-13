@@ -68,6 +68,10 @@
       "type": "dropdown",
       "items": [
         {
+          "title": "Event Feedback",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSdOj1YuEOEU8ihjZ-SQVMo0qtq-VGWRO4yk6r1TN8WVTEUQaQ/viewform"
+        },
+        {
           "title": "View All Applications",
           "url": "/apply/"
         },
